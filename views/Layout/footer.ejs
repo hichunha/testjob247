@@ -1,0 +1,159 @@
+<!-- Footer -->
+<link rel="stylesheet" href="/public/css/footer.css">
+<div class="container_footer">
+  <div class="contact_info">
+    <!-- about container for mobile -->
+    <div class="about_container-mobile">
+      <div class="column">
+        <div class="title">About Us
+          <button class="btn_down-ft">
+            <img src="/images/icon/down_footer.svg" alt="down" style="width: 24px; height: 24px;">
+          </button>
+        </div>
+        <a href="">Terms of use</a>
+        <a href="">Privacy policy</a>
+        <a href="">Sitemap</a>
+        <a href="">Personal Data Policy</a>
+        <a href="">Compliance and Consent</a>
+      </div>
+      <div class="column">
+        <div class="title">For Seakers
+          <button class="btn_down-ft">
+            <img src="/images/icon/down_footer.svg" alt="down" style="width: 24px; height: 24px;">
+          </button>
+        </div>
+        <a href="">Job search</a>
+        <a href="">Saved jobs</a>
+        <a href="">Recommended jobs</a>
+        <a href="">Job applications</a>
+        <a href="">Career blog</a>
+        <a href="">Explore careers</a>
+        <a href="">Explore salaries</a>
+        <a href="">Explore companies</a>
+        <a href="">Hot CV templates</a>
+        <a href="">Net-gross salaries convert</a>
+      </div>
+      <div class="column">
+        <div class="title">For Employers
+          <button class="btn_down-ft">
+            <img src="/images/icon/down_footer.svg" alt="down" style="width: 24px; height: 24px;">
+          </button>
+        </div>
+        <a href="">Register for free</a>
+        <a href="">Post a job ad</a>
+        <a href="">Products & prices</a>
+        <a href="">Customer service</a>
+        <a href="">Hiring advice</a>
+      </div>
+      <div class="column">
+        <div class="title">Tools
+          <button class="btn_down-ft">
+            <img src="/images/icon/down_footer.svg" alt="down" style="width: 24px; height: 24px;">
+          </button>
+        </div>
+        <a href="">Help center</a>
+        <a href="">Contact us</a>
+        <a href="">Product and tetch</a>
+        <a href="">Social</a>
+      </div>
+    </div>
+
+    <div class="about_container">
+      <div class="column" style="width: 25%;">
+        <div class="title">About Us</div>
+        <a href="">Terms of use</a>
+        <a href="">Privacy policy</a>
+        <a href="">Sitemap</a>
+        <a href="">Personal Data Policy</a>
+        <a href="">Compliance and Consent</a>
+      </div>
+      <div class="column" style="width: 25%;">
+        <div class="title">For Seakers</div>
+        <a href="">Job search</a>
+        <a href="">Saved jobs</a>
+        <a href="">Recommended jobs</a>
+        <a href="">Job applications</a>
+        <a href="">Career blog</a>
+        <a href="">Explore careers</a>
+        <a href="">Explore salaries</a>
+        <a href="">Explore companies</a>
+        <a href="">Hot CV templates</a>
+        <a href="">Net-gross salaries convert</a>
+      </div>
+      <div class="column" style="width: 25%;">
+        <div class="title">For Employers</div>
+        <a href="">Register for free</a>
+        <a href="">Post a job ad</a>
+        <a href="">Products & prices</a>
+        <a href="">Customer service</a>
+        <a href="">Hiring advice</a>
+      </div>
+      <div class="column" style="width: 25%;">
+        <div class="title">Tools</div>
+        <a href="">Help center</a>
+        <a href="">Contact us</a>
+        <a href="">Product and tetch</a>
+        <a href="">Social</a>
+      </div>
+    </div>
+
+    <div class="logo_container">
+      <a href="">
+        <div class="logo">
+          <img src="/images/img/logo_footer.png" alt="Logo Job247.ph" loading="lazy"
+            style="color: transparent; height: 227px; object-fit: contain;">
+        </div>
+      </a>
+    </div>
+
+    <div class="contact">
+      <div class="left">
+        <div class="com_name" style="text-transform: uppercase;"></div>
+        <div class="email">
+          <img src="/images/icon/icongmail.svg" alt="Icon gmail" loading="lazy" decoding="async"
+            style="width: 25px; height: 25px; margin-top: 2px; margin-right: 6px;">
+          <p>Email: support@job365.com</p>
+        </div>
+
+        <div class="hotline">
+          <img src="/images/icon/icontelephone.svg" alt="Icon phone" decoding="async" loading="lazy"
+            style="width: 25px; height: 25px; margin-top: 2px; margin-right: 6px;">
+          <p>Số điện thoại: 0979.524.615</p>
+        </div>
+
+        <div class="email">
+          <img src="/images/icon/icontime.svg" alt="Icon email" loading="lazy" decoding="async"
+            style="width: 25px; height: 25px; margin-top: 2px; margin-right: 6px;">
+          <p>Time: Monday to Saturday, 9:00 AM to 6:00 PM</p>
+        </div>
+
+        <div class="address">
+          <img src="/images/icon/iconaddress.svg" alt="Icon address" decoding="async" loading="lazy"
+            style="width: 25px; height: 25px; margin-top: 2px; margin-right: 6px;">
+          <p>Address: The Infinity Tower, 6th floor, Unit 603, 26th St, BGC, Taguig City, Metro Manila, Philippines</p>
+        </div>
+      </div>
+
+      <div class="right"></div>
+    </div>
+  </div>
+</div>
+<script>
+  document.querySelectorAll('.btn_down-ft').forEach(button => {
+    button.addEventListener('click', function () {
+      const column = this.closest('.column');
+      const links = column.querySelectorAll('a');
+
+      links.forEach(link => {
+        link.style.display = (link.style.display === 'block') ? 'none' : 'block';
+      });
+
+      const icon = this.querySelector('img');
+      if (icon.src.includes('down_footer.svg')) {
+        icon.src = '/images/icon/up_footer.svg';
+      } else {
+        icon.src = '/images/icon/down_footer.svg';
+      }
+    });
+  })
+</script>

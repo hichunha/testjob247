@@ -1,0 +1,344 @@
+a {
+    text-decoration: none
+  }
+  
+  .contact_info {
+    min-height: max-content;
+    /* background-image: url(https://job247.vn/images/footer/footer_bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    /* padding: 60px 350px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: #00458A;
+    margin: 40px 0px;
+  }
+  .container_footer {
+    background-color: #FFFFFF;
+  }
+  .contact_info .about_container {
+    width: 100%;
+    height: max-content;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 100px;
+  }
+  .contact_info .about_container-mobile{
+    display: none;
+  }
+  
+  .about_container .column {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+    font: 300 15px Roboto, sans-serif
+  }
+  
+  .about_container .column .title {
+    margin-bottom: 10px;
+    font: 500 18px Roboto, sans-serif
+  }
+  
+  .about_container .column a {
+    margin: 5px 0;
+    text-decoration: none;
+    color: #fff
+  }
+  
+  .contact_info .logo_container {
+    width: calc(100% - 80px);
+    height: 240px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 24px;
+    padding-bottom: 20px
+  }
+  
+  .contact_info .logo_container .logo {
+    width: 310px;
+    height: 143px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+  }
+  
+  .logo_container .logo p {
+    font: 300 15px Roboto, sans-serif;
+    color: #fff;
+    margin-top: 10px
+  }
+  
+  .logo_container .logo p:hover {
+    color: #fff !important
+  }
+  
+  .logo_container .logo img {
+    width: 347px;
+    height: 113px
+  }
+  
+  .contact {
+    width: calc(100% - 80px);
+    display: flex;
+    justify-content: space-between
+  }
+  
+  .contact p {
+    color: #fff;
+    font-family: Roboto
+  }
+  
+  .contact p:hover {
+    color: #fff !important;
+    cursor: auto
+  }
+  
+  .contact .left {
+    color: #fff
+  }
+  
+  .contact .left .com_name {
+    font-family: Roboto;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600
+  }
+  
+  .contact .left .email {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .contact .left .email img {
+    width: 25px;
+    height: 25px;
+    margin-top: 2px;
+    margin-right: 6px
+  }
+  
+  .contact .left .email .email_title {
+    margin-right: 5px
+  }
+  
+  .contact .left .hotline {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .contact .left .hotline img {
+    width: 25px;
+    height: 25px;
+    margin-top: 2px;
+    margin-right: 6px
+  }
+  
+  .contact .left .hotline .hotline_title {
+    margin-right: 5px
+  }
+  
+  .contact .left .address {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .contact .left .address img {
+    width: 25px;
+    height: 25px;
+    margin-top: 2px;
+    margin-right: 6px
+  }
+  
+  .contact .left .address .address_title {
+    margin-right: 5px
+  }
+  
+  @media (max-width:1919px) {
+    .contact_info {
+      padding: 40px 165px
+    }
+  
+    .logo_container {
+      width: calc(100% - 100px) !important
+    }
+  
+    .contact {
+      width: calc(100% - 100px)
+    }
+  }
+  
+  @media (max-width:1365px) {
+    .logo_container {
+      width: calc(100% - 10px) !important
+    }
+  
+    .contact_info {
+      padding: 48px 60px 30px
+    }
+  
+    .contact {
+      width: calc(100% - 10px)
+    }
+  
+    .logo {
+      width: 280px !important;
+      height: 113px !important
+    }
+  
+    /* .logo img {
+      width: 280px !important;
+      height: 113px !important
+    } */
+  
+    .logo p {
+      font-size: 13px !important
+    }
+  }
+  
+  @media (max-width:1023px) {
+    .contact_info {
+      padding-left: 24px;
+      padding-right: 24px
+    }
+  
+    .contact_info .about_container {
+      /* display: none !important */
+    }
+  
+    .logo_container {
+      width: calc(100% - 6px) !important
+    }
+  
+    .contact {
+      width: calc(100% - 6px) !important
+    }
+  }
+  
+  @media (max-width:767px) {
+    .contact_info {
+      background-image: url(/public/images/cv/footer_bg.svg);
+      padding: 32px 0px 24px
+    }
+  
+    .contact_info .about_container {
+      /* display: none !important */
+    }
+
+    .contact_info .about_container {
+      gap: 10px;
+    }
+  
+    .logo_container {
+      display: flex;
+      width: calc(100% - 6px) !important;
+      /* flex-direction: column; */
+      align-items: center;
+      justify-content: flex-start !important;
+      height: auto !important
+    }
+  
+    .logo_container .logo {
+      margin-bottom: 20px
+    }
+  
+    .logo_container .logo {
+      width: auto !important;
+      height: auto !important;
+      align-items: center !important
+    }
+  
+    /* .logo_container .logo img {
+      width: 354px !important;
+      height: 143px !important
+    } */
+  
+    .logo_container .logo p {
+      font-size: 16px !important;
+      letter-spacing: 2px
+    }
+  
+    .contact {
+      flex-direction: column;
+      align-items: center;
+      width: calc(100% - 6px) !important
+    }
+  
+    .contact .left,
+    .contact .right {
+      margin-bottom: 20px
+    }
+  
+    .contact .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+    .about_container .column {
+      padding: 10px 0 10px 10px;
+    }
+  }
+  
+  @media screen and (max-width:390px) {
+    .logo_container .logo img {
+      width: 280px !important;
+      height: 150px !important
+    }
+  
+    .logo_container .logo p {
+      letter-spacing: 1px
+    }
+  }
+@media screen and (max-width: 431px) {
+  .contact_info .about_container-mobile{
+    display: flex;
+  }
+  .contact_info .about_container{
+    display: none;
+  }
+  .contact_info .about_container-mobile{
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .about_container-mobile .column .title {
+    width: 100% !important;
+  }
+  .title {
+    text-align: left !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font: 500 18px Roboto, sans-serif;
+  }
+  .btn_down-ft {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  .about_container-mobile .column a {
+    display: none;
+  }
+  .about_container-mobile .column {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+    font: 300 15px Roboto, sans-serif;
+  }
+  .about_container-mobile .column a {
+    margin: 5px 0;
+    text-decoration: none;
+    color: #fff;
+  } 
+}

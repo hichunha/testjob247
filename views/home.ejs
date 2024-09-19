@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY TO FIND JOB, RECRUIT EFFECTIVELY</title>
+    <link rel="icon" href="/images/img/img_logo.png">
+    <link rel="stylesheet" href="/css/header.css" as="style">
+    <link rel="stylesheet" href="/css/footer.css" as="style">
+    <link rel="stylesheet" href="/css/menu.css" as="style">
+    <link rel="stylesheet" href="/css/page_css/trang_chu.css" as="style">
+</head>
+
+<body>
+    <%- include('Layout/header', {}); %>
+        <div class="container_Trangchu">
+            <div class="wrapper">
+                <div class="wrapper_child">
+                    <!-- Banner Mobile, tablet -->
+                    <div class="banner_top_mobile">
+                        <div class="box_banner">
+                            <div class="content_bn_left">
+                                <img src="/images/img/logo_footer.png" alt="Logo Job247.ph" loading="lazy"
+                                    style="color: transparent; height: 118px; object-fit: contain;">
+                                <h1 class="title ffffff">
+                                    <span class="font32_800 ">EASY TO FIND JOB, RECRUIT
+                                        EFFECTIVELY</span>
+                                </h1>
+                                <p class="font20_500 ffffff ">Work AI - quality jobs, potential candidates</p>
+                                <div class="form_search_job">
+                                    <div>
+                                        <div class="box_form">
+                                            <div class="wrapper_search">
+                                                <div class="box_position" style="position: relative;">
+                                                    <div class="img_box_form img_search">
+                                                        <img src="/images/icon/iconsearch.svg" alt="search"
+                                                            loading="lazy" decoding="async">
+                                                    </div>
+                                                    <input type="text" name="name" class="search_pojob"
+                                                        id="search_pojob" placeholder="Enter Keyword" value=""
+                                                        autocomplete="off">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box_form">
+                                            <div class="wrapper_search">                                     
+                                                <div class="box_clean">
+                                                    <div class="img_box_form img_location">
+                                                        <img src="/images/icon/iconclean.svg" alt="location"
+                                                            loading="lazy" decoding="async">
+                                                    </div>
+                                                    <input type="text" name="name" class="search_pojob"
+                                                        id="search_pojob" placeholder="Any  Classifications" value=""
+                                                        autocomplete="off">
+                                                    <div class="btn_search_down">
+                                                        <img src="/images/icon/btn_search_down.svg" alt="location"
+                                                            loading="lazy" decoding="async">
+                                                    </div>
+                                                </div>
+                                                <div class="box_position_addr">
+                                                    <div class="img_box_form img_location">
+                                                        <img src="/images/icon/location.svg" alt="location"
+                                                            loading="lazy" decoding="async">
+                                                    </div>
+                                                    <input type="text" name="name" class="search_pojob"
+                                                        id="search_pojob" placeholder="Enter suburb, city, or region"
+                                                        value="" autocomplete="off">
+                                                    <div class="btn_search_down">
+                                                        <img src="/images/icon/btn_search_down.svg" alt="location"
+                                                            loading="lazy" decoding="async">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box_keyword">
+                                    <div class="list_keyword">
+                                        <a class="font16_500 ffffff active" href="/">more option
+                                            <img class="img_more" src="/images/icon/iconmore_option.svg" alt="location"
+                                            loading="lazy" decoding="async">
+                                        </a>
+                                        <a class="font16_500 ffffff border-listkey" href="/">all work type
+                                            <img class="img_down" src="/images/icon/icon_down.svg" alt="location"
+                                            loading="lazy" decoding="async">
+                                        </a>
+                                        <a class="font16_500 ffffff border-listkey" href="/">Pay(salary PH)
+                                            <img class="img_down" src="/images/icon/icon_down.svg" alt="location"
+                                            loading="lazy" decoding="async">
+                                        </a>
+                                    </div>
+                                </div>
+                                <button class="submit_job" id="submit_job">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Banner top PC -->
+                    <div class="banner_top">
+                        <div class="box_banner">
+                            <div class="content_bn_left">
+                                <img src="/images/img/logo_footer.png" alt="Logo Job247.ph" loading="lazy"
+                                    style="color: transparent; height: 118px; object-fit: contain;">
+                                <h1 class="title ffffff">
+                                    <span class="font32_800 ">EASY TO FIND JOB, RECRUIT
+                                        EFFECTIVELY</span>
+                                </h1>
+                                <p class="font20_500 ffffff ">Work AI - quality jobs, potential candidates</p>
+                                <div class="form_search_job">
+                                    <div>
+                                        <div class="box_form">
+                                            <div class="wrapper_search">
+                                                <div class="box_position" style="position: relative;">
+                                                    <div class="img_box_form img_search">
+                                                        <img src="/images/icon/iconsearch.svg" alt="search"
+                                                            loading="lazy" decoding="async">
+                                                    </div>
+                                                    <input type="text" name="name" class="search_pojob"
+                                                        id="search_pojob" placeholder="Enter Keyword" value=""
+                                                        autocomplete="off">
+                                                </div>
+                                                <div class="all_job" id="all_job_pc">
+                                                    <div class="all_job_filtered">
+                                                        <p>Tìm kiếm gần đây</p>
+                                                        <ul class="job-list job-list-history" style="width: 100%;"
+                                                            id="job_list_pc">
+                                                            <!-- <li>Kế toán - Kiểm toán</li> -->
+                                                        </ul>
+                                                    </div>
+                                                    <div class="job_have">
+                                                        <div class="job_have_title">
+                                                            <p>Từ khóa phổ biến</p>
+                                                            <div class="job_have_close" id="job_have_close_pc">×</div>
+                                                        </div>
+                                                        <ul class="job-list" id="job_list_common"></ul>
+                                                    </div>
+                                                </div>
+                                                <div class="box_clean">
+                                                    <div class="img_box_form img_location">
+                                                        <img src="/images/icon/iconclean.svg" alt="location"
+                                                            loading="lazy" decoding="async">
+                                                    </div>
+                                                    <input type="text" name="name" class="search_pojob"
+                                                        id="search_pojob" placeholder="Any  Classifications" value=""
+                                                        autocomplete="off">
+                                                    <div class="btn_search_down">
+                                                        <img src="/images/icon/btn_search_down.svg" alt="location"
+                                                            loading="lazy" decoding="async">
+                                                    </div>
+                                                </div>
+                                                <div class="box_position_addr">
+                                                    <div class="img_box_form img_location">
+                                                        <img src="/images/icon/location.svg" alt="location"
+                                                            loading="lazy" decoding="async">
+                                                    </div>
+                                                    <input type="text" name="name" class="search_pojob"
+                                                        id="search_pojob" placeholder="Enter suburb, city, or region"
+                                                        value="" autocomplete="off">
+                                                    <div class="btn_search_down">
+                                                        <img src="/images/icon/btn_search_down.svg" alt="location"
+                                                            loading="lazy" decoding="async">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="submit_job" id="submit_job">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box_keyword">
+                                    <div class="list_keyword">
+                                        <a class="font16_500 ffffff active" href="/">more option
+                                            <img class="img_more" src="/images/icon/iconmore_option.svg" alt="location"
+                                                loading="lazy" decoding="async">
+                                        </a>
+                                        <a class="font16_500 ffffff border-listkey" href="/">all work type
+                                            <img class="img_down" src="/images/icon/icon_down.svg" alt="location"
+                                                loading="lazy" decoding="async">
+                                        </a>
+                                        <a class="font16_500 ffffff border-listkey" href="/">Pay(salary PH)
+                                            <img class="img_down" src="/images/icon/icon_down.svg" alt="location"
+                                                loading="lazy" decoding="async">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat with employee -->
+                    <div class="box_wrap">
+                        <div class="box_wrap_left">
+                            <div class="wrapper_company pt60">
+                                <div class="job_hapdan" id="tt_vlhd">
+                                    <img class="img_noti" src="/images/icon/icon_noti.svg" alt="noti">
+                                    <h2><span class="F8971C">URGENT JOBS</span></h2>
+                                </div>
+                                <div class="list_company" id="vieclamhapdan">
+                                    <div class="detail_company">
+                                        <div class="company_info">
+                                            <a href="/">
+                                                <p class="company_info-title" style="font-size: 20px;">No Experience WFH
+                                                    ESL
+                                                    Teacher</p>
+                                            </a>
+                                            <div class="company_info-detail">
+                                                <a href="/" class="avata_com">
+                                                    <img class="img_ava" src="" alt="avatar" loading="lazy"
+                                                        decoding="async"
+                                                        onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                        width="80" height="80">
+                                                </a>
+                                                <div class="box_detail_com">
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                            alt="address">
+                                                        <p>Batangas City, Batangas</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                            alt="address">
+                                                        <p>₱22,000 – ₱25,000 per month</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_time.svg"
+                                                            alt="address">
+                                                        <p>3d ago</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                            alt="address">
+                                                        <p>Chat</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail_company">
+                                        <div class="company_info">
+                                            <a href="/">
+                                                <p class="company_info-title" style="font-size: 20px;">No Experience WFH
+                                                    ESL
+                                                    Teacher</p>
+                                            </a>
+                                            <div class="company_info-detail">
+                                                <a href="/" class="avata_com">
+                                                    <img class="img_ava" src="" alt="avatar" loading="lazy"
+                                                        decoding="async"
+                                                        onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                        width="80" height="80">
+                                                </a>
+                                                <div class="box_detail_com">
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                            alt="address">
+                                                        <p>Batangas City, Batangas</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                            alt="address">
+                                                        <p>₱22,000 – ₱25,000 per month</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_time.svg"
+                                                            alt="address">
+                                                        <p>3d ago</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                            alt="address">
+                                                        <p>Chat</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail_company">
+                                        <div class="company_info">
+                                            <a href="/">
+                                                <p class="company_info-title" style="font-size: 20px;">No Experience WFH
+                                                    ESL
+                                                    Teacher</p>
+                                            </a>
+                                            <div class="company_info-detail">
+                                                <a href="/" class="avata_com">
+                                                    <img class="img_ava" src="" alt="avatar" loading="lazy"
+                                                        decoding="async"
+                                                        onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                        width="80" height="80">
+                                                </a>
+                                                <div class="box_detail_com">
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                            alt="address">
+                                                        <p>Batangas City, Batangas</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                            alt="address">
+                                                        <p>₱22,000 – ₱25,000 per month</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_time.svg"
+                                                            alt="address">
+                                                        <p>3d ago</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                            alt="address">
+                                                        <p>Chat</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail_company">
+                                        <div class="company_info">
+                                            <a href="/">
+                                                <p class="company_info-title" style="font-size: 20px;">No Experience WFH
+                                                    ESL
+                                                    Teacher</p>
+                                            </a>
+                                            <div class="company_info-detail">
+                                                <a href="/" class="avata_com">
+                                                    <img class="img_ava" src="" alt="avatar" loading="lazy"
+                                                        decoding="async"
+                                                        onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                        width="80" height="80">
+                                                </a>
+                                                <div class="box_detail_com">
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                            alt="address">
+                                                        <p>Batangas City, Batangas</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                            alt="address">
+                                                        <p>₱22,000 – ₱25,000 per month</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_time.svg"
+                                                            alt="address">
+                                                        <p>3d ago</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                            alt="address">
+                                                        <p>Chat</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail_company">
+                                        <div class="company_info">
+                                            <a href="/">
+                                                <p class="company_info-title" style="font-size: 20px;">No Experience WFH
+                                                    ESL
+                                                    Teacher</p>
+                                            </a>
+                                            <div class="company_info-detail">
+                                                <a href="/" class="avata_com">
+                                                    <img class="img_ava" src="" alt="avatar" loading="lazy"
+                                                        decoding="async"
+                                                        onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                        width="80" height="80">
+                                                </a>
+                                                <div class="box_detail_com">
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                            alt="address">
+                                                        <p>Batangas City, Batangas</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                            alt="address">
+                                                        <p>₱22,000 – ₱25,000 per month</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_time.svg"
+                                                            alt="address">
+                                                        <p>3d ago</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                            alt="address">
+                                                        <p>Chat</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail_company">
+                                        <div class="company_info">
+                                            <a href="/">
+                                                <p class="company_info-title" style="font-size: 20px;">No Experience WFH
+                                                    ESL
+                                                    Teacher</p>
+                                            </a>
+                                            <div class="company_info-detail">
+                                                <a href="/" class="avata_com">
+                                                    <img class="img_ava" src="" alt="avatar" loading="lazy"
+                                                        decoding="async"
+                                                        onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                        width="80" height="80">
+                                                </a>
+                                                <div class="box_detail_com">
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                            alt="address">
+                                                        <p>Batangas City, Batangas</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                            alt="address">
+                                                        <p>₱22,000 – ₱25,000 per month</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_time.svg"
+                                                            alt="address">
+                                                        <p>3d ago</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                            alt="address">
+                                                        <p>Chat</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail_company">
+                                        <div class="company_info">
+                                            <a href="/">
+                                                <p class="company_info-title" style="font-size: 20px;">No Experience WFH
+                                                    ESL
+                                                    Teacher</p>
+                                            </a>
+                                            <div class="company_info-detail">
+                                                <a href="/" class="avata_com">
+                                                    <img class="img_ava" src="" alt="avatar" loading="lazy"
+                                                        decoding="async"
+                                                        onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                        width="80" height="80">
+                                                </a>
+                                                <div class="box_detail_com">
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                            alt="address">
+                                                        <p>Batangas City, Batangas</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                            alt="address">
+                                                        <p>₱22,000 – ₱25,000 per month</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_time.svg"
+                                                            alt="address">
+                                                        <p>3d ago</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                            alt="address">
+                                                        <p>Chat</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail_company">
+                                        <div class="company_info">
+                                            <a href="/">
+                                                <p class="company_info-title" style="font-size: 20px;">No Experience WFH
+                                                    ESL
+                                                    Teacher</p>
+                                            </a>
+                                            <div class="company_info-detail">
+                                                <a href="/" class="avata_com">
+                                                    <img class="img_ava" src="" alt="avatar" loading="lazy"
+                                                        decoding="async"
+                                                        onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                        width="80" height="80">
+                                                </a>
+                                                <div class="box_detail_com">
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                            alt="address">
+                                                        <p>Batangas City, Batangas</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                            alt="address">
+                                                        <p>₱22,000 – ₱25,000 per month</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_time.svg"
+                                                            alt="address">
+                                                        <p>3d ago</p>
+                                                    </div>
+                                                    <div class="box_tt">
+                                                        <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                            alt="address">
+                                                        <p>Chat</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="pagination_com" id="vlhd_pag">
+                                    <div class="show_tag show_left" style="cursor: pointer;"><img
+                                            src="/images/small-left1.svg" alt="Lùi" id="vlhd_prev"></div>
+                                    <div class="list_pag">
+                                        <div class="item_pag bg_3582CD bd_3582CD ffffff" id="vlhd_1">1</div>
+                                        <div class="item_pag" id="vlhd_2">2</div>
+                                    </div>
+                                    <div class="show_tag show_right" style="cursor: pointer;"><img
+                                            src="/images/small-right.svg" alt="Tiến" id="vlhd_next"></div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="box_wrap_right">
+                            <div class="box-chat-title">
+                                CHAT WITH EMPLOYER
+                            </div>
+                            <div class="box-chat-list">
+                                <div class="chat-item">
+                                    <a href="/" class="avata_com active">
+                                        <img class="img_ava-chat" src="" alt="avatar" loading="lazy" decoding="async"
+                                            onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                            width="80" height="80">
+                                    </a>
+                                    <div class="chat-item-tt">
+                                        <a href="">
+                                            <p>Allergan Healthcare Ph...</p>
+                                        </a>
+                                        <p style="color: rgb(0, 0, 0, 50%);">Quezon</p>
+                                    </div>
+                                </div>
+                                <div class="chat-item">
+                                    <a href="/" class="avata_com active">
+                                        <img class="img_ava-chat" src="" alt="avatar" loading="lazy" decoding="async"
+                                            onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                            width="80" height="80">
+                                    </a>
+                                    <div class="chat-item-tt">
+                                        <a href="">
+                                            <p>Allergan Healthcare Ph...</p>
+                                        </a>
+                                        <p style="color: rgb(0, 0, 0, 50%);">Quezon</p>
+                                    </div>
+                                </div>
+                                <div class="chat-item">
+                                    <a href="/" class="avata_com active">
+                                        <img class="img_ava-chat" src="" alt="avatar" loading="lazy" decoding="async"
+                                            onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                            width="80" height="80">
+                                    </a>
+                                    <div class="chat-item-tt">
+                                        <a href="">
+                                            <p>Allergan Healthcare Ph...</p>
+                                        </a>
+                                        <p style="color: rgb(0, 0, 0, 50%);">Quezon</p>
+                                    </div>
+                                </div>
+                                <div class="chat-item">
+                                    <a href="/" class="avata_com active">
+                                        <img class="img_ava-chat" src="" alt="avatar" loading="lazy" decoding="async"
+                                            onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                            width="80" height="80">
+                                    </a>
+                                    <div class="chat-item-tt">
+                                        <a href="">
+                                            <p>Allergan Healthcare Ph...</p>
+                                        </a>
+                                        <p style="color: rgb(0, 0, 0, 50%);">Quezon</p>
+                                    </div>
+                                </div>
+                                <div class="chat-item">
+                                    <a href="/" class="avata_com active">
+                                        <img class="img_ava-chat" src="" alt="avatar" loading="lazy" decoding="async"
+                                            onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                            width="80" height="80">
+                                    </a>
+                                    <div class="chat-item-tt">
+                                        <a href="">
+                                            <p>Allergan Healthcare Ph...</p>
+                                        </a>
+                                        <p style="color: rgb(0, 0, 0, 50%);">Quezon</p>
+                                    </div>
+                                </div>
+                                <div class="chat-item">
+                                    <a href="/" class="avata_com active">
+                                        <img class="img_ava-chat" src="" alt="avatar" loading="lazy" decoding="async"
+                                            onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                            width="80" height="80">
+                                    </a>
+                                    <div class="chat-item-tt">
+                                        <a href="">
+                                            <p>Allergan Healthcare Ph...</p>
+                                        </a>
+                                        <p style="color: rgb(0, 0, 0, 50%);">Quezon</p>
+                                    </div>
+                                </div>
+                                <div class="chat-item">
+                                    <a href="/" class="avata_com active">
+                                        <img class="img_ava-chat" src="" alt="avatar" loading="lazy" decoding="async"
+                                            onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                            width="80" height="80">
+                                    </a>
+                                    <div class="chat-item-tt">
+                                        <a href="">
+                                            <p>Allergan Healthcare Ph...</p>
+                                        </a>
+                                        <p style="color: rgb(0, 0, 0, 50%);">Quezon</p>
+                                    </div>
+                                </div>
+                                <div class="chat-item">
+                                    <a href="/" class="avata_com active">
+                                        <img class="img_ava-chat" src="" alt="avatar" loading="lazy" decoding="async"
+                                            onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                            width="80" height="80">
+                                    </a>
+                                    <div class="chat-item-tt">
+                                        <a href="">
+                                            <p>Allergan Healthcare Ph...</p>
+                                        </a>
+                                        <p style="color: rgb(0, 0, 0, 50%);">Quezon</p>
+                                    </div>
+                                </div>
+                                <div class="chat-item">
+                                    <a href="/" class="avata_com active">
+                                        <img class="img_ava-chat" src="" alt="avatar" loading="lazy" decoding="async"
+                                            onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                            width="80" height="80">
+                                    </a>
+                                    <div class="chat-item-tt">
+                                        <a href="">
+                                            <p>Allergan Healthcare Ph...</p>
+                                        </a>
+                                        <p style="color: rgb(0, 0, 0, 50%);">Quezon</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper_child">
+                    <div class="banner_taocv" style="position: relative;">
+                        <div class="box_banner">
+                            <div class="box_describe">
+                                <img class="img_banner2" src="/images/img/logo_footer.png" alt="logo">
+                                <h2 class="text_cvonl ffffff font28_700">APPLY FOR YOUR SUITABLE JOB</h2>
+                                <div class="dou_btn">
+                                    <button class="create_cvo">
+                                        <a href="/" style="display: flex; align-items: center; gap: 6px;">
+                                            <span class="ffffff" style="font-size: 16px;">CREATE FREE CV</span>
+                                            <div class="img_cr_cv"><img src="/images/icon/octicon_arrow-right-16.svg"
+                                                    alt="arrow-right" loading="lazy" decoding="async"></div>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; overflow: hidden; display: flex;">
+                        <img src="/images/bannercv_768.svg" alt="banner" loading="lazy" decoding="async">
+                    </div> -->
+                    </div>
+                    <!-- Recomendation job -->
+                    <div class="box_wrap">
+                        <div class="wrapper_company pt60">
+                            <div class="job_hapdan" id="tt_vllc">
+                                <img class="img_hotjob" src="/images/icon/hot_job.svg" alt="job">
+                                <h2><span class="F8971C">HOT JOBS</span></h2>
+                            </div>
+                            <div class="list_company" id="vieclamluongcao">
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination_com" id="vllc_pag">
+                                <div class="show_tag show_left" style="cursor: pointer;"><img
+                                        src="/images/icon/small-left.svg" alt="Lùi" id="vllc_prev"></div>
+                                <div class="list_pag">
+                                    <div class="item_pag bg_3582CD bd_3582CD ffffff" id="vllc_1">1</div>
+                                    <div class="item_pag" id="vllc_2">2</div>
+                                    <div class="item_pag" id="vllc_2">3</div>
+                                    <div class="show_tag show_right"><img src="/images/icon/etc.svg" alt="etc"
+                                            id="vllc_next"></div>
+                                    <div class="item_pag" id="vllc_2">10</div>
+                                </div>
+                                <div class="show_tag show_right" style="cursor: pointer;"><img
+                                        src="/images/icon/small-right.svg" alt="Tiến" id="vllc_next"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_wrap">
+                        <div class="wrapper_company pt60">
+                            <div class="job_hapdan" id="tt_vllc">
+                                <img class="img_hotjob" src="/images/icon/recomendation_job.svg" alt="job">
+                                <h2><span class="F8971C">RECOMENDATION JOBS</span></h2>
+                            </div>
+                            <div class="list_company" id="vieclamluongcao">
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail_company">
+                                    <div class="company_info">
+                                        <a href="/">
+                                            <p class="company_info-title" style="font-size: 20px;">No Experience WFH ESL
+                                                Teacher</p>
+                                        </a>
+                                        <div class="company_info-detail">
+                                            <a href="/" class="avata_com">
+                                                <img class="img_ava" src="" alt="avatar" loading="lazy" decoding="async"
+                                                    onerror="this.onerror=null; this.src='/images/img/avata_default.png';"
+                                                    width="80" height="80">
+                                            </a>
+                                            <div class="box_detail_com">
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_addr_list.svg"
+                                                        alt="address">
+                                                    <p>Batangas City, Batangas</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_salary.svg"
+                                                        alt="address">
+                                                    <p>₱22,000 – ₱25,000 per month</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_time.svg"
+                                                        alt="address">
+                                                    <p>3d ago</p>
+                                                </div>
+                                                <div class="box_tt">
+                                                    <img class="img_list" src="/images/icon/icon_chat.svg"
+                                                        alt="address">
+                                                    <p>Chat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination_com" id="vllc_pag">
+                                <div class="show_tag show_left" style="cursor: pointer;"><img
+                                        src="/images/icon/small-left.svg" alt="Lùi" id="vllc_prev"></div>
+                                <div class="list_pag">
+                                    <div class="item_pag bg_3582CD bd_3582CD ffffff" id="vllc_1">1</div>
+                                    <div class="item_pag" id="vllc_2">2</div>
+                                    <div class="item_pag" id="vllc_2">3</div>
+                                    <div class="show_tag show_right"><img src="/images/icon/etc.svg" alt="etc"
+                                            id="vllc_next"></div>
+                                    <div class="item_pag" id="vllc_2">10</div>
+                                </div>
+                                <div class="show_tag show_right" style="cursor: pointer;"><img
+                                        src="/images/icon/small-right.svg" alt="Tiến" id="vllc_next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Find your next employer -->
+                <div class="wrapper_child">
+                    <div class="box_wrap">
+                        <div class="wrapper_company pt60">
+                            <div class="job_hapdan" id="tt_vllc">
+                                <img class="img_hotjob" src="/images/icon/find_employee.svg" alt="find_employee">
+                                <h2 id="camnangtimviec">
+                                    <span class="F8971C">FIND YOUR NEXT EMPLOYER</span>
+                                </h2>
+                            </div>
+                            <div class="list_news">
+                                <div class="show_com_onl show_left" id="cntv_prev">
+                                    <img src="/images/icon/left-line.svg" alt="Lùi" loading="lazy" decoding="async">
+                                </div>
+                                <div class="many_news" id="many_news">
+                                    <div class="news_child">
+                                        <div class="news_box">
+                                            <div class="box_img img_news">
+                                                <img class="img_df" src="/images/img/avata_df.png" alt="Ahh tin tuc"
+                                                    loading="lazy" decoding="async"
+                                                    style="color: transparent; object-fit: cover;">
+                                            </div>
+                                            <div class="ct_news">
+                                                <a href="/">
+                                                    <h3 class="tt_ct_news">Sun Life Grepa Financial, Inc.
+                                                    </h3>
+                                                </a>
+                                                <div class="name">5 Jobs
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="news_child">
+                                        <div class="news_box">
+                                            <div class="box_img img_news">
+                                                <img class="img_df" src="/images/img/avata_df.png" alt="Ahh tin tuc"
+                                                    loading="lazy" decoding="async"
+                                                    style="color: transparent; object-fit: cover;">
+                                            </div>
+                                            <div class="ct_news">
+                                                <a href="/">
+                                                    <h3 class="tt_ct_news">Sun Life Grepa Financial, Inc.
+                                                    </h3>
+                                                </a>
+                                                <div class="name">5 Jobs
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="news_child">
+                                        <div class="news_box">
+                                            <div class="box_img img_news">
+                                                <img class="img_df" src="/images/img/avata_df.png" alt="Ahh tin tuc"
+                                                    loading="lazy" decoding="async"
+                                                    style="color: transparent; object-fit: cover;">
+                                            </div>
+                                            <div class="ct_news">
+                                                <a href="/">
+                                                    <h3 class="tt_ct_news">Sun Life Grepa Financial, Inc.
+                                                    </h3>
+                                                </a>
+                                                <div class="name">5 Jobs
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="news_child">
+                                        <div class="news_box">
+                                            <div class="box_img img_news">
+                                                <img class="img_df" src="/images/img/avata_df.png" alt="Ahh tin tuc"
+                                                    loading="lazy" decoding="async"
+                                                    style="color: transparent; object-fit: cover;">
+                                            </div>
+                                            <div class="ct_news">
+                                                <a href="/">
+                                                    <h3 class="tt_ct_news">Sun Life Grepa Financial, Inc.
+                                                    </h3>
+                                                </a>
+                                                <div class="name">5 Jobs
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="show_com_onl show_right" id="cntv_next">
+                                    <img src="/images/icon/right-line.svg" alt="Tiến" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EMPLOYER AND CANDIDATE SUPPORT HOTLINE -->
+                <div class="wrapper_child">
+                    <div class="box_wrap">
+                        <div class="wrapper_company pt60">
+                            <div class="empl_support">
+                                <img class="img_hotjob" src="/images/icon/bxs_phone-call.svg" alt="phone_call">
+                                <h2>
+                                    <span class="F8971C">EMPLOYER AND CANDIDATE SUPPORT HOTLINE</span>
+                                </h2>
+                            </div>
+                            <div class="list_support">
+                                <div class="hl_seeker">
+                                    <h3><span class="hl-title">Hotlinefor job seaker</span></h3>
+                                    <div class="seeker_detail">
+                                        <div class="seeker_child">
+                                            <h3><span class="hl-title">Team Hoàng Linh</span></h3>
+                                            <h3><span class="hotline">0981.208.813</span></h3>
+                                        </div>
+                                        <div class="seeker_child">
+                                            <h3><span class="hl-title">Team Ngô Dung</span></h3>
+                                            <h3><span class="hotline">0985.472.529</span></h3>
+                                        </div>
+                                    </div>
+                                    <button class="btn_hl">
+                                        <a href="/">
+                                            <h3 class="consult_for_job hl-title">Consult for job seeker</h3>
+                                        </a>
+                                    </button>
+                                </div>
+                                <div class="line_hl"></div>
+                                <div class="hl_employee">
+                                    <h3><span class="hl-title">Hotline for job employee</span></h3>
+                                    <div class="employee_detail">
+                                        <div class="employee_child">
+                                            <h3><span class="hl-title">Team Hoàng Linh</span></h3>
+                                            <h3><span class="hotline">0981.208.813</span></h3>
+                                        </div>
+                                        <div class="seeker_child">
+                                            <h3><span class="hl-title">Team Ngô Dung</span></h3>
+                                            <h3><span class="hotline">0985.472.529</span></h3>
+                                        </div>
+                                    </div>
+                                    <button class="btn_hl">
+                                        <a href="/">
+                                            <h3 class="consult_for_job hl-title">Consult for job seeker</h3>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consult_hl" style="display: none;">
+                    <button class="btn_consult-hl">
+                        <img class="img_hotjob" src="/images/icon/bxs_phone-call.svg" alt="phone">
+                        <a href="/">
+                            <h3 class="hl_nd">Hotline: 0982.079.209</h3>
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Hand book -->
+                <div class="wrapper_child">
+                    <div class="box_wrap">
+                        <div class="wrapper_company pt60">
+                            <div class="car_handbook">
+                                <h2>
+                                    <span class="F8971C">CAREER HANDBOOK</span>
+                                </h2>
+                            </div>
+                            <div class="list_handbook">
+                                <div class="handbook_child">
+                                    <div class="handbook_avt">
+                                        <img class="img_handbook" src="/images/img/avt_handbook.png" alt="avt_handbook">
+                                    </div>
+                                    <div class="handbook_box">
+                                        <a href="/">
+                                            <h3 class="title_hanbook">What is self-doubt?How to Overcome Self-Doubt at
+                                                Work</h3>
+                                        </a>
+                                        <h3 class="des_handbook">Self-doubt refers to a lack of confidence in oneself,
+                                            feeling inadequate, not good </h3>
+                                    </div>
+                                </div>
+                                <div class="handbook_child">
+                                    <div class="handbook_avt">
+                                        <img class="img_handbook" src="/images/img/avt_handbook.png" alt="avt_handbook">
+                                    </div>
+                                    <div class="handbook_box">
+                                        <a href="/">
+                                            <h3 class="title_hanbook">What is self-doubt?How to Overcome Self-Doubt at
+                                                Work</h3>
+                                        </a>
+                                        <h3 class="des_handbook">Self-doubt refers to a lack of confidence in oneself,
+                                            feeling inadequate, not good </h3>
+                                    </div>
+                                </div>
+                                <div class="handbook_child">
+                                    <div class="handbook_avt">
+                                        <img class="img_handbook" src="/images/img/avt_handbook.png" alt="avt_handbook">
+                                    </div>
+                                    <div class="handbook_box">
+                                        <a href="/">
+                                            <h3 class="title_hanbook">What is self-doubt?How to Overcome Self-Doubt at
+                                                Work</h3>
+                                        </a>
+                                        <h3 class="des_handbook">Self-doubt refers to a lack of confidence in oneself,
+                                            feeling inadequate, not good </h3>
+                                    </div>
+                                </div>
+                                <div class="handbook_child">
+                                    <div class="handbook_avt">
+                                        <img class="img_handbook" src="/images/img/avt_handbook.png" alt="avt_handbook">
+                                    </div>
+                                    <div class="handbook_box">
+                                        <a href="/">
+                                            <h3 class="title_hanbook">What is self-doubt?How to Overcome Self-Doubt at
+                                                Work</h3>
+                                        </a>
+                                        <h3 class="des_handbook">Self-doubt refers to a lack of confidence in oneself,
+                                            feeling inadequate, not good </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn_handbook">
+                                <a href="/">
+                                    <h3>See more</h3>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('Layout/footer', {}); %>
+</body>
+
+</html>
