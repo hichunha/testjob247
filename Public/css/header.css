@@ -33,13 +33,16 @@
   }
   
   .container_header {
-    position: relative;
+    font-family: "Roboto";
     background-color: #285A9B;
     padding: 16px 28px;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .1);
     border: 1px solid;
+    position: fixed;
+    width: -webkit-fill-available;
+    z-index: 10;
   }
   
   .header_left {
@@ -64,11 +67,31 @@
     display: flex;
     gap: 32px
   }
-  
-  .header_right {
-    display: flex
+  .header_right.bf-sign {
+    display: flex;
   }
-  
+/* header after sign */
+  .header_right.aft-sign{
+    gap: 20px;
+    display: none;
+  }
+  .btn_chat-365 {
+    height: auto;
+}
+.infor_user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.name_user{
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.noti_header_aft-sign {
+  cursor: pointer;
+}
+  /* end-header_aft_sign */
   .node_cate a,
   .node_cate button {
     display: block;

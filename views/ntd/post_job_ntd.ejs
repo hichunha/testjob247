@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE A JOB</title>
+    <link rel="icon" href="/images/img/img_logo.png">
+    <link rel="stylesheet" href="/css/header.css" as="style">
+    <link rel="stylesheet" href="/css/footer.css" as="style">
+    <link rel="stylesheet" href="/css/menu.css" as="style">
+    <link rel="stylesheet" href="/css/ntd/post_job_ntd.css" as="style">
+</head>
+
+<body>
+    <%- include('../Layout/header', {}); %>
+        <div class="container_content">
+            <div class="wrapper">
+                <div class="wrapper_child">
+                    <!-- infor  sp-staff -->
+                    <div class="infor_sp-staff">
+                        <div class="infor-staff">
+                            <div class="avt_sp-staff">
+                                <img src="/images/img/avt_sp-staff.png" alt="avt">
+                            </div>
+                        </div>
+                        <div class="support-info">
+                            <p>Support staff: <a href="/">Mrs. Nguyễn Hồng</a></p>
+                            <p>Phone number: <a href="/">0972319116</a></p>
+                            <p>Email: <a href="/">nguyenhongg2609@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <!-- form create job -->
+                    <div class="form-create-job">
+                        <div class="form-title">Create a job ad</div>
+                        <div class="form-content">
+                            <div class="job-form">
+                                <form>
+                                    <div id="job-tit">
+                                        <div class="title_job">
+                                            <label for="job-title">Jobtitle</label>
+                                            <span class="color-alert">*</span>
+                                        </div>
+                                        <input type="text" id="job-title"
+                                            placeholder="Enter a simple job title (e.g. Sales Assistant)" required>
+                                    </div>
+
+                                    <div id="job-location">
+                                        <div class="location_job">
+                                            <label for="location">Location</label>
+                                            <span class="color-alert">*</span>
+                                        </div>
+                                        <input type="text" id="job-location"
+                                            placeholder="Enter a suburb, city or region (e.g. Manila City Metro Manila)"
+                                            required>
+                                    </div>
+
+                                    <div class="catergory">
+                                        <div class="catergory_job">
+                                            <label for="catergory">Catergory</label>
+                                            <span class="color-alert">*</span>
+                                        </div>
+                                        <div class="category-options">
+                                            <label><input type="radio" name="category"
+                                                    value="Sales Representatives/Consultants (Sales)" required> Sales
+                                                Representatives/Consultants (Sales)</label>
+                                            <label><input type="radio" name="category"
+                                                    value="New Business Development (Sales)"> New Business Development
+                                                (Sales)</label>
+                                            <label><input type="radio" name="category"
+                                                    value="Retail Assistants (Retail & Consumer Products)"> Retail
+                                                Assistants (Retail & Consumer Products)</label>
+                                            <label><input type="radio" name="category"
+                                                    value="Choose a different category"> Choose a different
+                                                category</label>
+                                        </div>
+                                        <select class="select_category">
+                                            <option value="">Select a category</option>
+                                            <option value="category1">Category 1</option>
+                                            <option value="category2">Category 2</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="work-type">
+                                        <div class="work-type_job">
+                                            <label for="work-type">Work-type</label>
+                                            <span class="color-alert">*</span>
+                                        </div>
+                                        <div class="category-options">
+                                            <label><input type="radio" name="work-type" value="Full time" required> Full
+                                                time</label>
+                                            <label><input type="radio" name="work-type" value="Part time"> Part
+                                                time</label>
+                                            <label><input type="radio" name="work-type" value="Contract">
+                                                Contract</label>
+                                            <label><input type="radio" name="work-type" value="Casual"> Casual</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="pay-range">
+                                        <div class="pay-range_job">
+                                            <label for="pay-range">Pay range</label>
+                                            <span class="color-alert">*</span>
+                                        </div>
+                                        <input type="text" id="job-pay-range"
+                                            placeholder="Enter a range to offer candidates. If pay is an exact amount, enter the same in both fields."
+                                            required>
+                                        <div class="pay-range-select">
+                                            <div class="pay-range-currency">
+                                                <label for="currency">Currency</label>
+                                                <select id="currency">
+                                                    <option value="PHP">PHP</option>
+                                                    <option value="USD">USD</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-pay">
+                                                <label for="from-pay">From</label>
+                                                <input type="number" required>
+                                            </div>
+                                            <div class="to-pay">
+                                                <label for="to-pay">To</label>
+                                                <input type="number" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="form-title">Write about your job</div>
+                        <div class="form-content">
+                            <div class="job-des">
+                                <div class="des_job">
+                                    <label for="des_job">Job decription</label>
+                                    <span class="color-alert">*</span>
+                                </div>
+                                <textarea id="job-description" rows="15" required placeholder="- Enter your job details or let us guide you through what to write.
+                                - Let candidates know what they will be doing day-to-day?”
+                                - Add tasks & responsibilities?
+                                - Qualifications & experience
+                                - What qualifications or skills must applicants have?
+                                - How much experience (if any) do they need?
+                                - Add qualifications & experience
+                                - Benefits (optional)
+                                - There’s more to a job than just the pay. Attract candidates by letting them know what benefits you offer.
+                                - Add benefits
+                                - About the business (optional)
+                                - Candidates want to know who you are. What does your organis ation do? What makes your business special? Why is your business a great place to work?
+                                - Job summary
+                                - Write a compelling statement about your role to entice more candidates."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../Layout/footer', {}); %>
+</body>
+
+</html>

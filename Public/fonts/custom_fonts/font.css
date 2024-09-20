@@ -1,0 +1,75 @@
+@font-face {  
+	font-family: "AmaticSC Regular";  
+	src: url("/fonts/custom_fonts/AmaticSC-Regular.ttf"); /* IE */ 
+	src: local("AmaticSC-Regular"), url("/fonts/custom_fonts/AmaticSC-Regular.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "Grenze Regular";  
+	src: url("/fonts/custom_fonts/Grenze-Regular.ttf"); /* IE */ 
+	src: local("Grenze Regular"), url("/fonts/custom_fonts/Grenze-Regular.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "Pangolin Regular";  
+	src: url("/fonts/custom_fonts/Pangolin-Regular.ttf"); /* IE */  
+	src: local("Pangolin Regular"), url("/fonts/custom_fonts/Pangolin-Regular.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "DancingScript Regular";  
+	src: url("/fonts/custom_fonts/DancingScript-Regular.ttf"); /* IE */  
+	src: local("DancingScript Regular"), url("/fonts/custom_fonts/DancingScript-Regular.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "HLT Motion Picture";  
+	src: url("/fonts/custom_fonts/HLT-Motion-Picture.ttf");  /*IE*/   
+	src: local("HLT Motion Picture"), url("/fonts/custom_fonts/HLT-Motion-Picture.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "iCiel Alina";  
+	src: url("/fonts/custom_fonts/iCiel-Alina.otf"); /* IE*/   
+	src: local("iCiel Alina"), url("/fonts/custom_fonts/iCiel-Alina.otf") format("opentype");  
+}
+@font-face {  
+	font-family: "UTM IsadoraBold";  
+	src: url("/fonts/custom_fonts/UTM IsadoraBold.ttf"); /* IE*/   
+	src: local("UTM IsadoraBold"), url("/fonts/custom_fonts/UTM IsadoraBold.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "SVN-Beauford";  
+	src: url("/fonts/custom_fonts/iCiel-Alina.otf"); /* IE*/   
+	src: local("SVN-Beauford"), url("/fonts/custom_fonts/SVN-Beauford.otf") format("opentype");  
+}
+@font-face {  
+	font-family: "DancingScript-VariableFont_wght";  
+	src: url("/fonts/custom_fonts/DancingScript-VariableFont_wght.ttf"); /* IE*/   
+	src: local("DancingScript-VariableFont_wght"), url("/fonts/custom_fonts/DancingScript-VariableFont_wght.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "iCiel Grandma";  
+	src: url("/fonts/custom_fonts/iCiel Grandma.otf"); /* IE*/   
+	src: local("iCiel Grandma"), url("/fonts/custom_fonts/iCiel Grandma.otf") format("opentype");  
+}
+@font-face {  
+	font-family: "Quicksand-Regular";  
+	src: url("/fonts/custom_fonts/Quicksand-Regular.ttf"); /* IE*/   
+	src: local("Quicksand-Regular"), url("/fonts/custom_fonts/Quicksand-Regular.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "NotoSerif-Regular";  
+	src: url("/fonts/custom_fonts/NotoSerif-Regular.ttf"); /* IE*/   
+	src: local("NotoSerif-Regular"), url("/fonts/custom_fonts/NotoSerif-Regular.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "CormorantGaramond-Regular";  
+	src: url("/fonts/custom_fonts/CormorantGaramond-Regular.ttf"); /* IE*/   
+	src: local("CormorantGaramond-Regular"), url("/fonts/custom_fonts/CormorantGaramond-Regular.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "Cormorant-Regular";  
+	src: url("/fonts/custom_fonts/Cormorant-Regular.ttf"); /* IE*/   
+	src: local("Cormorant-Regular"), url("/fonts/custom_fonts/Cormorant-Regular.ttf") format("truetype");  
+}
+@font-face {  
+	font-family: "OldStandardTT-Regular";  
+	src: url("/fonts/custom_fonts/OldStandardTT-Regular.ttf"); /* IE*/   
+	src: local("OldStandardTT-Regular"), url("/fonts/custom_fonts/OldStandardTT-Regular.ttf") format("truetype");  
+}
