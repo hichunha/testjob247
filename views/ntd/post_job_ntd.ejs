@@ -32,10 +32,10 @@
                     </div>
                     <!-- form create job -->
                     <div class="form-create-job">
-                        <div class="form-title">Create a job ad</div>
                         <div class="form-content">
                             <div class="job-form">
-                                <form>
+                                <form id="job-form">
+                                    <div class="form-title">Create a job ad</div>
                                     <div id="job-tit">
                                         <div class="title_job">
                                             <label for="job-title">Jobtitle</label>
@@ -45,7 +45,7 @@
                                             placeholder="Enter a simple job title (e.g. Sales Assistant)" required>
                                     </div>
 
-                                    <div id="job-location">
+                                    <div id="job-loca">
                                         <div class="location_job">
                                             <label for="location">Location</label>
                                             <span class="color-alert">*</span>
@@ -123,30 +123,52 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="form-title">Write about your job</div>
+                                    <div class="job-des">
+                                        <div class="des_job">
+                                            <label for="des_job">Job decription</label>
+                                            <span class="color-alert">*</span>
+                                        </div>
+                                        <textarea id="job-description" rows="15" required
+                                            placeholder="- Enter your job details or let us guide you through what to write.
+                                        - Let candidates know what they will be doing day-to-day?”
+                                        - Add tasks & responsibilities?
+                                        - Qualifications & experience
+                                        - What qualifications or skills must applicants have?
+                                        - How much experience (if any) do they need?
+                                        - Add qualifications & experience
+                                        - Benefits (optional)
+                                        - There’s more to a job than just the pay. Attract candidates by letting them know what benefits you offer.
+                                        - Add benefits
+                                        - About the business (optional)
+                                        - Candidates want to know who you are. What does your organis ation do? What makes your business special? Why is your business a great place to work?
+                                        - Job summary
+                                        - Write a compelling statement about your role to entice more candidates."></textarea>
+                                    </div>
+
+                                    <div class="job-summary">
+                                        <div class="summary_job">
+                                            <label for="summary_job">Job summary</label>
+                                            <span class="color-alert">*</span>
+                                        </div>
+                                        <input type="text" id="job-summary"
+                                            placeholder="Write a compelling statement about your role to entice more candidates."
+                                            required>
+                                    </div>
+
+                                    <div class="video-opt">
+                                        <div class="video_opt">
+                                            <label for="video-opt">Video (optional)</label>
+                                        </div>
+                                        <input type="url" id="video-input"
+                                            placeholder="Add a video to your ad with a YouTube link. The video will appear at the bottom of your ad">
+                                    </div>
+
+                                    <div class="buttons">
+                                        <button type="button" class="preview-btn">Preview</button>
+                                        <button type="submit" class="post-job-btn">Post the Job</button>
+                                    </div>
                                 </form>
-                            </div>
-                        </div>
-                        <div class="form-title">Write about your job</div>
-                        <div class="form-content">
-                            <div class="job-des">
-                                <div class="des_job">
-                                    <label for="des_job">Job decription</label>
-                                    <span class="color-alert">*</span>
-                                </div>
-                                <textarea id="job-description" rows="15" required placeholder="- Enter your job details or let us guide you through what to write.
-                                - Let candidates know what they will be doing day-to-day?”
-                                - Add tasks & responsibilities?
-                                - Qualifications & experience
-                                - What qualifications or skills must applicants have?
-                                - How much experience (if any) do they need?
-                                - Add qualifications & experience
-                                - Benefits (optional)
-                                - There’s more to a job than just the pay. Attract candidates by letting them know what benefits you offer.
-                                - Add benefits
-                                - About the business (optional)
-                                - Candidates want to know who you are. What does your organis ation do? What makes your business special? Why is your business a great place to work?
-                                - Job summary
-                                - Write a compelling statement about your role to entice more candidates."></textarea>
                             </div>
                         </div>
                     </div>
@@ -154,6 +176,31 @@
             </div>
         </div>
         <%- include('../Layout/footer', {}); %>
+            <script>
+                function updatePlaceholders() {
+                    var jobSummaryInput = document.getElementById('job-summary');
+                    var videoInput = document.getElementById('video-input');
+                    var jobTitle = document.getElementById('job-title');
+                    var jobLocation = document.getElementById('job-location');
+
+                    if (window.innerWidth <= 430) {
+                        jobSummaryInput.placeholder = "Write a compelling statement about your role";
+                        videoInput.placeholder = "Add a video to your ad with a YouTube link.";
+                        jobTitle.placeholder = "Enter a simple job title";
+                        jobLocation.placeholder = "Enter a suburb, city or region";
+                    } else {
+                        jobSummaryInput.placeholder = "Write a compelling statement about your role to entice more candidates.";
+                        videoInput.placeholder = "Add a video to your ad with a YouTube link. The video will appear at the bottom of your ad";
+                        jobTitle.placeholder = "Enter a simple job title (e.g. Sales Assistant)";
+                        jobLocation.placeholder = "Enter a suburb, city or region (e.g. Manila City Metro Manila)"
+                    }
+                }
+
+                updatePlaceholders();
+
+                window.addEventListener('resize', updatePlaceholders);
+
+            </script>
 </body>
 
 </html>

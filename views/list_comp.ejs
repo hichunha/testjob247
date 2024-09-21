@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIST COMPANIES</title>
+    <link rel="icon" href="/images/img/img_logo.png">
+    <link rel="stylesheet" href="/css/header.css" as="style">
+    <link rel="stylesheet" href="/css/footer.css" as="style">
+    <link rel="stylesheet" href="/css/menu.css" as="style">
+    <link rel="stylesheet" href="/css/list_comp.css" as="style">
+</head>
+
+<body>
+    <%- include('Layout/header', {}); %>
+        <div class="container_content">
+            <div class="wrapper">
+                <div class="wrapper_child">
+                    <div class="search-form">
+                        <div class="search-list">
+                            <div class="search-job-opportunity">
+                                <span>
+                                    <img src="/images/icon/search_job_opp.svg" alt="search-job-opportunity">
+                                </span>
+                                <input id="search-job-opportunity" type="text" placeholder="Looking for job opportunities">
+                            </div>
+                            <div class="dropdown location-dropdown">
+                                <span class="icon">
+                                    <img src="/images/icon/location_search_comp.svg" alt="location-dropdown">
+                                </span>
+                                <span class="text">Location</span>
+                                <span class="arrow">
+                                    <img src="/images/icon/Arrow-Down.svg" alt="down" width="24" height="24">
+                                </span>
+                            </div>
+                    
+                            <div class="dropdown industry-dropdown">
+                                <span class="icon">
+                                    <img src="/images/icon/insutry.svg" alt="insutry">
+                                </span>
+                                <span class="text">All industries</span>
+                                <span class="arrow">
+                                    <img src="/images/icon/Arrow-Down.svg" alt="down" width="24" height="24">
+                                </span>
+                            </div>
+                    
+                            <button class="search-btn">Search</button>
+                    
+                            <button class="filter-btn">Advanced Filtering</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <%- include('Layout/footer', {}); %>
+</body>
+
+</html>

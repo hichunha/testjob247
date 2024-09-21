@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'Public')));
 
 // Tạo route để render file EJS
 app.get('/', (req, res) => {
-    res.render('ntd/post_job_ntd');
+    res.render('list_comp');
 });
 
 
