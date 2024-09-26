@@ -1,0 +1,53 @@
+.head-right #cv-boxtitle {
+	font-size: 16px;
+}
+
+.head #cvo-experience-blocktitle {
+	font-size: 16px;
+}
+
+#cv-main .box-content {
+	font-size: 13px;
+}
+
+#cv-main .box-content * {
+	font-size: 13px;
+}
+
+#cv-content h3 .exp-title,
+.exp-title {
+	font-size: 13px;
+}
+
+#cv-content .exp-date {
+	font-size: 13px;
+}
+
+#cv-content .exp-subtitle {
+	font-size: 13px;
+}
+
+#cv-content .exp-content {
+	font-size: 13px;
+}
+
+#cv-content .exp-content * {
+	font-size: 13px;
+}
+
+#box-content span {
+	font-size: 13px;
+}
+
+.skill-name {
+	font-size: 13px;
+}
+
+#cv-content span {
+	font-size: 13px;
+}
+
+.exp-title *,
+.skill-name * {
+	font-size: 13px;
+}

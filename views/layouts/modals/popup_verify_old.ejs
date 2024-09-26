@@ -1,0 +1,165 @@
+<% if(DataAccount.type==2 && DataAccount.data.us_active == 0){ %>
+    <link rel="stylesheet" href="/css/modals/modal_active_account.css?v=<% data.version %>" />
+    <div id="m_formxacthuc" style="<%= (DataAccount.data.active_account == '') ? '' : 'display:none' %>">
+        <div class="container_xacthuc">
+            <div class="header_xacthuc">
+                <div class="main_header_xacthuc">
+                    <p class="title_xacthuc">Bạn chưa xác thực tài khoản</p>
+                    <img src="/images/modals/close_white.png" width="25px" height="25px" alt="close" class="icon_close cursor_pt">
+                </div>
+            </div>
+            <div class="content_xacthuc">
+                <p id="show_account_confirm">(Mã OTP được Topcvvn gửi về <%= "số điện thoại" %>: <span class="blue"><%= DataAccount.data.us_account %></span>)</p>
+                <input type="hidden" class="us_sdt" value="<%= DataAccount.data.us_account %>">
+                <input type="hidden" class="us_id" value="<%= DataAccount.data.us_id %>">
+                <div class="box_xacthuc">
+                    <div class="box_xacnhan_otp">
+                        <button type="button" id="btn_confirm_xn" class="btn_xt_general cursor_pt">Xác thực</button>
+                    </div>
+                    <div class="ctn_reg_xnhan d_none">
+                        <div class="ctn_xn_nr">
+                            <div id="recaptcha-container"></div>
+                            <div class="btn_xacnhan_nrbot">
+                                <p class="btn_regist_buy btn_guima_sdt btn_xt_general cursor_pt" onclick="phoneAuth()">Xác thực</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ctn_login_two d_none"></div>
+                    <div class="guilai d_none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script>
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Tính thời gian hết hạn
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+        $(document).on("click", ".icon_close", function () {
+            $("#m_formxacthuc").hide();
+            setCookie("active_account", "1", 1);
+        });
+        
+        $("#btn_confirm_xn").click(async function () {
+            $(this).hide();
+            $(".ctn_reg_xnhan").show();
+            let response = await axios.post('http://43.239.223.188:3070/api/Topcv247/user/getConfigFirebase', {});
+            let responses = response.data;
+            if (responses && responses.data && responses.data.result && responses.data.config.config) {
+                firebaseConfig = responses.data.config.config;
+                firebase.initializeApp(firebaseConfig);
+                render();
+                const myTimeout = setTimeout(() => {
+                    $('.btn_guima_sdt').show();
+                }, 2000);
+            }
+        })
+
+        function render() {
+            try {
+                window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+                recaptchaVerifier.render();
+            } catch (e) {
+                console.log(e)
+            }
+        };
+
+        const phoneAuth = async () => {
+            try {
+                var html_otp = `<input id="partitioned" maxlength="6" name="ma_otp" />
+            <div class="btn_xacnhan_nrbot">
+                <p id="successForgot1" class="btn_regist_buy btn_guima_sdt ip_active btn_xt_general input_login cursor_pt" onclick="codeverify()">Xác thực</p>
+            </div>`;
+                $(".ctn_login_two").html(html_otp);
+                let number1 = $(".us_sdt").val();
+                number = '+84' + number1;
+                var xn = 2;
+                var pass = '';
+                firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
+                    window.confirmationResult = confirmationResult;
+                    coderesult = confirmationResult;
+                    var user = {
+                        phone: number,
+                        pass: pass,
+                    };
+                    window.localStorage.setItem('user', JSON.stringify(user));
+                    $(".ctn_login_two").show();
+                    gui_lai_otpuv();
+                    $(".ctn_reg_xnhan").hide();
+                });
+            } catch (e) {
+                console.log(e);
+            }
+        };
+
+        const codeverify = () => {
+            let sdt = $(".us_sdt").val();
+            var code = $("#partitioned").val();
+            if (code != '') {
+                coderesult.confirm(code).then(async () => {
+                    $.ajax({
+                        url: '/AuthenAccount',
+                        type: 'POST',
+                        data: {
+                            sdt: sdt,
+                            type: 2,
+                            otp: code,
+                        },
+                        dataType:"JSON",
+                        success: function (data) {
+                            if (data.result) {
+                                alert(data.message);
+                                window.location.href = '/';
+                            } else {
+                                alert(data.message);
+                            }
+                        }
+                    })
+                }).catch(function (e) {
+                    console.log(e);
+                    alert("Mã xác thực không chính xác");
+                })
+            } else {
+                alert("Nhập mã xác thực");
+            }
+        };
+
+        async function resent_otp(obj) {
+            $(".ctn_login_two").hide().html("");
+            $(".guilai").hide().html("");
+            $(".ctn_reg_xnhan").show();
+            let response = await axios.post('http://43.239.223.188:3070/api/Topcv247/user/getConfigFirebase', {});
+            console.log(response);
+            let responses = response.data;
+            if (responses && responses.data && responses.data.result && responses.data.config.config) {
+                firebaseConfig = responses.data.config.config;
+                firebase.initializeApp(firebaseConfig);
+                render();
+                const myTimeout = setTimeout(() => {
+                    $('.btn_guima_sdt').show();
+                }, 2000);
+            }
+        }
+
+        function gui_lai_otpuv() {
+            var html = `<button id="resent">Gửi lại <span class="so_giay" style="color:red;  font-weight: 600;">60</span><span class="don_vi" style="color:red;  font-weight: 600;">s</span></button>`;
+            $(".guilai").html(html);
+            $(".guilai").show();
+            var sec = $(".guilai .so_giay").text();
+            var timer = setInterval(function () {
+                $('.so_giay').text(--sec);
+                if (sec == 0) {
+                    $('.so_giay').text('');
+                    $('.don_vi').text('');
+                    clearInterval(timer);
+                    var html1 = `<button id="resent" onclick="resent_otp(this)">Gửi lại</button>`;
+                    $(".guilai").html(html1);
+                }
+            }, 1000);
+        }
+    </script>
+<% } %>

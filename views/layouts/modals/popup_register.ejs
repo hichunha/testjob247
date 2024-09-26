@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="/css/modals/popup_register.css" type="text/css">
+<div id="register_candidate" class="popup_register">
+    <div class="container_register">
+        <div class="register_header">
+            <div class="txt_rgt_hd font_s16 font_w500 line_h24">Đăng Ký</div>
+            <img width="19px" height="19px" class="close_popup_register cursor_pt" src="/images/modals/close_popup.png" alt="icon">
+        </div>
+        <div class="register_content">
+            <div class="header_register_content">
+                <p class="title_register_content font_s17 font_w600 line_h24 color_451da0">Đăng ký ứng viên</p>
+                <p class="txt_register_content font_s15 font_w500 line_h18">Đăng ký Topcvvn, cơ hội việc làm rộng mở</p>
+            </div>
+            <div class="content_register_content">
+                <div class="form-controll">
+                    <div class="form-input">
+                        <p class="form-text font_s16 font_w500 line_h18">Tài khoản <span class="cl_red">*</span></p>
+                        <input type="text" id="account" placeholder="Vui lòng nhập email tài khoản" class="input-controll">
+                        <img width="24px" height="24px" class="icon_popres" src="/images/modals/account.png" alt="icon">
+                    </div>
+                    <div class="form-input">
+                        <p class="form-text font_s16 font_w500 line_h18">Số điện thoại liên hệ <span class="cl_red">*</span></p>
+                        <input type="text" id="phone_lh" autocomplete="off" placeholder="Nhập số điện thoại liên hệ của bạn" class="input-controll" disabled>
+                        <img width="24px" height="24px" class="icon_popres" src="/images/modals/phone.png" alt="icon">
+                    </div>
+                </div>
+                <div class="form-controll">
+                    <div class="form-input">
+                        <p class="form-text font_s16 font_w500 line_h18">Mật khẩu <span class="cl_red">*</span></p>
+                        <div class="form_regis_pass">
+                            <img width="24px" height="24px" class="icon_popres_pass" src="/images/modals/password.png" alt="icon">
+                            <input type="password" id="newpassword" placeholder="Vui lòng nhập mật khẩu" class="input-controll">
+                            <img width="24px" height="24px" class="icon_showhide_passres" src="/images/modals/eye-close.png" alt="icon" onclick="showhidepass(this)" data="1">
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <p class="form-text font_s16 font_w500 line_h18">Nhập lại mật khẩu <span class="cl_red">*</span></p>
+                        <div class="form_regis_pass">
+                            <img width="24px" height="24px" class="icon_popres_pass" src="/images/modals/password.png" alt="icon">
+                            <input type="password" id="confirmnewpass" placeholder="Vui lòng nhập lại mật khẩu" class="input-controll">
+                            <img width="24px" height="24px" class="icon_showhide_passres" src="/images/modals/eye-close.png" onclick="showhidepass(this)" data="1" alt="icon">
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="form-controll">
+                    <div class="form-input form_user_name">
+                        <p class="form-text font_s16 font_w500 line_h18">Họ và tên <span class="cl_red">*</span></p>
+                        <input type="text" id="hoten_uv" autocomplete="off" placeholder="Vui lòng nhập họ tên" class="input-controll" disabled>
+                        <img width="24px" height="24px" class="icon_popres" src="/images/modals/name.png" alt="icon">
+                    </div>
+                </div>
+                <div class="form-controll">
+                    <div class="form-input">
+                        <p class="form-text font_s16 font_w500 line_h18">Vị trí mong muốn <span class="cl_red">*</span></p>
+                        <input type="text" id="cv_title" placeholder="Ví dụ: nhân viên kinh doanh,..." class="input-controll" disabled>
+                        <img width="24px" height="24px" class="icon_popres" src="/images/modals/job.png" alt="icon">
+                    </div>
+                    <div class="form-select nganh_nghe">
+                        <p class="font_w700 font_s16 line_h18">Ngành nghề <span class="cl_red">*</span></p>
+                        <select multiple="" name="use_nganh_nghe[]" id="use_nganh_nghe">
+                            <option value="">Chọn ngành nghề làm việc</option>
+                            <% objectregisteruv.cate_array.forEach((element,key)=> { %>
+                                <option value="<%= element.cat_user_id  %>">
+                                    <%= element.cat_user_name %>
+                                </option>
+                                <% }); %>
+                        </select>
+                        <div class="box-append-usenganhnghe"></div>
+                    </div>
+                </div>
+                <div class="form-controll">
+                    <div class="city_job form-select">
+                        <p class="font_s16 font_w500 line_h18">Tỉnh thành làm việc <span class="cl_red">*</span></p>
+                        <select multiple="" name="use_city_job[]" id="use_city_job">
+                            <option value="">Chọn tỉnh thành làm việc</option>
+                            <% objectregisteruv.city_array.forEach((element,key)=> { %>
+                                <option value="<%= element.cit_id  %>">
+                                    <%= element.cit_name %>
+                                </option>
+                                <% }); %>
+                        </select>
+                        <div class="box-append-cityjob"></div>
+                    </div>
+                    <div class="district_job form-select">
+                        <p class="font_s16 font_w500 line_h18">Quận huyện làm việc <span class="cl_red">*</span></p>
+                        <select multiple="" name="use_district_job[]" id="use_district_job">
+                            <option value="">Chọn quận huyện làm việc</option>
+                        </select>
+                        <div class="box-append-districtjob"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="register_footer">
+            <div class="button_regis">
+                <div class="registeruvcv">Đăng ký</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/javascript/modals/register_popup.js" defer></script>

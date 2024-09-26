@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Xem trước Cv PDF</title>
+    <%- include('layouts/common_library.ejs'); %>
+        <link rel="stylesheet" href="/css/csscv/create.css?v=<%= version %>" type="text/css">
+        <link rel="stylesheet" href="/css/csscv/cv_create.css?v=<%= version %>" type="text/css">
+</head>
+<body>
+    <style>
+        .content-main-cv {
+            margin-top: 0px;
+        }
+
+        #page-cv {
+            margin-top: 0px;
+        }
+
+        .cvo-block:hover {
+            box-shadow: unset;
+        }
+
+        .cvo-block:hover .blockControls {
+            display: none;
+        }
+
+        .ctbx:hover .fieldgroup_controls {
+            display: none;
+        }
+
+        .ctbx:hover .fieldgroup_controls {
+            display: none !important;
+        }
+
+        .ctbx:hover {
+            box-shadow: unset !important;
+        }
+
+        .cv_page {
+            box-shadow: unset;
+            border: unset;
+            margin-bottom: 0px;
+        }
+        
+    </style>
+    <div id="m_cv">
+        <div class="content-main-cv page_cv">
+            <%- include(`maucv/${aliasCv}/index`); %>
+        </div>
+    </div>
+    <script>
+        var data_box = [],
+            data_block = [],
+            box,
+            block,
+            arr_content;
+        <% for (const [key, m] of Object.entries(menu_html_default)) { %>
+            <% if (m.id === "box03") { %>
+                arr_content =[];
+                <% for (const skill of m.content) { %>
+                    arr_content.push({
+                        name: `<%- skill.name %>`,
+                        exp: `<%- skill.exp %>`
+                    });
+                <% } %>
+                    box = {
+                    id: `<%= m.id %>`,
+                        content: arr_content
+                };
+            <% } else { %>
+                box = {
+                    id: `<%= m.id %>`,
+                        content: `<%- m.type !== 'profile' ? m.content : '' %>`
+                };
+            <% } %>
+                data_box.push(box);
+        <% } %>
+        <% for (const [key, b] of Object.entries(block_html_default)) { %>
+            arr_content =[];
+            <% for (const block_content of b.content) { %>
+                arr_content.push({
+                    title: `<%- block_content.title %>`,
+                    subtitle: `<%- block_content.subtitle %>`,
+                    content: `<%- block_content.content %>`
+                });
+            <% } %>
+                block = {
+                id: `<%= b.id %>`,
+                    content: arr_content
+            };
+            data_block.push(block);
+        <% } %>
+    </script>
+    <script src="/javascript/jscv/html2canvas.js"></script>
+    <script src="/javascript/jscv/cropper.js" type="text/javascript"></script>
+    <script src="/javascript/jscv/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/javascript/jscv/functioncv.js"></script>
+    <script src="/javascript/jscv/cv_new_all.js"></script>
+    <script src="/javascript/jscv/create_cv.js" defer></script>
+</body>
+
+</html>

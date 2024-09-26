@@ -1,0 +1,156 @@
+<% if(DataAccount.type==2 && DataAccount.data.us_active==0){ %>
+    <link rel="stylesheet" href="/css/modals/modal_active_account.css?v=<% data.version %>" />
+    <div id="m_formxacthuc" style="<%= (DataAccount.data.active_account == '') ? '' : 'display:none' %>">
+        <div class="container_xacthuc">
+            <div class="header_xacthuc">
+                <div class="main_header_xacthuc">
+                    <p class="title_xacthuc">Bạn chưa xác thực tài khoản</p>
+                    <img src="/images/modals/close_white.png" width="25px" height="25px" alt="close"
+                        class="icon_close cursor_pt">
+                </div>
+            </div>
+            <div class="content_xacthuc">
+                <p id="show_account_confirm">(Mã OTP được Topcvvn gửi về <%= (DataAccount.data.emailTK && DataAccount.data.emailTK != "") ? "email" : "số điện thoại" %>: <span class="blue"><%= (DataAccount.data.emailTK && DataAccount.data.emailTK != "") ? DataAccount.data.emailTK : DataAccount.data.phoneTK %></span>)</p>
+                <input type="hidden" class="us_account" value="<%= (DataAccount.data.emailTK && DataAccount.data.emailTK != "") ? DataAccount.data.emailTK : DataAccount.data.phoneTK %>">
+                <input type="hidden" class="us_id" value="<%= DataAccount.data.us_id %>">
+                <div class="box_xacthuc">
+                    <div class="box_xacnhan_otp">
+                        <button type="button" id="btn_confirm_xn" class="btn_xt_general cursor_pt">Xác thực</button>
+                    </div>
+                    <div class="ctn_reg_xnhan d_none">
+                        <div class="ctn_xn_nr">
+                            <div id="recaptcha-container"></div>
+                            <div class="btn_xacnhan_nrbot">
+                                <p class="btn_regist_buy btn_guima_sdt btn_xt_general cursor_pt" onclick="phoneAuth()">Xác thực</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ctn_login_two d_none"></div>
+                    <div class="guilai d_none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function generateRandomNumber() {
+            return Math.floor(Math.random() * (999999 - 111111 + 1)) + 111111;
+        }
+
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Tính thời gian hết hạn
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        $(document).on("click", ".icon_close", function () {
+            $("#m_formxacthuc").hide();
+            setCookie("active_account", "1", 1);
+        });
+
+        $("#btn_confirm_xn").click(function () {
+            let account = $(".us_account").val();
+            let thiss = $(this);
+            if (account) {
+                $("#loader").show();
+                $.ajax({
+                    type: "POST",
+                    url: "/SendOTPToAccount",
+                    data: {
+                        account: account,
+                        type: 2,//bằng 2 là ứng viên
+                    },
+                    dataType: "JSON",
+                    success: function (data) {
+                        $("#loader").hide();
+                        if (data && data.result) {
+                            alert(data.message);
+                            thiss.parents(".box_xacnhan_otp").hide();
+                            $(".ctn_reg_xnhan").hide();
+                            var html_otp = `<input id="partitioned" maxlength="6" name="ma_otp" />
+                            <div class="btn_xacnhan_nrbot">
+                                <p id="successForgot1" class="btn_regist_buy btn_guima_sdt ip_active btn_xt_general input_login cursor_pt" onclick="codeverify()">Xác thực</p>
+                            </div>`;
+                            $(".ctn_login_two").html(html_otp);
+                            $(".ctn_login_two").show();
+                            gui_lai_otpuv();
+                        } else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+        });
+
+        const codeverify = () => {
+            let account = $(".us_account").val();
+            var code = $("#partitioned").val();
+            if (code != '') {
+                $.ajax({
+                    url: '/ConfirmOTPByAccount',
+                    type: 'POST',
+                    data: {
+                        account: account,
+                        type: 2,
+                        otp: code,
+                    },
+                    dataType: "JSON",
+                    success: function (data) {
+                        console.log(data);
+                        if (data.result) {
+                            alert(data.message);
+                            location.reload();
+                        } else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            } else {
+                alert("Nhập mã xác thực");
+            }
+        };
+
+        function resent_otp(e) {
+            let account = $(".us_account").val();
+            let thiss = $(e);
+            if (account) {
+                $("#loader").show();
+                $.ajax({
+                    type: "POST",
+                    url: "/SendOTPToAccount",
+                    data: {
+                        account: account,
+                        type: 2,//bằng 2 là ứng viên
+                    },
+                    dataType: "JSON",
+                    success: function (data) {
+                        $("#loader").hide();
+                        if (data && data.result) {
+                            alert(data.message);
+                            gui_lai_otpuv();
+                        } else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+        }
+
+        function gui_lai_otpuv() {
+            var html = `<button id="resent">Gửi lại <span class="so_giay" style="color:red;  font-weight: 600;">60</span><span class="don_vi" style="color:red;  font-weight: 600;">s</span></button>`;
+            $(".guilai").html(html);
+            $(".guilai").show();
+            var sec = $(".guilai .so_giay").text();
+            var timer = setInterval(function () {
+                $('.so_giay').text(--sec);
+                if (sec == 0) {
+                    $('.so_giay').text('');
+                    $('.don_vi').text('');
+                    clearInterval(timer);
+                    var html1 = `<button id="resent" onclick="resent_otp(this)">Gửi lại</button>`;
+                    $(".guilai").html(html1);
+                }
+            }, 1000);
+        }
+    </script>
+    <% } %>

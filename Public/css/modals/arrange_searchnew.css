@@ -1,0 +1,130 @@
+/*PHẦN LỌC TIN PAGE TÌM KIẾM*/
+.box_filtersort_new {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.box_filtersort_new_pc {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: start;
+}
+
+.box_filtersort_new_mb {
+    display: none;
+    background: #FFF;
+}
+
+.boxlst_filtersort {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.item_filtersort {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title_filtersort,
+.txt_filtersort {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.val_filtersort {
+    width: 20px;
+    height: 20px;
+    accent-color: #23527c;
+}
+
+.box_filtersort_new_mb .select2-container--default .select2-selection--single {
+    border-radius: 5px !important;
+    border: 1px solid hsl(0, 0%, 0%) !important;
+    background: #FFF;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    min-height: 28px;
+    gap: 5px;
+}
+
+.box_filtersort_new_mb .select2-container--default .select2-selection--single::before {
+    content: 'Lọc theo:';
+    float: left;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    background: url(/images/Filter.svg) no-repeat;
+    height: unset !important;
+    padding-left: 32px;
+    background-position: left center;
+    width: fit-content;
+}
+
+.box_filtersort_new_mb .select2-container--default .select2-selection--single::before {
+    height: 28px !important;
+    display: flex;
+    align-items: center;
+}
+
+.cusor_pt {
+    cursor: pointer;
+}
+
+.item_filtersort input[type="radio"] {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.val_filtersort {
+    border: 1px solid #23527c;
+    -webkit-appearance: none;
+}
+
+.val_filtersort:checked {
+    border-color: #451da0 !important;
+    background-color: #451da0;
+}
+
+.val_filtersort:checked::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 11px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: 6px;
+    margin-top: 1px;
+}
+
+.box_filtersort_new_mb .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100%;
+    top: 0;
+}
+
+.box_filtersort_new_mb .select2-container {
+    max-width: 100%;
+    width: 100% !important;
+}
+
+@media screen and (max-width:768px) {
+    .box_filtersort_new_pc {
+        display: none;
+    }
+
+    .box_filtersort_new_mb {
+        display: flex;
+        min-height: 40px;
+    }
+}
+
+/*END PHẦN LỌC TIN PAGE TÌM KIẾM*/

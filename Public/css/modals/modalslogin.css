@@ -1,0 +1,181 @@
+#popup_login_candidate,
+#popup_login_company {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #00000030;
+    z-index: 8;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    display: none;
+    backdrop-filter: blur(20px);
+}
+
+.icon_close_popup_login {
+    cursor: pointer;
+}
+
+.container_login_general {
+    max-width: 500px;
+    width: 100%;
+    background: #FFF;
+    border-radius: 10px;
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #fff;
+    transition: all 0.5s ease;
+}
+
+.header_login_general {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.title_header_general {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.content_login_general {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.item_box_input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.box_input_content_login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.frame_input_login_general {
+    width: 100%;
+    position: relative;
+}
+
+.icon_person,
+.icon_passwordd {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+input.input_login_general {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px 35px;
+    border-radius: 10px;
+    font-size: 15px;
+    height: 40px;
+}
+
+.title_content_login_general {
+    font-weight: 600;
+    font-size: 18px;
+    color: #451da0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.txt_content_login_general {
+    font-size: 15px;
+    color: #707070;
+    font-weight: 500;
+    text-align: center;
+}
+
+.icon_eve_close,
+.icon_eve_open {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.txt_input_login {
+    font-weight: 500;
+    width: 100%;
+}
+
+.button_login_general {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_button {
+    padding: 8px 10px;
+    background: #451da0;
+    border-radius: 10px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.txt_navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_login_general {
+    width: 100%;
+    padding: 5px 20px 20px;
+}
+
+.item_navigation_dk {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.item_navigation_qmk {
+    font-weight: 500;
+    color: #451da0;
+    font-size: 15px;
+}
+
+.span_dkn {
+    color: red;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+:is(#popup_login_candidate, #popup_login_company) .error {
+    font-size: 15px;
+    padding-top: 5px;
+    font-weight: 500;
+    color: red;
+    width: 100%;
+    float: left;
+}
+
+#inforaccount_error {
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width:500px) {
+    .txt_navigation {
+        flex-direction: column;
+    }
+}

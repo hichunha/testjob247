@@ -1,0 +1,193 @@
+<link rel="stylesheet" href="/maucv/<%- aliasCv %>/css/cv.css?v=<%- version %>" type="text/css">
+<link id="cv-color-css" rel="stylesheet" href="/maucv/<%- aliasCv %>/css/colors/<%- data_cv.color_active %>.css?v=<%- version %>" type="text/css">
+<link id="cv-font" rel="stylesheet" href="/maucv/<%- aliasCv %>/css/fonts/<%- data_cv.font_active %>.css?v=<%- version %>" type="text/css">
+<link id="cv-font-size" rel="stylesheet" href="/maucv/<%- aliasCv %>/css/font-size/<%- data_cv.font_size_active %>.css?v=<%- version %>" type="text/css">
+<link id="cv-cpacing-css" rel="stylesheet" href="/maucv/<%- aliasCv %>/css/font-spacing/<%- data_cv.font_spacing_active %>.css?v=<%- version %>" type="text/css">
+<div class="box_cv" id="page-cv">
+  <div id="form-cv">
+    <div id="cv-top">
+      <div id="cvo-profile">
+        <div class="box-01">
+          <div id="anh">
+            <div id="cvo-profile-avatar-wraper">
+              <div id="border_img">
+                <img id="cvo-profile-avatar" cvo-form-field="true" src="<%- data_uv.avatar %>" alt="avatar">
+              </div>
+            </div>
+            <div class="fake-img">
+              <img class="background_avt" src="" alt="">
+            </div>
+          </div>
+          <div id="chu">
+            <div id="box-hvt">
+              <h1><span id="cv-profile-fullname" cvo-placeholder="<%- placeholders.holder_name %>" contenteditable="true"><% if (typeof data_uv.fullnamess !== 'undefined') { %>
+                  <%- data_uv.fullnamess %>
+                <% } else if (typeof data_uv.namefull !== 'undefined') { %>
+                  <%- data_uv.namefull %>
+                <% } else if (typeof data_uv.fullname !== 'undefined') { %>
+                  <%- data_uv.fullname %>
+                <% } %></span></h1>
+              <h2><span id="cv-profile-job" contenteditable="true" cvo-placeholder="<%- placeholders.holder_job %>"><%- data_uv.position ? data_uv.position : '' %></span></h2>
+            </div>
+          </div>
+          <% menu_html.forEach(function(m, index) {
+            if (m.type === "profile") { %>
+              <div id="<%- m.id %>" class="<%- m.class %>" <%- m.status === 'hide' ? 'style="display:none"' : '' %>>
+                <div class="about">
+                  <div id="cv-contact" cv-form-field="true" contenteditable="true" cvo-placeholder="Tiêu đề" class="contact-01">THÔNG TIN LIÊN HỆ</div>
+                </div>
+                <div id="prof">
+                  <div class="ic iconsex">
+                    <div class="icoweb icoweb-sex"></div>
+                    <span id="cv-profile-sex" class="span-icoweb" cvo-placeholder="<%- placeholders.holder_sex %>" contenteditable="true"><%- data_uv.sex || m.content.sex %></span>
+                  </div>
+                  <div class="ic iconbirth">
+                    <div class="icoweb icoweb-birthday"></div>
+                    <span id="cv-profile-birthday" class="span-icoweb" cvo-placeholder="<%- placeholders.holder_birthday %>" contenteditable="true"><%- data_uv.birthday || m.content.birthday %></span>
+                  </div>
+                  <div class="ic iconphone">
+                    <div class="icoweb icoweb-phone"></div>
+                    <span id="cv-profile-phone" class="span-icoweb" cvo-placeholder="<%- placeholders.holder_phone %>" contenteditable="true"><%- data_uv.phone || m.content.phone %></span>
+                  </div>
+                  <div class="ic iconemail">
+                    <div class="icoweb icoweb-email"></div>
+                    <span id="cv-profile-email" class="span-icoweb" cvo-placeholder="<%- placeholders.holder_email %>" contenteditable="true"><%- data_uv.email || m.content.email %></span>
+                  </div>
+                  <div class="ic iconaddress">
+                    <div class="icoweb icoweb-address"></div>
+                    <span id="cv-profile-address" class="span-icoweb" cvo-placeholder="<%- placeholders.holder_address %>" contenteditable="true"><%- data_uv.address || m.content.address %></span>
+                  </div>
+                </div>
+                <div class="clr"></div>
+                <div class="clr"></div>
+              </div>
+            <% }
+          }); %>
+          <div class="clr"></div>
+        </div>
+      </div>
+    </div>
+    <div class="all">
+      <div id="cv-main">
+        <div id="cv-right">
+          <div class="ir">
+            <div id="sortable">
+              <% if (menu_html.length > 0) {
+                menu_html.forEach((m, index) => { %>
+                  <div id="<%- m.id %>" class="<%- m.class %>" <%- m.status === 'hide' ? 'style="display:none"' : '' %>>
+                    <% if (m.type === "profile") { %>
+                      <div class="blockControls">
+                        <div title="Di chuyển khối" class="show-layout-editor"><i class="fa fa-bars"></i></div>
+                        <div title="Chuyển mục này lên trên" class="up">▲</div>
+                        <div title="Chuyển mục này xuống dưới" class="down">▼</div>
+                        <div title="Ẩn mục này" class="an-muc"> <i class="fa fa-minus"></i> Ẩn</div>
+                      </div>
+                    <% } else if (m.type === "skill") { %>
+                      <div class="blockControls">
+                        <div title="Di chuyển khối" class="show-layout-editor"><i class="fa fa-bars"></i></div>
+                        <div title="Chuyển mục này lên trên" class="up">▲</div>
+                        <div title="Chuyển mục này xuống dưới" class="down">▼</div>
+                        <div title="Ẩn mục này" class="an-muc"> <i class="fa fa-minus"></i> Ẩn</div>
+                      </div>
+                      <div class="head-right">
+                        <div class="ic<%- index + 1 %>"></div>
+                        <div class="titlecv titlecv_<%- m.id %>">
+                          <div id="cv-boxtitle" cv-form-field="true" contenteditable="true" cvo-placeholder="<%- placeholders.holder_box_title %>" class="box-title boxtitle_<%- m.id %>"><%- m.title %></div>
+                        </div>
+                      </div>
+                      <div class="exp content-edit skill">
+                        <% m.content.forEach(function(k) { %>
+                          <div class="ctbx">
+                            <div class="fieldgroup_controls">
+                              <div class="clone" title="Thêm"><i class="fa fa-plus"></i><%- placeholders.holder_tool_add %></div>
+                              <div class="edit js-edit-content" title="Sửa"><i class="fa fa-edit"></i><%- placeholders.holder_tool_edit %></div>
+                              <div class="remove" title="Xóa"><i class="fa fa-minus"></i><%- placeholders.holder_tool_del %></div>
+                            </div>
+                            <p class="skill-name" cv-form-field="true" cvo-placeholder="<%- placeholders.holder_skill %>" contenteditable="true"><%- k.name %></p>
+                            <div class="bar-exp">
+                              <% let styleExp = `width: ${k.exp}%`;
+                                if (k.exp < 10) {
+                                    styleExp += '; display: none;';
+                              } %>
+                            <div style="<%- styleExp %>"></div>
+                            </div>
+                            <div class="bar-value-exp">
+                              <input min="0" max="100" type="number" value="<%- k.exp %>">
+                            </div>
+                            <div class="exp-fake"></div>
+                          </div>
+                        <% }); %>
+                        <div class="clr"></div>
+                      </div>
+                    <% } else { %>
+                      <div class="blockControls">
+                        <div title="Di chuyển khối" class="show-layout-editor"><i class="fa fa-bars"></i></div>
+                        <div title="Chuyển mục này lên trên" class="up">▲</div>
+                        <div title="Chuyển mục này xuống dưới" class="down">▼</div>
+                        <div title="Ẩn mục này" class="an-muc"> <i class="fa fa-minus"></i> Ẩn</div>
+                      </div>
+                      <div class="head-right">
+                        <div class="ic<%- index + 1 %>"></div>
+                        <div class="titlecv titlecv_<%- m.id %>">
+                          <div id="cv-boxtitle" cv-form-field="true" contenteditable="true" cvo-placeholder="<%- placeholders.holder_box_title %>" class="box-title boxtitle_<%- m.id %>"><%- m.title %></div>
+                        </div>
+                      </div>
+                      <div id="box-content">
+                        <div class="box-content" cvo-placeholder="<%- placeholders.holder_box_content %>" contenteditable="true"><%- m.content %></div>
+                      </div>
+                    <% } %>
+                  </div>
+                <% });
+              } %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cv-content">
+        <div class="ir" id="sort_block">
+          <% if (block_html.length > 0) {
+            block_html.forEach(function(block, index) { %>
+              <div id="<%- block.id %>" class="cvo-block" <%- block.status === 'hide' ? 'style="display:none"' : '' %>>
+                <div class="blockControls">
+                  <div title="Di chuyển khối" class="show-layout-editor"><i class="fa fa-bars"></i></div>
+                  <div title="Chuyển mục này lên trên" class="up">▲</div>
+                  <div title="Chuyển mục này xuống dưới" class="down">▼</div>
+                  <div title="Ẩn mục này" class="an-muc"> <i class="fa fa-minus"></i> Ẩn</div>
+                </div>
+                <div class="head titlecv_<%- block.id %>">
+                  <div class="icr<%- index + 1 %>"></div>
+                  <div id="cvo-experience-blocktitle" class="block-title" cvo-placeholder="<%- placeholders.holder_block_title %>" contenteditable="true"><%- block.title %></div>
+                </div>
+                <div id="experience-table">
+                  <% block.content.forEach(function(bl, j) { %>
+                    <div id="exp<%- j + 1 %>" class="ctbx experience">
+                      <div class="fieldgroup_controls">
+                        <div class="clone" title="Thêm"><i class="fa fa-plus"></i><%- placeholders.holder_tool_add %></div>
+                        <div class="remove" title="Xóa"><i class="fa fa-minus"></i><%- placeholders.holder_tool_del %></div>
+                      </div>
+                      <% if (bl.title) { %>
+                        <h3>
+                          <div class="exp-title" contenteditable="true" cvo-placeholder="<%- placeholders.holder_block_cp_name %>"><%- bl.title %></div>
+                          <% if (bl.date) { %>
+                            <div class="exp-date" contenteditable="true" cvo-placeholder="<%- placeholders.holder_block_time %>"><%- bl.date %></div>
+                          <% } %>
+                        </h3>
+                      <% }
+                      if (bl.subtitle) { %>
+                        <p class="h3 h3-title"><span class="exp-subtitle" cvo-placeholder="<%- placeholders.holder_block_job %>" contenteditable="true"><%- bl.subtitle %></span></p>
+                      <% } %>
+                      <div class="exp-content" contenteditable="true" cvo-placeholder="<%- placeholders.holder_block_job_info %>"><%- bl.content %></div>
+                    </div>
+                  <% }); %>
+                </div>
+              </div>
+            <% });
+          } %>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="footer"></div>
+    <div class="clr"></div>
+  </div>
+</div>

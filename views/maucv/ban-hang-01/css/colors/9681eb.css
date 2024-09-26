@@ -1,0 +1,56 @@
+.cv_page {
+  position: relative;
+  background: url(../top3.png) no-repeat, url(../bottom3.png) no-repeat, #FFF;
+  background-size: 790px 517px, 790px 91px, 100% 100%;
+  background-position: left top, left bottom, left top;
+}
+
+.cv_page.page_more {
+  position: relative;
+  background: url(../bottom3.png) no-repeat, #FFF;
+  background-size: 790px 91px, 100% 100%;
+  background-position: left bottom, left top;
+}
+
+#border_img {
+  border: 8px solid #9681eb;
+}
+
+#cv-content .exp-date {
+  color: #9681eb;
+}
+
+.icoweb-birthday {
+  width: 23px;
+  height: 23px;
+  background: url(../date3.png) no-repeat;
+  background-size: 23px 23px;
+}
+
+.icoweb-address {
+  width: 23px;
+  height: 23px;
+  background: url(../address3.png) no-repeat;
+  background-size: 23px 23px;
+}
+
+.icoweb-email {
+  width: 23px;
+  height: 23px;
+  background: url(../email3.png) no-repeat;
+  background-size: 23px 23px;
+}
+
+.icoweb-phone {
+  width: 23px;
+  height: 23px;
+  background: url(../phone3.png) no-repeat;
+  background-size: 23px 23px;
+}
+
+.icoweb-sex {
+  width: 23px;
+  height: 23px;
+  background: url(../sex3.png) no-repeat;
+  background-size: 23px 23px;
+}

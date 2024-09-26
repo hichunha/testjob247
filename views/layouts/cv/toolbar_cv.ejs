@@ -1,0 +1,139 @@
+<div id="cvo-toolbar" class="cvo-toolbar-pc">
+    <div class="toolbar-global-controls">
+        <div class="global-controls-left">
+            <div class="cvo-toolbar-general cvo-toolbar-maucv" onclick="sidebar_option(this)" data="1">
+                <div class="button-cvo-toolbar-gnr button-cvo-toolbar-maucv cursor_pt">
+                    <p class="txt-cvo-toolbar-maucv font_w500">Mẫu CV</p>
+                    <img width="34px" height="34px" class="icon_maucvblack" src="/images/iconcv/icon_maucvblack.png" alt="icon">
+                    <img width="34px" height="34px" class="icon_maucvblue d_none" src="/images/iconcv/icon_maucvblue.png" alt="icon">
+                </div>
+            </div>
+            <div class="cvo-toolbar-general cvo-toolbar-color" onclick="sidebar_option(this)" data="2">
+                <div class="button-cvo-toolbar-gnr button-cvo-toolbar-color cursor_pt">
+                    <p class="txt-cvo-toolbar-color font_w500">Đổi màu CV</p>
+                    <div class="options-color">
+                        <span title="Màu nền" class="color active" style="background-color:#<%= data_cv.color_active %>" data-color="<%= data_cv.color_active %>"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cvo-toolbar-general cvo-toolbar-lang" onclick="sidebar_option(this)" data="3">
+                <div class="button-cvo-toolbar-gnr button-cvo-toolbar-lang">
+                    <p class="txt-cvo-toolbar-lang font_w500">Đổi ngôn ngữ CV</p>
+                    <div class="options-lang">
+                        <% if(data_cv.langcv == 1){ %>
+                            <img class="lang active-lang" data-lang = "1" src="/images/iconcv/vi.png" alt="icon">
+                        <% } else if(data_cv.langcv == 2) { %>
+                            <img class="lang active-lang" data-lang = "2" src="/images/iconcv/en.png" alt="icon">
+                        <% } else if(data_cv.langcv == 3) { %>
+                            <img class="lang active-lang" data-lang = "3" src="/images/iconcv/jp.png" alt="icon">
+                        <% } else if(data_cv.langcv == 4) { %>
+                            <img class="lang active-lang" data-lang = "4" src="/images/iconcv/cn.png" alt="icon">
+                        <% } else if(data_cv.langcv == 5) { %>
+                            <img class="lang active-lang" data-lang = "5" src="/images/iconcv/kr.png" alt="icon">
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <div class="cvo-toolbar-general cvo-toolbar-cvthamkhao" onclick="sidebar_option(this)" data="4">
+                <div class="button-cvo-toolbar-gnr button-cvo-toolbar-cvthamkhao cursor_pt">
+                    <p class="txt-cvo-toolbar-cvthamkhao font_w500">CV tham khảo</p>
+                    <img class="icon_cvthamkhaoblack" width="34px" height="34px" src="/images/iconcv/icon_cvthamkhaoblack.png" alt="icon">
+                    <img class="icon_cvthamkhaoblue d_none" width="34px" height="34px" src="/images/iconcv/icon_cvthamkhaoblue.png" alt="icon">
+                </div>
+            </div>
+        </div>
+        <div class="global-controls-right">
+            <div class="cvo-toolbar-right cvo-toolbar-xemtruoccv cursor_pt" id="xemtruoc_cv" onclick="xemtruoc_cv()">
+                <img width="21px" height="21px" src="/images/iconcv/icon_xemtruoccv.png" alt="icon">
+                <p class="toolbar-xemtruoccv font_w500 font_s16 line_h18 color_451da0">Xem trước</p>
+            </div>
+            <% if(typeregis && typeregis == 1){ %>
+                <div class="cvo-toolbar-right cvo-toolbar-luuvatai cursor_pt" id="save-cv-step1">
+                    <img width="21px" height="22px" src="/images/iconcv/icon_luutaicv.png" alt="icon">
+                    <p class="toolbar-xemtruoccv font_w500 font_s16 line_h18 color_451da0">Lưu CV</p>
+                </div>
+            <% } else if(typeregis && typeregis == 2){%>
+                <div class="cvo-toolbar-right cvo-toolbar-luuvatai cursor_pt" id="btn-save-step2">
+                    <img width="21px" height="22px" src="/images/iconcv/icon_luutaicv.png" alt="icon">
+                    <p class="toolbar-xemtruoccv font_w500 font_s16 line_h18 color_451da0">Lưu CV</p>
+                </div>
+            <% } else { %>
+                <div class="cvo-toolbar-right cvo-toolbar-luuvatai cursor_pt" id="btn-save-cv">
+                    <img width="21px" height="22px" src="/images/iconcv/icon_luutaicv.png" alt="icon">
+                    <p class="toolbar-xemtruoccv font_w500 font_s16 line_h18 color_451da0">Lưu và tải CV</p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="cv-form-text-editor">
+        <div class="form-text-editor-left">
+            <div class="container-bocuc cursor_pt" onclick="sidebar_option(this)" data="5">
+                <img src="/images/iconcv/icon_bocuccvblack.png" width="25px" height="25px" alt="icon" class="icon-doibocu">
+                <p class="txt-doibocu">Đổi bố cục</p>
+                <img width="10px" height="12px" src="/images/iconcv/angle_bt.png" alt="icon">
+            </div>
+            <div class="container-phongchu">
+                <div class="container-select-phongchu">
+                    <select title="Chọn font chữ" name="font" id="font-selector">
+                        <option value="Roboto" <%= data_cv.font_active == "Roboto" ? "selected" : "" %>>Roboto</option>
+                        <option value="Arial" <%= data_cv.font_active == "Arial" ? "selected" : "" %>>Arial</option>
+                    </select>
+                    <div class="box-append-phongchu"></div>
+                </div>
+            </div>
+            <div class="container-giandong cursor_pt" onclick="sidebar_option(this)" data="6">
+                <img src="/images/iconcv/icon_giandong.png" width="31px" height="26px" alt="icon" class="icon-giandong">
+                <p class="txt-giandong">Tối ưu không gian</p>
+                <img width="10px" height="12px" src="/images/iconcv/angle_bt.png" alt="icon">
+            </div>
+        </div>
+        <div class="form-text-editor-right">
+            <div class="editor-controls-wraper">
+                <div class="editor-controls" id="tools">
+                    <div class="editor-control-group disabled">
+                        <span class="editor-control cursor_pt cmd-bold" title="In đậm" onmousedown="event.preventDefault();" onclick="doCommand('bold')">
+                            <img width="37px" height="38px" class="icon_boldblack" src="/images/iconcv/icon_indamblack.png" alt="icon">
+                            <img width="37px" height="38px" class="icon_boldblue d_none" src="/images/iconcv/icon_indamblue.png" alt="icon">
+                        </span>
+                        <span class="editor-control cursor_pt cmd-italic" title="In nghiêng" onmousedown="event.preventDefault();" onclick="doCommand('italic')">
+                            <img width="38px" height="38px" class="icon_italicblack" src="/images/iconcv/icon_innghiengblack.png" alt="icon">
+                            <img width="38px" height="38px" class="icon_italicblue d_none" src="/images/iconcv/icon_innghiengblue.png" alt="icon">
+                        </span>
+                        <span class="editor-control cursor_pt cmd-underline" title="Gạch chân" onmousedown="event.preventDefault();" onclick="doCommand('underline')">
+                            <img width="38px" height="38px" class="icon_underlineblack" src="/images/iconcv/icon_gachchanblack.png" alt="icon">
+                            <img width="38px" height="38px" class="icon_underlinelue d_none" src="/images/iconcv/icon_gachchanblue.png" alt="icon">
+                        </span>
+                    </div>
+                    <div class="editor-control-group disabled">
+                        <span class="editor-control cursor_pt cmd-justifyLeft" title="Căn trái" onmousedown="event.preventDefault();" onclick="doCommand('justifyLeft')">
+                            <img width="37px" height="38px" class="icon_justifyLeftblack" src="/images/iconcv/icon_cantrai_black.png" alt="icon">
+                            <img width="37px" height="38px" class="icon_justifyLeftblue d_none" src="/images/iconcv/icon_cantrai_blue.png" alt="icon">
+                        </span>
+                        <span class="editor-control cursor_pt cmd-justifyCenter" title="Căn giữa" onmousedown="event.preventDefault();" onclick="doCommand('justifyCenter')">
+                            <img width="37px" height="38px" class="icon_justifyCenterblack" src="/images/iconcv/icon_cangiua_black.png" alt="icon">
+                            <img width="37px" height="38px" class="icon_justifyCenterblue d_none" src="/images/iconcv/icon_cangiua_blue.png" alt="icon">
+                        </span>
+                        <span class="editor-control cursor_pt cmd-justifyRight" title="Căn phải" onmousedown="event.preventDefault();" onclick="doCommand('justifyRight')">
+                            <img width="37px" height="38px" class="icon_justifyRightblack" src="/images/iconcv/icon_canphai_black.png" alt="icon">
+                            <img width="37px" height="38px" class="icon_justifyRightblue d_none" src="/images/iconcv/icon_canphai_blue.png" alt="icon">
+                        </span>
+                        <span class="editor-control cursor_pt cmd-justifyFull" title="Căn đều hai bên" onmousedown="event.preventDefault();" onclick="doCommand('justifyFull')">
+                            <img width="37px" height="38px" class="icon_justifyFullblack" src="/images/iconcv/icon_can2ben_black.png" alt="icon">
+                            <img width="37px" height="38px" class="icon_justifyFullblue d_none" src="/images/iconcv/icon_can2ben_blue.png" alt="icon">
+                        </span>
+                    </div>
+                    <div class="editor-control-group editor-control-group-unredo disabled">
+                        <p class="editor-control editor-control-unredo cmd-undo" title="Hoàn tác" onmousedown="event.preventDefault();" onclick="doCommand('undo')">
+                            <span class="font_s14 line_h16">Undo</span>
+                            <img width="19px" height="19px" src="/images/iconcv/icon_cv_undo.png" alt="icon">
+                        </p>
+                        <p class="editor-control editor-control-unredo cmd-redo" title="Làm lại" onmousedown="event.preventDefault();" onclick="doCommand('redo')">
+                            <span class="font_s14 line_h16">Redo</span>
+                            <img width="19px" height="19px" src="/images/iconcv/icon_cv_redo.png" alt="icon">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
