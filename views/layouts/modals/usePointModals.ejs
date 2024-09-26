@@ -1,0 +1,31 @@
+<% if (DataAccount && DataAccount.islogin==1){ %>
+    <link rel="stylesheet" href="/css/modals/usePointModals.css" />
+    <div class="modalusepoint">
+        <div class="modal-content">
+            <div class="top-modal-content">
+                <h2 class="modal-content-h2">Thông báo</h2>
+                <p for="modal-toggle" class="close-btn" onclick="closemodalusepoint(this)">&times;</p>
+            </div>
+            <div class="box-show-noti">
+                <% 
+                let txtnoti=''; 
+                let txtshowpoint= `Quý khách đang có ${(DataAccount.point) ? DataAccount.point : 0} điểm mất phí`;
+                if(data?.dataApi?.use_authentic && data?.dataApi?.use_authentic==1){
+                    txtnoti="Chức năng xem toàn bộ hồ sơ ứng viên này có giá trị 3 điểm"; 
+                } else {
+                    txtnoti="Chức năng xem toàn bộ hồ sơ ứng viên này có giá trị 2 điểm"; 
+                } %>
+                <p class="modal-content-txt"><%= txtshowpoint %></p>
+                <p class="modal-content-txt"><%= txtnoti %></p>
+                <p class="modal-content-txt">Quý khách vẫn muốn thực hiện chức năng này</p>
+            </div>
+            <div class="button-group">
+                <button class="confirm-btn" checkopentt="<%= data?.dataApi?.xemTT == true ? 1 : 0 %>" user_id="<%= (data?.dataApi?.use_id) ? data?.dataApi?.use_id : 0 %>"
+                    accountype="<%= (DataAccount.type) ? DataAccount.type : 0 %>"
+                    accounusid="<%= (DataAccount.data.us_id) ? DataAccount.data.us_id : 0 %>"
+                    onclick="viewinforuv(this)">Đồng ý</button>
+                <label for="modal-toggle" class="cancel-btn" onclick="closemodalusepoint(this)">Hủy</label>
+            </div>
+        </div>
+    </div>
+<% } %>

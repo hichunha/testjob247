@@ -1,0 +1,637 @@
+<link rel="stylesheet" href="/css/csscv/cv_mobile.css" type="text/css">
+<div id="container_box-CV">
+    <div id="input_block" class="popup_nhaptt hidden" data-block="block02" data="sort_block">
+        <div class="top">
+            <div class="save_infor cursor_pt">Xong</div>
+        </div>
+        <div class="toolbar_option_mobile">
+            <div class="editor-controls" id="tools_mobile_box">
+                <div class="editor-control-group disabled">
+                    <span class="editor-control cursor_pt cmd-bold" title="In đậm" onmousedown="event.preventDefault();" onclick="doCommand('bold')">
+                        <img width="37px" height="38px" class="icon_boldblack" src="/images/iconcv/icon_indamblack.png" alt="icon">
+                        <img width="37px" height="38px" class="icon_boldblue d_none" src="/images/iconcv/icon_indamblue.png" alt="icon">
+                    </span>
+                    <span class="editor-control cursor_pt cmd-italic" title="In nghiêng" onmousedown="event.preventDefault();" onclick="doCommand('italic')">
+                        <img width="38px" height="38px" class="icon_italicblack" src="/images/iconcv/icon_innghiengblack.png" alt="icon">
+                        <img width="38px" height="38px" class="icon_italicblue d_none" src="/images/iconcv/icon_innghiengblue.png" alt="icon">
+                    </span>
+                    <span class="editor-control cursor_pt cmd-underline" title="Gạch chân" onmousedown="event.preventDefault();" onclick="doCommand('underline')">
+                        <img width="38px" height="38px" class="icon_underlineblack" src="/images/iconcv/icon_gachchanblack.png" alt="icon">
+                        <img width="38px" height="38px" class="icon_underlinelue d_none" src="/images/iconcv/icon_gachchanblue.png" alt="icon">
+                    </span>
+                </div>
+                <div class="editor-control-group disabled">
+                    <span class="editor-control cursor_pt cmd-justifyLeft" title="Căn trái" onmousedown="event.preventDefault();" onclick="doCommand('justifyLeft')">
+                        <img width="37px" height="38px" class="icon_justifyLeftblack" src="/images/iconcv/icon_cantrai_black.png" alt="icon">
+                        <img width="37px" height="38px" class="icon_justifyLeftblue d_none" src="/images/iconcv/icon_cantrai_blue.png" alt="icon">
+                    </span>
+                    <span class="editor-control cursor_pt cmd-justifyCenter" title="Căn giữa" onmousedown="event.preventDefault();" onclick="doCommand('justifyCenter')">
+                        <img width="37px" height="38px" class="icon_justifyCenterblack" src="/images/iconcv/icon_cangiua_black.png" alt="icon">
+                        <img width="37px" height="38px" class="icon_justifyCenterblue d_none" src="/images/iconcv/icon_cangiua_blue.png" alt="icon">
+                    </span>
+                    <span class="editor-control cursor_pt cmd-justifyRight" title="Căn phải" onmousedown="event.preventDefault();" onclick="doCommand('justifyRight')">
+                        <img width="37px" height="38px" class="icon_justifyRightblack" src="/images/iconcv/icon_canphai_black.png" alt="icon">
+                        <img width="37px" height="38px" class="icon_justifyRightblue d_none" src="/images/iconcv/icon_canphai_blue.png" alt="icon">
+                    </span>
+                    <span class="editor-control cursor_pt cmd-justifyFull" title="Căn đều hai bên" onmousedown="event.preventDefault();" onclick="doCommand('justifyFull')">
+                        <img width="37px" height="38px" class="icon_justifyFullblack" src="/images/iconcv/icon_can2ben_black.png" alt="icon">
+                        <img width="37px" height="38px" class="icon_justifyFullblue d_none" src="/images/iconcv/icon_can2ben_blue.png" alt="icon">
+                    </span>
+                </div>
+                <div class="editor-control-group editor-control-group-unredo disabled">
+                    <p class="editor-control editor-control-unredo cmd-undo" title="Hoàn tác" onmousedown="event.preventDefault();" onclick="doCommand('undo')">
+                        <span class="font_s14 line_h16">Undo</span>
+                        <img width="19px" height="19px" src="/images/iconcv/icon_cv_undo.png" alt="icon">
+                    </p>
+                    <p class="editor-control editor-control-unredo cmd-redo" title="Làm lại" onmousedown="event.preventDefault();" onclick="doCommand('redo')">
+                        <span class="font_s14 line_h16">Redo</span>
+                        <img width="19px" height="19px" src="/images/iconcv/icon_cv_redo.png" alt="icon">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="infor">
+            <div class="hide_arrange">
+                <button class="an_muc">
+                    <img src="/images/iconcv/icon_hide_mb.svg" alt="hide">
+                    <span class="text">Ẩn mục</span>
+                </button>
+                <!-- <button class="sap_xep">
+                    <img src="/images/icon_sapxep_mb.svg" alt="arrange">
+                    <span class="text">Sắp xếp</span>
+                </button> -->
+            </div>
+            <!-- Trình độ học vấn -->
+            <div class="thongtin_block hidden" id="thongtin_block01">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Trình độ học vấn</span>
+                </div>
+                 <div class="box-ctbx_mobile">
+                    <% if(checkCvCreate == 1){ %>
+                        <%
+                            let j = 1;
+                            block_html.forEach(function(value, index) {
+                            if(value.id == 'block01'){
+                                value.content.forEach(item => {
+                        %>
+                        <div class="ctbx_mobile">
+                            <div class="icon_remove">
+                                <img src="/images/iconcv/icon_remove_mb.svg" class="remove_tdhv" alt="remove">
+                            </div>
+                            <div class="textarea">
+                                <div class="input_text">
+                                    <span class="exp-title-mb" id="ten_truong" contenteditable="true" cvo-placeholder="Tên trường"><%- item.title %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-date-mb" contenteditable="true" cvo-placeholder="Thời gian"><%- item.date %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-subtitle-mb" contenteditable="true" cvo-placeholder="Chuyên ngành"><%- item.subtitle %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-content-mb" contenteditable="true" cvo-placeholder="Xếp loại: xếp loại bằng, điểm trung bình"><%- item.content %></span>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); }; }); %>
+                    <% } else {  %>
+                        <div class="ctbx_mobile">
+                            <div class="icon_remove">
+                                <img src="/images/iconcv/icon_remove_mb.svg" class="remove_tdhv" alt="remove">
+                            </div>
+                            <div class="textarea">
+                                <div class="input_text">
+                                    <span class="exp-title-mb" id="ten_truong" contenteditable="true" cvo-placeholder="Tên trường"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-date-mb" contenteditable="true" cvo-placeholder="Thời gian"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-subtitle-mb" contenteditable="true" cvo-placeholder="Chuyên ngành"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-content-mb" contenteditable="true" cvo-placeholder="Xếp loại: xếp loại bằng, điểm trung bình"></span>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>  
+                </div>
+                <div class="them_muc cursor_pt" id="add_tdhv">
+                    <img src="/images/iconcv/icon_addskill_mb.svg" alt="add">
+                    <span class="text">Thêm</span>
+                </div>
+            </div>
+            <!-- // End Trình độ học vấn -->
+            <!-- // Kinh nghiệm làm việc -->
+            <div class="thongtin_block" id="thongtin_block02">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Kinh Nghiệm làm việc</span>
+                </div>
+                 <div class="box-ctbx_mobile">
+                    <% if(checkCvCreate == 1){ %>
+                        <%
+                            let j = 1;
+                            block_html.forEach(function(value, index) {
+                            if(value.id == 'block02'){
+                                value.content.forEach(item => {
+                        %>
+                        <div class="ctbx_mobile">
+                            <div class="icon_remove">
+                                <img src="/images/iconcv/icon_remove_mb.svg" class="remove_knlv" alt="remove">
+                            </div>
+                            <div class="textarea">
+                                <div class="input_text">
+                                    <span class="exp-title-mb" id="ten_congty" contenteditable="true" cvo-placeholder="Tên công ty"><%- item.title %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-date-mb" contenteditable="true" cvo-placeholder="Thời gian làm việc"><%- item.date %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-subtitle-mb" contenteditable="true" cvo-placeholder="Vị trí"><%- item.subtitle %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-content-mb" contenteditable="true" cvo-placeholder="Chi tiết công việc: nhiệm vụ, thành tựu"><%- item.content %></span>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); }; }); %>
+                    <% } else {  %>
+                        <div class="ctbx_mobile">
+                            <div class="icon_remove">
+                                <img src="/images/iconcv/icon_remove_mb.svg" class="remove_knlv" alt="remove">
+                            </div>
+                            <div class="textarea">
+                                <div class="input_text">
+                                    <span class="exp-title-mb" id="ten_congty" contenteditable="true" cvo-placeholder="Tên công ty"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-date-mb" contenteditable="true" cvo-placeholder="Thời gian làm việc"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-subtitle-mb" contenteditable="true" cvo-placeholder="Vị trí"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-content-mb" contenteditable="true" cvo-placeholder="Chi tiết công việc: nhiệm vụ, thành tựu"></span>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="them_muc cursor_pt" id="add_knlv">
+                    <img src="/images/iconcv/icon_addskill_mb.svg" alt="add">
+                    <span class="text">Thêm</span>
+                </div>
+            </div>
+            <!-- End Kinh nghiệm làm việc -->
+            <!-- Dự án tham gia -->
+            <div class="thongtin_block hidden" id="thongtin_block04">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Dự án tham gia</span>
+                </div>
+                 <div class="box-ctbx_mobile">
+                    <% if(checkCvCreate == 1){ %>
+                        <%
+                            let j = 1;
+                            block_html.forEach(function(value, index) {
+                            if(value.id == 'block04'){
+                                value.content.forEach(item => {
+                        %>
+                        <div class="ctbx_mobile">
+                            <div class="icon_remove">
+                                <img src="/images/iconcv/icon_remove_mb.svg" class="remove_datg" alt="remove">
+                            </div>
+                            <div class="textarea">
+                                <div class="input_text">
+                                    <span class="exp-title-mb" id="ten_duan" contenteditable="true" cvo-placeholder="Tên dự án"><%- item.title %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-date-mb" contenteditable="true" cvo-placeholder="Thời gian làm việc"><%- item.date %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-subtitle-mb" contenteditable="true" cvo-placeholder="Vai trò"><%- item.subtitle %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-content-mb" contenteditable="true" cvo-placeholder="Chi tiết dự án"><%- item.content %></span>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); }; }); %>
+                    <% } else {  %>
+                        <div class="ctbx_mobile">
+                            <div class="icon_remove">
+                                <img src="/images/iconcv/icon_remove_mb.svg" class="remove_datg" alt="remove">
+                            </div>
+                            <div class="textarea">
+                                <div class="input_text">
+                                    <span class="exp-title-mb" id="ten_duan" contenteditable="true" cvo-placeholder="Tên dự án"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-date-mb" contenteditable="true" cvo-placeholder="Thời gian làm việc"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-subtitle-mb" contenteditable="true" cvo-placeholder="Vai trò"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-content-mb" contenteditable="true" cvo-placeholder="Chi tiết dự án"></span>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="them_muc cursor_pt" id="add_datg">
+                    <img src="/images/iconcv/icon_addskill_mb.svg" alt="add">
+                    <span class="text">Thêm</span>
+                </div>
+            </div>
+            <!-- End Dự án tham gia -->
+            <!-- Hoạt động -->
+            <div class="thongtin_block hidden" id="thongtin_block03">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Hoạt động</span>
+                </div>
+                 <div class="box-ctbx_mobile">
+                    <% if(checkCvCreate == 1){ %>
+                        <%
+                            let j = 1;
+                            block_html.forEach(function(value, index) {
+                            if(value.id == 'block03'){
+                                value.content.forEach(item => {
+                        %>
+                        <div class="ctbx_mobile">
+                            <div class="icon_remove">
+                                <img src="/images/iconcv/icon_remove_mb.svg" class="remove_hd" alt="remove">
+                            </div>
+                            <div class="textarea">
+                                <div class="input_text">
+                                    <span class="exp-title-mb" id="ten_hoatdong" contenteditable="true" cvo-placeholder="Mô tả"><%- item.title %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-date-mb" contenteditable="true" cvo-placeholder="Thời gian"><%- item.date %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-subtitle-mb" contenteditable="true" cvo-placeholder="Vai trò"><%- item.subtitle %></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-content-mb" contenteditable="true" cvo-placeholder="Nhập hoạt động"><%- item.content %></span>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); }; }); %>
+                    <% } else {  %>
+                        <div class="ctbx_mobile">
+                            <div class="icon_remove">
+                                <img src="/images/iconcv/icon_remove_mb.svg" class="remove_hd" alt="remove">
+                            </div>
+                            <div class="textarea">
+                                <div class="input_text">
+                                    <span class="exp-title-mb" id="ten_hoatdong" contenteditable="true" cvo-placeholder="Mô tả"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-date-mb" contenteditable="true" cvo-placeholder="Thời gian"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-subtitle-mb" contenteditable="true" cvo-placeholder="Vai trò"></span>
+                                </div>
+                                <div class="input_text">
+                                    <span class="exp-content-mb" contenteditable="true" cvo-placeholder="Nhập hoạt động"></span>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="them_muc cursor_pt" id="add_hd">
+                    <img src="/images/iconcv/icon_addskill_mb.svg" alt="add">
+                    <span class="text">Thêm</span>
+                </div>
+            </div>
+            <!-- End Hoạt động -->
+        </div>
+    </div>
+</div>
+
+<div id="container_block-CV">
+    <div id="fullname_job" class="popup_nhaptt hidden" data-block="name_job" data="sortable">
+        <div class="top">
+            <div class="save_infor cursor_pt">Xong</div>
+        </div>
+        <div class="toolbar_option_mobile">
+            <div class="editor-controls" id="tools_mobile_block">
+                <div class="editor-control-group disabled">
+                    <span class="editor-control cursor_pt cmd-bold" title="In đậm" onmousedown="event.preventDefault();" onclick="doCommand('bold')">
+                        <img width="37px" height="38px" class="icon_boldblack" src="/images/iconcv/icon_indamblack.png" alt="icon">
+                        <img width="37px" height="38px" class="icon_boldblue d_none" src="/images/iconcv/icon_indamblue.png" alt="icon">
+                    </span>
+                    <span class="editor-control cursor_pt cmd-italic" title="In nghiêng" onmousedown="event.preventDefault();" onclick="doCommand('italic')">
+                        <img width="38px" height="38px" class="icon_italicblack" src="/images/iconcv/icon_innghiengblack.png" alt="icon">
+                        <img width="38px" height="38px" class="icon_italicblue d_none" src="/images/iconcv/icon_innghiengblue.png" alt="icon">
+                    </span>
+                    <span class="editor-control cursor_pt cmd-underline" title="Gạch chân" onmousedown="event.preventDefault();" onclick="doCommand('underline')">
+                        <img width="38px" height="38px" class="icon_underlineblack" src="/images/iconcv/icon_gachchanblack.png" alt="icon">
+                        <img width="38px" height="38px" class="icon_underlinelue d_none" src="/images/iconcv/icon_gachchanblue.png" alt="icon">
+                    </span>
+                </div>
+                <div class="editor-control-group disabled">
+                    <span class="editor-control cursor_pt cmd-justifyLeft" title="Căn trái" onmousedown="event.preventDefault();" onclick="doCommand('justifyLeft')">
+                        <img width="37px" height="38px" class="icon_justifyLeftblack" src="/images/iconcv/icon_cantrai_black.png" alt="icon">
+                        <img width="37px" height="38px" class="icon_justifyLeftblue d_none" src="/images/iconcv/icon_cantrai_blue.png" alt="icon">
+                    </span>
+                    <span class="editor-control cursor_pt cmd-justifyCenter" title="Căn giữa" onmousedown="event.preventDefault();" onclick="doCommand('justifyCenter')">
+                        <img width="37px" height="38px" class="icon_justifyCenterblack" src="/images/iconcv/icon_cangiua_black.png" alt="icon">
+                        <img width="37px" height="38px" class="icon_justifyCenterblue d_none" src="/images/iconcv/icon_cangiua_blue.png" alt="icon">
+                    </span>
+                    <span class="editor-control cursor_pt cmd-justifyRight" title="Căn phải" onmousedown="event.preventDefault();" onclick="doCommand('justifyRight')">
+                        <img width="37px" height="38px" class="icon_justifyRightblack" src="/images/iconcv/icon_canphai_black.png" alt="icon">
+                        <img width="37px" height="38px" class="icon_justifyRightblue d_none" src="/images/iconcv/icon_canphai_blue.png" alt="icon">
+                    </span>
+                    <span class="editor-control cursor_pt cmd-justifyFull" title="Căn đều hai bên" onmousedown="event.preventDefault();" onclick="doCommand('justifyFull')">
+                        <img width="37px" height="38px" class="icon_justifyFullblack" src="/images/iconcv/icon_can2ben_black.png" alt="icon">
+                        <img width="37px" height="38px" class="icon_justifyFullblue d_none" src="/images/iconcv/icon_can2ben_blue.png" alt="icon">
+                    </span>
+                </div>
+                <div class="editor-control-group editor-control-group-unredo disabled">
+                    <p class="editor-control editor-control-unredo cmd-undo" title="Hoàn tác" onmousedown="event.preventDefault();" onclick="doCommand('undo')">
+                        <span class="font_s14 line_h16">Undo</span>
+                        <img width="19px" height="19px" src="/images/iconcv/icon_cv_undo.png" alt="icon">
+                    </p>
+                    <p class="editor-control editor-control-unredo cmd-redo" title="Làm lại" onmousedown="event.preventDefault();" onclick="doCommand('redo')">
+                        <span class="font_s14 line_h16">Redo</span>
+                        <img width="19px" height="19px" src="/images/iconcv/icon_cv_redo.png" alt="icon">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Thông tin tên và nghề nghiệp mong muốn -->
+        <div class="infor" id="name_job">
+            <div class="box_name box_infor">
+                <span class="tieude cursor_pt">Họ và Tên:</span>
+                <div class="input_value">
+                    <% if(checkCvCreate == 1){ %>
+                        <div class="border_dashed input_fullname">
+                            <span id="cv-profile-fullname-mb" class="text_value cursor_pt" contenteditable="true" cvo-placeholder="Họ tên"><% if (typeof data_uv.fullnamess !== 'undefined') { %>
+                                <%- data_uv.fullnamess %>
+                              <% } else if (typeof data_uv.namefull !== 'undefined') { %>
+                                <%- data_uv.namefull %>
+                              <% } else if (typeof data_uv.fullname !== 'undefined') { %>
+                                <%- data_uv.fullname %>
+                              <% } %></span>
+                        </div>
+                    <% } else {  %>
+                        <div class="border_dashed input_fullname">
+                            <span id="cv-profile-fullname-mb" class="text_value cursor_pt" contenteditable="true" cvo-placeholder="Họ tên"></span>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="box_vtut box_infor">
+                <span class="tieude cursor_pt">Vị trí ứng tuyển:</span>
+                <div class="input_value">
+                    <% if(checkCvCreate == 1){ %>
+                        <div class="border_dashed input_job">
+                            <span id="cv-profile-job-mb" class="text_value cursor_pt" contenteditable="true" cvo-placeholder="Vị trí công việc bạn mong muốn ứng tuyển"><%- data_uv.position ? data_uv.position : '' %></span>
+                        </div>
+                    <% } else {  %>
+                        <div class="border_dashed input_job">
+                            <span id="cv-profile-job-mb" class="text_value cursor_pt" contenteditable="true" cvo-placeholder="Vị trí công việc bạn mong muốn ứng tuyển"></span>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="infor hidden" id="thongtin_box">
+            <div class="hide_arrange">
+                <button class="an_muc">
+                    <img src="/images/iconcv/icon_hide_mb.svg" alt="hide">
+                    <span class="text">Ẩn mục</span>
+                </button>
+                <!-- <button class="sap_xep">
+                    <img src="/images/icon_sapxep_mb.svg" alt="arrange">
+                    <span class="text">Sắp xếp</span>
+                </button> -->
+            </div>
+            <!-- Mục tiêu nghề nghiệp -->
+            <div class="thongtin_box" id="thongtin_box02">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Mục tiêu nghề nghiệp</span>
+                </div>
+                <div class="textarea">
+                    <div class="input_text">
+                        <% if(checkCvCreate == 1){ %>
+                            <%  menu_html.forEach(function(value, index) {
+                                if(value.id == 'box02'){ %> 
+                                    <span class="content" id="ctn_muctieu_nn" contenteditable="true" cvo-placeholder="Nhập mục tiêu"><%- value.content %></span>
+                                <% } %> 
+                            <% ;}); %>
+                        <% } else {  %>
+                            <span class="content" id="ctn_muctieu_nn" contenteditable="true" cvo-placeholder="Nhập mục tiêu"></span>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <!-- End Mục tiêu nghề nghiệp -->
+            <!-- Giải thưởng -->
+            <div class="thongtin_box hidden" id="thongtin_box04">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Giải thưởng</span>
+                </div>
+                <div class="textarea">
+                    <div class="input_text">
+                        <% if(checkCvCreate == 1){ %>
+                            <%  menu_html.forEach(function(value, index) {
+                                if(value.id == 'box04'){ %> 
+                                    <span class="content" id="ctn_gthuong_uv" contenteditable="true" cvo-placeholder="Nhập giải thưởng"><%- value.content %></span>
+                                <% } %> 
+                            <% ;}); %>
+                        <% } else {  %>
+                            <span class="content" id="ctn_gthuong_uv" contenteditable="true" cvo-placeholder="Nhập giải thưởng"></span>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <!-- End Giải thưởng -->
+            <!-- Chứng chỉ -->
+            <div class="thongtin_box hidden" id="thongtin_box05">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Chứng chỉ</span>
+                </div>
+                <div class="textarea">
+                    <div class="input_text">
+                        <% if(checkCvCreate == 1){ %>
+                            <%  menu_html.forEach(function(value, index) {
+                                if(value.id == 'box05'){ %> 
+                                    <span class="content" id="ctn_chchi" contenteditable="true" cvo-placeholder="Nhập chứng chỉ"><%- value.content %></span>
+                                <% } %> 
+                            <% ;}); %>
+                        <% } else {  %>
+                            <span class="content" id="ctn_chchi" contenteditable="true" cvo-placeholder="Nhập chứng chỉ"></span>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <!-- End Chứng chỉ -->
+            <!-- Sở thích -->
+            <div class="thongtin_box hidden" id="thongtin_box06">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Sở thích</span>
+                </div>
+                <div class="textarea">
+                    <div class="input_text">
+                        <% if(checkCvCreate == 1){ %>
+                            <%  menu_html.forEach(function(value, index) {
+                                if(value.id == 'box06'){ %> 
+                                    <span class="content" id="ctn_sothich_uv" contenteditable="true" cvo-placeholder="Nhập sở thích"><%- value.content %></span>
+                                <% } %> 
+                            <% ;}); %>
+                        <% } else {  %>
+                            <span class="content" id="ctn_sothich_uv" contenteditable="true" cvo-placeholder="Nhập sở thích"></span>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <!-- End Sở thích -->
+            <!-- Người tham chiếu -->
+            <div class="thongtin_box hidden" id="thongtin_box07">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Người tham chiếu</span>
+                </div>
+                <div class="textarea">
+                    <div class="input_text">
+                        <% if(checkCvCreate == 1){ %>
+                            <%  menu_html.forEach(function(value, index) {
+                                if(value.id == 'box07'){ %> 
+                                    <span class="content" id="ctn_ngthamchieu_uv" contenteditable="true" cvo-placeholder="Nhập người tham chiếu: Họ & tên, chức vụ, công ty, sđt."><%- value.content %></span>
+                                <% } %> 
+                            <% ;}); %>
+                        <% } else {  %>
+                            <span class="content" id="ctn_ngthamchieu_uv" contenteditable="true" cvo-placeholder="Nhập người tham chiếu: Họ & tên, chức vụ, công ty, sđt."></span>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <!-- End Người tham chiếu -->
+            <!-- Thông tin thêm -->
+            <div class="thongtin_box hidden" id="thongtin_block05">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Thông tin thêm</span>
+                </div>
+                <div class="textarea">
+                    <div class="input_text">
+                        <% if(checkCvCreate == 1){ %>
+                            <%  block_html.forEach(function(value, index) {
+                                if(value.id == 'block05'){ 
+                                value.content.forEach(item => {
+                                %> 
+                                    <span class="content" id="ctn_ttinthem_uv" contenteditable="true" cvo-placeholder="Nhập thông tin thêm"><%- item.subtitle %></span>
+                                <% }); }; %> 
+                            <% }); %>
+                        <% } else {  %>
+                            <span class="content" id="ctn_ttinthem_uv" contenteditable="true" cvo-placeholder="Nhập thông tin thêm"></span>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <!-- End Thông tin thêm -->
+            <!-- Kỹ năng -->
+            <div class="thongtin_box hidden" id="thongtin_box03">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Kỹ năng</span>
+                </div>
+                 <div class="box-ctbx_mobile">
+                    <% if(checkCvCreate == 1){ %>
+                        <%  menu_html.forEach(function(value, index) {
+                            if(value.id == 'box03'){ 
+                            value.content.forEach(item => {
+                            %> 
+                                <div class="ctbx_mobile">
+                                    <div class="icon_remove">
+                                        <img src="/images/iconcv/icon_remove_mb.svg" class="remove_hd" alt="remove">
+                                    </div>
+                                    <div class="skill_value">
+                                        <div class="input_value skill_name">
+                                            <div class="border_dashed input_fullname">
+                                                <span class="text_value" id="nameskill" contenteditable="true" cvo-placeholder="Nhập kỹ năng"><%- item.name %></span>
+                                            </div>
+                                        </div>
+                                        <div class="input_value skill_percent">
+                                            <div class="border_dashed input_fullname">
+                                                <span class="text_value" contenteditable="true"><%- item.exp %></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }); }; %> 
+                        <% }); %>
+                    <% } else {  %>
+                        <div class="ctbx_mobile">
+                            <div class="icon_remove">
+                                <img src="/images/iconcv/icon_remove_mb.svg" class="remove_hd" alt="remove">
+                            </div>
+                            <div class="skill_value">
+                                <div class="input_value skill_name">
+                                    <div class="border_dashed input_fullname">
+                                        <span class="text_value" id="nameskill" contenteditable="true" cvo-placeholder="Nhập kỹ năng"></span>
+                                    </div>
+                                </div>
+                                <div class="input_value skill_percent">
+                                    <div class="border_dashed input_fullname">
+                                        <span class="text_value" contenteditable="true">80</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="them_muc cursor_pt" id="add_kn">
+                    <img src="/images/iconcv/icon_addskill_mb.svg" alt="add">
+                    <span class="text">Thêm</span>
+                </div>
+            <!-- End Kỹ năng -->
+            </div>
+        </div>
+    </div>
+    <div id="input_box01" class="popup_nhaptt hidden" data-block="box01">
+        <div class="top">
+            <div class="save_infor cursor_pt">Xong</div>
+        </div>
+        <div class="infor" id="thongtin_box01">
+            <div class="box_infor">
+                <div class="infor_cv_contact">
+                    <span class="tieude cursor_pt" contenteditable="true" cvo-placeholder="Tiêu đề">Thông tin liên hệ</span>
+                </div>
+            </div>
+            <div class="box_infor">
+                <div class="box_infor_small">
+                    <div class="icon"><img src="/images/iconcv/icon_date_mb.svg" alt="date"></div>
+                    <div class="text input_text">
+                        <span id="cv-profile-birthday-mb" contenteditable="true" class="text_value cursor_pt" cvo-placeholder="Ngày sinh"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box_infor">
+                <div class="box_infor_small">
+                    <div class="icon"><img src="/images/iconcv/icon_sex_mb.svg" alt="sex"></div>
+                    <div class="text"><span id="cv-profile-sex-mb" class="text_value cursor_pt" contenteditable="true" cvo-placeholder="Giới tính"></span></div>
+                </div>
+            </div>
+            <div class="box_infor">
+                <div class="box_infor_small">
+                    <div class="icon"><img src="/images/iconcv/icon_phone_mb.svg" alt="phone"></div>
+                    <div class="text">
+                        <span id="cv-profile-phone-mb" class="text_value cursor_pt" contenteditable="true" cvo-placeholder="Số điện thoại (di động)"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box_infor">
+                <div class="box_infor_small">
+                    <div class="icon"><img src="/images/iconcv/icon_email_mb.svg" alt="email"></div>
+                    <div class="text"><span id="cv-profile-email-mb" class="text_value cursor_pt" contenteditable="true" cvo-placeholder="Email"></span></div>
+                </div>
+            </div>
+            <div class="box_infor">
+                <div class="box_infor_small">
+                    <div class="icon"><img src="/images/iconcv/icon_add_mb.svg" alt="add"></div>
+                    <div class="text"><span id="cv-profile-address-mb" class="text_value cursor_pt" contenteditable="true" cvo-placeholder="Địa chỉ"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

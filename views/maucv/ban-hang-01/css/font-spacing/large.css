@@ -1,0 +1,53 @@
+.head-right #cv-boxtitle {
+	line-height: 32px;
+}
+
+.head #cvo-experience-blocktitle {
+	line-height: 32px;
+}
+
+#cv-main .box-content {
+	line-height: 28px;
+}
+
+#cv-main .box-content * {
+	line-height: 28px;
+}
+
+#cv-content h3 .exp-title,
+.exp-title {
+	line-height: 28px;
+}
+
+#cv-content .exp-date {
+	line-height: 28px;
+}
+
+#cv-content .exp-subtitle {
+	line-height: 28px;
+}
+
+#cv-content .exp-content {
+	line-height: 28px;
+}
+
+#cv-content .exp-content * {
+	line-height: 28px;
+}
+
+.skill-name {
+	line-height: 28px;
+}
+
+#box-content span {
+	line-height: 28px;
+}
+
+#cv-content span {
+	line-height: 28px;
+}
+
+.exp-title *,
+.skill-name * {
+	line-height: 28px;
+}

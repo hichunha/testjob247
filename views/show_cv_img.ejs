@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Xem trước Cv Img</title>
+    <%- include('layouts/common_library.ejs'); %>
+        <link rel="stylesheet" href="/css/csscv/create.css?v=<%= version %>" type="text/css">
+        <link rel="stylesheet" href="/css/csscv/cv_create.css?v=<%= version %>" type="text/css">
+</head>
+<body>
+    <style>
+        .content-main-cv {
+            margin-top: 0px;
+        }
+
+        #page-cv {
+            margin-top: 0px;
+        }
+
+        .cvo-block:hover {
+            box-shadow: unset;
+        }
+
+        .cvo-block:hover .blockControls {
+            display: none;
+        }
+
+        .ctbx:hover .fieldgroup_controls {
+            display: none;
+        }
+
+        .ctbx:hover .fieldgroup_controls {
+            display: none !important;
+        }
+
+        .ctbx:hover {
+            box-shadow: unset !important;
+        }
+        
+    </style>
+    <div id="m_cv">
+        <div class="content-main-cv page_cv">
+            <%- include(`maucv/${aliasCv}/index`); %>
+        </div>
+    </div>
+</body>
+</html>

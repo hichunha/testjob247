@@ -1,0 +1,146 @@
+.d_none {
+    display: none;
+}
+
+.icon_close {
+    width: 25px;
+    height: 25px;
+}
+
+#m_formxacthuc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    background: #ffffffa3;
+    backdrop-filter: blur(20px);
+}
+
+.container_xacthuc {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    background: #FFF;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.header_xacthuc {
+    display: flex;
+    background: rgba(69, 29, 160, 1);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.main_header_xacthuc {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.title_xacthuc {
+    width: calc(100% - 35px);
+    text-align: center;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.content_xacthuc {
+    padding: 20px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#show_account_confirm {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+    padding: 20px 10px;
+}
+
+.box_xacnhan_otp {
+    width: 100%;
+}
+
+.btn_xt_general {
+    font-family: 'Roboto-Medium';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(207deg, #451da0a1 26.2%, #451da0 73.94%);
+    outline: 0;
+    border: 0;
+    margin: auto;
+}
+
+.btn_xacnhan_nrbot {
+    display: flex;
+    justify-content: center;
+}
+
+.box_xacthuc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#partitioned {
+    display: block;
+    margin: 0.5em auto;
+    border: none;
+    padding: 0;
+    width: 10.8ch;
+    background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.8ch) 0 100%/10ch 2px no-repeat;
+    font: 5ch droid sans mono, consolas, monospace;
+    letter-spacing: 0.8ch;
+    outline: 0;
+}
+
+.guilai {
+    width: 100%;
+}
+
+#resent {
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 600;
+    color: #451da0;
+}
+
+.blue {
+    font-size: 15px;
+    color: #451da0;
+}
+
+.ctn_xn_nr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.recaptcha-checkbox-border {
+    cursor: pointer;
+}

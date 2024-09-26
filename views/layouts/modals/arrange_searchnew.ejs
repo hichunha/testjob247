@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/modals/arrange_searchnew.css">
+<div class="box_filtersort_new" data-search="1">
+    <div class="box_filtersort_new_pc">
+        <p class="title_filtersort">Ưu tiên hiển thị theo:</p>
+        <div class="boxlst_filtersort">
+            <div class="item_filtersort">
+                <input class="val_filtersort cusor_pt" type="radio" <%= (!sort || !sort == 0 ? "checked" : "")  %> value="top_related" name="sort_advanced">
+                <p class="txt_filtersort">Liên quan</p>
+            </div>
+            <div class="item_filtersort">
+                <input class="val_filtersort cusor_pt" type="radio" <%= (sort && sort == 1 ? "checked" : "")  %> value="new" name="sort_advanced">
+                <p class="txt_filtersort">Ngày đăng</p>
+            </div>
+            <div class="item_filtersort">
+                <input class="val_filtersort cusor_pt" type="radio" <%= (sort && sort == 2 ? "checked" : "")  %> value="up_top" name="sort_advanced">
+                <p class="txt_filtersort">Ngày cập nhật</p>
+            </div>
+            <div class="item_filtersort">
+                <input class="val_filtersort cusor_pt" type="radio" <%= (sort && sort == 3 ? "checked" : "")  %> value="gap" name="sort_advanced">
+                <p class="txt_filtersort">Cần tuyển gấp</p>
+            </div>
+        </div>
+    </div>
+    <div class="box_filtersort_new_mb">
+        <select class="filtersort_new">
+            <option value="top_related" <%= (!sort || !sort == 0 ? "selected" : "")  %>>Liên quan</option>
+            <option value="new" <%= (sort && sort == 1 ? "selected" : "")  %>>Ngày đăng</option>
+            <option value="up_top" <%= (sort && sort == 2 ? "selected" : "")  %>>Ngày cập nhật</option>
+            <option value="gap" <%= (sort && sort == 3 ? "selected" : "")  %>>Cần tuyển gấp</option>
+        </select>
+        <div class="box-append-arrange">
+
+        </div>
+    </div>
+</div>
+<script src="/javascript/modals/arrange_searchnew.js" defer></script>

@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="/css/modals/popup_viewcv.css" />
+<!-- zoom cv -->
+<div class="popup popup_previewcv hidden" id="popup_previewcv">
+    <div class="main_popup">
+        <div class="box_img_cv">
+            <img src="" class="img_zoomcv">
+        </div>
+        <img class="close_popup close_zoom_cv" src="/images/modals/close_black.png" alt="close">
+    </div>
+</div>
+<!-- xem trước cv -->
+<div class="popup popup_viewcv" id="popup_viewcv" style="">
+    <div class="main_popup">
+        <div class="poup_left scroll_y">
+            <div class="list_imgcv"><img class="img_review_maucv" src="" alt="image"></div>
+            <img class="plus_zoom_cv" src="/images/iconcv/plus_zoom_cv.png" alt="zoom">
+        </div>
+        <div class="poup_right">
+            <form method="post" class="form_check">
+                <span class="title_maucv font_s24 line_h28 font_w500 cl_primary js_nganhnghe h2 h2-style">Trợ Giảng Tiếng Anh 01</span>
+                <div class="box_btn_view chil_24">
+                    <div class="cv-group">
+                        <span class="font_s18 line_h22 font_w500 cl_a4">Màu sắc</span>
+                        <div class="list_color_cv mt_16_i"><span class="color_cv cursor_ptt active" style="color: #231f20;" data-img=""></span><span class="color_cv cursor_ptt " style="color: #08246c;" data-img="/maucv/tro-giang-tieng-anh-01/08246c.jpg"></span><span class="color_cv cursor_ptt " style="color: #664341;" data-img="/maucv/tro-giang-tieng-anh-01/664341.jpg"></span></div>
+                    </div>
+                    <div class="cv-submit d_flex flex_column gap_15">
+                        <a rel="nofollow" href="/tao-cv-online/tro-giang-tieng-anh-01" target="_blank" class="add_mau btn d_flex font_s16 line_h19 font_w500">
+                            <img src="/images/iconcv/edit_white.png" alt="mẫu cv">
+                            Dùng mẫu này
+                        </a>
+                        <button type="button" class="cancel btn td_btn d_flex font_s16 line_h19 font_w500">Đóng lại</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="close_popup close_ppcv">
+            <img src="/images/modals/close_black.png" width="18" height="18" alt="Đóng">
+        </div>
+    </div>
+</div>
+<script defer>
+    // xem trước mẫu cv
+    $(document).on('click', '.button_previewcv', function () {
+        let el = $(this),
+            idcv = el.find(".img_button_previewcv").attr('data-idcv'),
+            name_cv = el.find(".img_button_previewcv").attr('data-name'),
+            alias_cv = el.find(".img_button_previewcv").attr('data-alias'),
+            color_cv = el.find(".img_button_previewcv").attr('data-color');
+        $('#popup_viewcv .title_maucv').text(name_cv);
+        var listColor = color_cv.split(','),
+            color_active = listColor[0],
+            html_color = '';
+        $('#popup_viewcv .list_imgcv').html(`<img class="img_review_maucv" src="/maucv/${alias_cv}/${color_active}.jpg">`);
+        listColor.forEach(function(color) { 
+            html_color += `<span class="color_cv cursor_pt ${(color == color_active) ? 'active' : ''}" style="color: #${color};" data-img="/maucv/${alias_cv}/${color}.jpg"></span>`;
+        });
+        $('#popup_viewcv .list_color_cv').html(html_color);
+        $('#popup_viewcv .add_mau').attr('href', `/tao-cv-online/${alias_cv}`);
+        $('#popup_viewcv').removeClass('hidden').show();
+        if (idcv > 0) {
+            $.ajax({
+                type: 'POST',
+                url: `${URL_API}/cv/UpdateViewCv`,
+                data: { idcv },
+                dataType: "JSON",
+                success: function (data) {
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+    });
+
+    $(document).on('click', '.popup .close_popup, .popup .cancel', function () {
+        $('#popup_viewcv').addClass('hidden').hide();
+    });
+
+    $(document).on('click', '#popup_viewcv .list_color_cv .color_cv', function () {
+        let img = $(this).attr('data-img');
+        $('#popup_viewcv .list_imgcv').html(`<img class="img_review_maucv" src="${img}">`);
+        $('#popup_viewcv .list_color_cv .color_cv').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $(document).on('click', '#popup_viewcv .plus_zoom_cv', function () {
+        $('.popup').addClass('hidden').hide();
+        let img = $(this).parents('.poup_left').find('.img_review_maucv').attr('src');
+        $('#popup_previewcv .img_zoomcv').attr('src', img);
+        $('#popup_previewcv').removeClass('hidden').show();
+    });
+    $(document).on('click', '#popup_previewcv .close_zoom_cv', function () {
+        $(this).parents("#popup_previewcv").hide();
+        $(this).parents('#popup_previewcv').find('.img_zoomcv').attr('src','');
+    });
+</script>

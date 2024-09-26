@@ -1,0 +1,155 @@
+<div class="box-sidebar-cv d_none">
+    <div class="container-side-barcv">
+        <div class="container_close_sidebar d_none">
+            <div class="button_close_sidebar">
+                <p class="txt_close_sidebar">Xong</p>
+            </div>
+        </div>
+        <div class="content-sidebar-cv">
+            <div class="content-sidebar-cm content-sidebar-maucv d_none">
+                <p class="tilte-sidebar-cm color_fff">Chọn mẫu Cv</p>
+                <div class="show-sidebar-maucv">
+                    <% cvthamkhaoo.forEach((element,key) => { %>
+                        <a class="item-mau-cv" href="<%= rewrite_url_CV(element.alias) %>">
+                            <div class="boder-imgsidebar-maucv">
+                                <img src="<%= element.cover_image %>" class="imgsidebar-maucv" alt="mẫu cv">
+                            </div>
+                            <p class="txt-name-maucv"><%= element.name %></p>
+                        </a>
+                    <% }); %>
+                </div>
+            </div>
+            <div class="content-sidebar-cm content-sidebar-colorcv d_none">
+                <p class="tilte-sidebar-cm">Chọn màu Cv</p>
+                <div class="show-sidebar-colorcv">
+                    <% data_cv.data_colorcv.forEach(element => { %>
+                    <div class="boder-sidebar-colorcv <%= (element == data_cv.color_active) ? "activecolor" : ""  %>">
+                        <span title="Màu nền" class="sidebar-colorcv" style="background-color:#<%= element %>" data-color="<%= element %>"></span>
+                    </div>
+                    <% }); %>
+                </div>
+            </div>
+            <div class="content-sidebar-cm content-sidebar-langcv d_none">
+                <p class="tilte-sidebar-cm">Chọn ngôn ngữ Cv</p>
+                <div class="show-sidebar-lang">
+                    <div class="boder-sidebar-lang button-lang <%= (data_cv.langcv == 1) ? "activelang" : ""  %>" data-lang = '1'>
+                        <img src="/images/iconcv/vi.png" class="imgsidebar-langcv" alt="mẫu cv">
+                    </div>
+                    <div class="boder-sidebar-lang button-lang <%= (data_cv.langcv == 2) ? "activelang" : ""  %>" data-lang = '2'>
+                        <img src="/images/iconcv/en.png" class="imgsidebar-langcv" alt="mẫu cv">
+                    </div>
+                    <div class="boder-sidebar-lang button-lang <%= (data_cv.langcv == 3) ? "activelang" : ""  %>" data-lang = '3'>
+                        <img src="/images/iconcv/jp.png" class="imgsidebar-langcv" alt="mẫu cv">
+                    </div>
+                    <div class="boder-sidebar-lang button-lang <%= (data_cv.langcv == 4) ? "activelang" : ""  %>" data-lang = '4'>
+                        <img src="/images/iconcv/cn.png" class="imgsidebar-langcv" alt="mẫu cv">
+                    </div>
+                    <div class="boder-sidebar-lang button-lang <%= (data_cv.langcv == 5) ? "activelang" : ""  %>" data-lang = '5'>
+                        <img src="/images/iconcv/kr.png" class="imgsidebar-langcv" alt="mẫu cv">
+                    </div>
+                </div>
+            </div>
+            <div class="content-sidebar-cm content-sidebar-cvthamkhao d_none">
+                <p class="tilte-sidebar-cm">Chọn mẫu CV tham khảo</p>
+                <div class="container-maucv-thamkhao">
+                    <% cvthamkhaoo.forEach((element,key) => { %>
+                        <div class="item-mau-cvthamkhao">
+                            <input type="radio" name="input_cvthamkhao" data-link="<%= rewrite_url_CV(element.alias) %>" value="<%= element.cover_image %>" class="input_cvthamkhao">
+                            <p class="txt-name-cvthamkhao"><%= element.name %></p>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+            <div class="content-sidebar-cm content-sidebar-doibocuc d_none">
+                <div class="box_bocuc_show">       
+                    <p class="tilte-sidebar-cm">Mục đang sử dụng</p>
+                    <div class="container_bocuc_show container_bocuc_general">
+                        <% menu_html.forEach(function(item) { %>
+                            <div class="boder-item-bocuc <%= item['type'] == "profile" ? "d_none": "" %> <%= item['status'] != 'hide' ? "": "d_none" %>" data-id="<%= item['id'] %>">
+                                <div class="item_bocuc_show">
+                                    <img width="16px" height="16px" src="/images/iconcv/warning-icon.png" class="icon_warning_muc cursor_pt" alt="icon">
+                                    <div class="bocuc_show_frame">
+                                        <p class="txt_frame_mcsd"><%= item['title'] %></p>
+                                    </div>
+                                    <img width="16px" height="16px" src="/images/iconcv/minus-icon.png" class="icon_an_muc cursor_pt" alt="icon">
+                                </div>
+                            </div>
+                        <% }); %>
+                        <% block_html.forEach(function(item) { %>
+                            <div class="boder-item-bocuc <%= item['status'] != 'hide' ? "": "d_none" %>" data-id="<%= item['id'] %>">
+                                <div class="item_bocuc_show">
+                                    <img width="16px" height="16px" src="/images/iconcv/warning-icon.png" class="icon_warning_muc cursor_pt" alt="icon">
+                                    <div class="bocuc_show_frame">
+                                        <p class="txt_frame_mcsd"><%= item['title'] %></p>
+                                    </div>
+                                    <img width="16px" height="16px" src="/images/iconcv/minus-icon.png" class="icon_an_muc cursor_pt" alt="icon">
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+                <div class="box_bocuc_hide">       
+                    <p class="tilte-sidebar-cm">Mục chưa sử dụng</p>
+                    <div class="container_bocuc_hide container_bocuc_general">
+                        <% menu_html.forEach(function(item) { %>
+                        <div class="boder-item-bocuc <%= item['status'] == 'hide' ? "": "d_none" %>" data-id="<%= item['id'] %>">
+                            <div class="item_bocuc_hide">
+                                <img width="16px" height="16px" src="/images/iconcv/warning-icon.png" class="icon_warning_muc cursor_pt" alt="icon">
+                                <div class="bocuc_hide_frame">
+                                    <p class="txt_frame_mcsd"><%= item['title'] %></p>
+                                </div>
+                                <img width="16px" height="16px" src="/images/iconcv/plus-icon.png" class="icon_them_muc cursor_pt" alt="icon">
+                            </div>
+                        </div>
+                        <% }); %>
+                        <% block_html.forEach(function(item) { %>
+                            <div class="boder-item-bocuc <%= item['status'] == 'hide' ? "": "d_none" %>" data-id="<%= item['id'] %>">
+                                <div class="item_bocuc_hide">
+                                    <img width="16px" height="16px" src="/images/iconcv/warning-icon.png" class="icon_warning_muc cursor_pt" alt="icon">
+                                    <div class="bocuc_hide_frame">
+                                        <p class="txt_frame_mcsd"><%= item['title'] %></p>
+                                    </div>
+                                    <img width="16px" height="16px" src="/images/iconcv/plus-icon.png" class="icon_them_muc cursor_pt" alt="icon">
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+            <div class="content-sidebar-cm content-sidebar-toiuukhonggian d_none">
+                <div class="container_toiuukg">
+                    <p class="tilte-sidebar-cm">Điều chỉnh khoảng cách đề tối ưu không gian CV</p>
+                    <div class="show_toiuukg">
+                        <div class="items_toiuukg">
+                            <img src="/images/iconcv/fontsize_normal.png" width="14" height="16" alt="Cỡ chữ">
+                            <div class="form_range">
+                                <div class="minus_range_btn cursor_pt" data="size">
+                                    <img src="/images/iconcv/icon_minus_small.png" width="21" height="21" alt="icon">
+                                </div>
+                                <input class="range_space_input ip_font_size" type="range" min="1" max="3" step="1" value="<%= (data_cv.font_size_activeint) ? data_cv.font_size_activeint : 2  %>">
+                                <div class="plus_range_btn cursor_pt" data="size">
+                                    <img src="/images/iconcv/icon_plus_small.png" width="21" height="21" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items_toiuukg">
+                            <img src="/images/iconcv/icon_giandongsb.png" width="19" height="16" alt="Giãn dòng">
+                            <div class="form_range">
+                                <div class="minus_range_btn cursor_pt" data="lheight">
+                                    <img src="/images/iconcv/icon_minus_small.png" width="21" height="21" alt="icon">
+                                </div>
+                                <input class="range_space_input ip_line_height" type="range" min="1" max="3" step="1" value="<%= (data_cv.font_spacing_activeint) ? data_cv.font_spacing_activeint : 2  %>">
+                                <div class="plus_range_btn cursor_pt" data="lheight">
+                                    <img src="/images/iconcv/icon_plus_small.png" width="21" height="21" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rutgon-sidebar-cv">
+            <img width="24px" height="21px" src="/images/iconcv/arrows-chevron.png" alt="icon">
+        </div>
+    </div>
+</div>
