@@ -5,6 +5,9 @@ var FormData = require('express-form-data');
 const Home_page = require("../controllers/Home_page");
 const Cv_create = require("../controllers/Cv_create");
 const profile = require("../controllers/profile");
+const listCandidate = require("../controllers/listCandidate");
+const candidateSubmissionSpecialist = require("../controllers/candidateSubmissionSpecialist")
+const candidateDetails = require("../controllers/candidateDetails")
 // 
 router.use(cookieParser());
 router.use((req, res, next) => {
@@ -19,5 +22,7 @@ router.get("/tao-cv-online/:slug", Cv_create.index);
 
 // ======================UV====================
 router.get("/profile", profile.index);
-
+router.get("/listCandidate", listCandidate.index);
+router.get("/candidateSubmissionSpecialist", candidateSubmissionSpecialist.index)
+router.get("/candidateDetails", candidateDetails.index)
 module.exports = router;

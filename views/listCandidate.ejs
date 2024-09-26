@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommend & Chat</title>
+    <%- include('layouts/common_library.ejs'); %>
+        <link rel="stylesheet" href="/css/listCandidate.css?v=<%= data.version %>">
+        
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-search">
+            <div class="search-input">
+                <input type="text" placeholder="Looking for job seeker" class="search-input-field" />
+                <!-- Location -->
+                <div class="select-container">
+                    <img src="/images/listCandidateIcon/ChooseLocation.svg" alt="Location Icon" class="content-icon" />
+                        <select class="content-select">
+                            <option value="" disabled selected>Location</option>
+                            <option value="ha-noi">Hà Nội</option>
+                            <option value="ho-chi-minh">TP. Hồ Chí Minh</option>
+                            <option value="da-nang">Đà Nẵng</option>
+                        </select>
+                        <div class="1"></div>
+                </div>
+                <!-- All industries -->
+                <div class="select-container">
+                    <img src="/images/listCandidateIcon/ChooseIndustries.svg" alt="Industries Icon"
+                        class="content-icon" />
+                    <select class="content-select">
+
+                        <option value="" disabled selected>All industries</option>
+                        <option value="it">Công nghệ thông tin</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="finance">Tài chính</option>
+                        <!-- Thêm các lựa chọn ngành nghề khác ở đây -->
+                    </select>
+                </div>
+                <button class="search-btn">Search</button>
+                <button class="filter-btn">Advanced Filtering</button>
+            </div>
+        </div>
+
+
+        <div class="container-content">
+            <div class="recommend">
+                <div class="recommended-title">RECOMMENDED JOB SEEKERS</div>
+                <div class="list-container">
+                    <ul class="list-container" id="job-seekers-list">
+                        <script>
+                            // Số lượng phần tử bạn muốn thêm vào danh sách
+                            const numberOfItems = 18;
+                            const listContainer = document.getElementById('job-seekers-list');
+
+                            for (let i = 1; i <= numberOfItems; i++) {
+                                const listItem = document.createElement('li');
+                                listItem.classList.add('list-item');
+
+                                const itemInfo = document.createElement('div');
+                                itemInfo.classList.add('item-info');
+
+                                const imgContainer = document.createElement('div');
+                                imgContainer.classList.add('img-container');
+
+                                const img = document.createElement('img');
+                                img.src = '/images/listCandidateIcon/avatar.png';
+                                img.alt = 'Ảnh avatar';
+
+                                // Tick xanh
+                                const circle = document.createElement('div');
+                                circle.classList.add('status-circle');
+
+                                // Append elements
+                                imgContainer.appendChild(img);
+                                imgContainer.appendChild(circle);
+
+                                const title = document.createElement('h3');
+                                title.textContent = `Isabelita Flor de Maria Reyes ${i}`;
+                                title.classList.add('title-item')
+
+                                const staff = document.createElement('p');
+                                staff.textContent = `Sales Staff: ${i}`;
+
+                                const update = document.createElement('p');
+                                update.textContent = `Last updated: Just now`;
+
+                                const detailsContainer = document.createElement('div');
+                                detailsContainer.classList.add('details-container');
+
+                                const detailsPart1 = document.createElement('div');
+                                detailsPart1.classList.add('detail-part');
+
+                                // location
+                                const icon1 = document.createElement('div');
+                                // icon1.id = 'icon-container';
+
+                                const iconElement = document.createElement('i');
+                                iconElement.className = 'fi fi-rr-marker detail-icon1';
+                                // iconElement.style.fontSize = '24px';
+                                // iconElement.style.color = 'black';
+
+                                icon1.appendChild(iconElement);
+
+                                document.body.appendChild(icon1);
+
+
+                                const text1 = document.createElement('span');
+                                text1.textContent = `Metro Manila, 1100, Philippines `;
+
+                                const verticalLine1 = document.createElement('span');
+                                verticalLine1.className = 'vertical-line';
+
+                                detailsPart1.appendChild(icon1);
+                                detailsPart1.appendChild(text1);
+                                detailsPart1.appendChild(verticalLine1);
+
+
+                                // Exp
+                                const detailsPart2 = document.createElement('div');
+                                detailsPart2.classList.add('detail-part');
+
+                                const icon2 = document.createElement('div');
+                                //icon2.classList.add('detail-icon2');
+
+                                const iconElement2 = document.createElement('i');
+                                iconElement2.className = 'fi fi-rr-briefcase';
+                                iconElement2.style = 'margin: 5px';
+
+                                icon2.appendChild(iconElement2);
+
+                                const text2 = document.createElement('span');
+                                text2.textContent = `3 years`;
+
+                                const verticalLine2 = document.createElement('span');
+                                verticalLine2.className = 'vertical-line';
+
+                                detailsPart2.appendChild(icon2);
+                                detailsPart2.appendChild(text2);
+                                detailsPart2.appendChild(verticalLine2);
+
+                                // Wage
+                                const detailsPart3 = document.createElement('div');
+                                detailsPart3.classList.add('detail-part');
+
+                                const icon3 = document.createElement('div');
+                                //icon3.classList.add('detail-icon3');
+
+                                const iconElement3 = document.createElement('i');
+                                iconElement3.className = 'fi fi-rr-usd-circle';
+                                iconElement3.style = 'margin: 5px';
+
+                                icon3.appendChild(iconElement3);
+
+                                const text3 = document.createElement('span');
+                                text3.textContent = `$1100`;
+
+                                detailsPart3.appendChild(icon3);
+                                detailsPart3.appendChild(text3);
+
+                                detailsContainer.appendChild(detailsPart1);
+                                detailsContainer.appendChild(detailsPart2);
+                                detailsContainer.appendChild(detailsPart3);
+
+                                // chat-recommend
+                                const tickElement = document.createElement('div');
+                                tickElement.classList.add('tick-icon');
+
+                                const chatButton = document.createElement('button');
+                                chatButton.classList.add('chat-btn');
+                                chatButton.textContent = 'Chat';
+
+                                itemInfo.appendChild(title);
+                                itemInfo.appendChild(staff);
+                                itemInfo.appendChild(update);
+                                itemInfo.appendChild(detailsContainer);
+
+                                listItem.appendChild(imgContainer); // Add imgContainer
+                                listItem.appendChild(itemInfo);
+                                listItem.appendChild(tickElement);  // Add tick-icon
+                                listItem.appendChild(chatButton); // Add chat-btn
+                                listContainer.appendChild(listItem);
+                            }
+                        </script>
+                        <div class="container-button">
+                            <button class="see-more-button">
+                                See More
+                                <img src="/images/listCandidateIcon/ant_design.svg" alt="Ant Design Icon"
+                                    class="ant-icon" />
+                            </button>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="chat">
+                <div class="chat-title-container">
+                    <h2 class="chat-title">CHAT WITH CANDIDATES</h2>
+                </div>
+                <div class="chat-content">
+                    <ul class="chat-list" id="chat-list">
+                        <script>
+                            // Số lượng phần tử bạn muốn thêm vào danh sách
+                            const numberOfItemHumans = 5; // Thay đổi theo số lượng cần thiết
+                            const chatListContainer = document.getElementById('chat-list');
+
+                            for (let i = 1; i <= numberOfItemHumans; i++) {
+                                const listItem = document.createElement('li');
+                                listItem.classList.add('chat-item');
+                                //img
+                                const imgContainer = document.createElement('div');
+                                imgContainer.classList.add('img-container');
+
+                                const img = document.createElement('img');
+                                img.src = '/images/listCandidateIcon/avatar.png';
+                                img.alt = 'Ảnh đại diện';
+                                img.classList.add('chat-avatar');
+
+                                // Tick xanh
+                                const circle = document.createElement('div');
+                                circle.classList.add('status-circle-chat');
+
+                                imgContainer.appendChild(img);
+                                imgContainer.appendChild(circle);
+                                //
+                                const title = document.createElement('span');
+                                title.textContent = `Isabelita Flor de Maria Reyes`;
+                                title.classList.add('chat-name');
+
+                                const itemInfo = document.createElement('div');
+                                itemInfo.classList.add('chat-item-info');
+
+                                const jobTitle = document.createElement('p');
+                                jobTitle.textContent = `Sale Staff`;
+
+                                // Tạo phần chi tiết 1
+                                const detailsPart1 = document.createElement('div');
+                                detailsPart1.classList.add('detail-part');
+
+                                // Tạo icon location
+                                const icon1 = document.createElement('div');
+                                const iconElement = document.createElement('i');
+                                iconElement.className = 'fi fi-rr-marker detail-icon1';
+                                icon1.appendChild(iconElement);
+
+                                // Thêm icon vào phần chi tiết 1
+                                const textLocation = document.createElement('span');
+                                textLocation.textContent = `Metro Manila`;
+
+                                // Append các phần tử vào detailsPart1
+                                detailsPart1.appendChild(icon1);
+                                detailsPart1.appendChild(textLocation);
+
+                                // Append các phần tử vào itemInfo
+                                itemInfo.appendChild(title);
+                                itemInfo.appendChild(jobTitle);
+                                itemInfo.appendChild(detailsPart1);
+
+                                // Append img và itemInfo vào listItem
+                                listItem.appendChild(imgContainer);
+                                listItem.appendChild(itemInfo);
+
+                                // Append listItem vào chatListContainer
+                                chatListContainer.appendChild(listItem);
+                            }
+                        </script>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script src = "/javascript/listCandidate.js" defer></script>
+</html>

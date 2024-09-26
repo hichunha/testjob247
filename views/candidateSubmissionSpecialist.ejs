@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyên viên gửi ứng viên</title>
+    <%- include('layouts/common_library.ejs'); %>
+    <link rel="stylesheet" href="/css/candidateSubmissionSpecialist.css?v=<%= data.version %>">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-menu-drawer">
+            <div class="container-logo-website">
+                <img src="/images/candidateSubmissionSpecialist/LogoWebsite.svg" alt="Logo website" class="logo-website" />
+            </div>
+            <div class="container-logo-website-2">
+                <div class="logo-company-slogan">
+                    <img src="/images/candidateSubmissionSpecialist/logo-company.png" alt="logo company" class="logo-company" />
+                </div>
+                <div class="container-title-logo">
+                    <p class="title-logo">Công ty Cổ phần OMEGA</p>
+                </div>
+            </div>
+            <div class="container-menu-item">
+                <div class="container-item-quan-ly-chung">
+                    <div class="container-logo-quan-ly-chung">
+                        <image src="/images/candidateSubmissionSpecialist/LogoQuanLyChung.svg" alt="" class="logo-quan-ly-chung" />
+                    </div>
+                    <p class="text-menu">Quản lý chung</p>
+                </div>
+                <div class="container-item-tin-tuyen-dung">
+                    <div class="container-tin-tuyen-dung">
+                        <div class="container-logo-tin-tuyen-dung">
+                            <img src="/images/candidateSubmissionSpecialist/LogoTinTuyenDung.svg" alt="" class="logo-tin-tuyen-dung" />
+                        </div>
+                        <div class="container-text-Tin-Tuyen-dung">
+                            <p class="text-menu">Tin tuyển dụng</p>
+                        </div>
+                    </div>
+                    <div class="container-arrow-down">
+                        <img src="/images/candidateSubmissionSpecialist/ArrowDown.svg" alt="" class="icon-arrow-down" />
+                    </div>
+                </div>
+                <!-- Phần chính -->
+                <div class="container-menu-quan-ly-ho-so">
+                    <div class="container-item-quan-ly-ho-so">
+                        <div class="container-quan-ly-ho-so">
+                            <div class="container-logo-quan-ly-ho-so">
+                                <img src="/images/candidateSubmissionSpecialist/LogoQuanLyHoSo.svg" alt="" class="logo-quan-ly-ho-so" />
+                            </div>
+                            <div class="container-text-Tin-Tuyen-dung">
+                                <p class="text-menu">Quản lý hồ sơ</p>
+                            </div>
+                        </div>
+                        <div class="container-arrow-down">
+                            <img src="/images/candidateSubmissionSpecialist/ArrowDown.svg" alt="" class="icon-arrow-down" />
+                        </div>
+                    </div>
+                    <div class="container-list-item-quan-ly-ho-so">
+                        <div class="container-item-chuyen-vien-gui-ung-vien">
+                            <img src="/images/candidateSubmissionSpecialist/Rectangle.svg" alt="" class="choose-item-background" />
+                            <p>Chuyên viên gửi ứng viên</p>
+                        </div>
+                        <div class="container-ung-vien-den-ung-tuyen">
+                            <div class="container-text-item-quan-ly-ho-so">
+                                <p class="text-menu">Ứng viên đến ứng tuyển</p>
+                            </div>
+                        </div>
+                        <div class="container-ung-vien-den-ung-tuyen">
+                            <div class="container-text-item-quan-ly-ho-so">
+                                <p class="text-menu">Ứng viên từ điểm lọc</p>
+                            </div>
+                        </div>
+                        <div class="container-ung-vien-den-ung-tuyen">
+                            <div class="container-text-item-quan-ly-ho-so">
+                                <p class="text-menu">Hồ sơ ứng viên đã lưu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- Tìm kiếm ứng viên -->
+                <div class="container-item-tin-tuyen-dung">
+                    <div class="container-tin-tuyen-dung">
+                        <div class="container-logo-tin-tuyen-dung">
+                            <img src="/images/candidateSubmissionSpecialist/LogoTimKiemUngVien.svg" alt="" class="logo-tin-tuyen-dung" />
+                        </div>
+                        <div class="container-text-Tin-Tuyen-dung">
+                            <p class="text-menu">Tim Kiem Ung Vien</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ưng viên gợi ý từ AI -->
+                <div class="container-item-tin-tuyen-dung">
+                    <div class="container-tin-tuyen-dung">
+                        <div class="container-logo-tin-tuyen-dung">
+                            <img src="/images/candidateSubmissionSpecialist/LogoUnVienGoiYTuAI.svg" alt="" class="logo-tin-tuyen-dung" />
+                        </div>
+                        <div class="container-text-Tin-Tuyen-dung">
+                            <p class="text-menu">Ứng viên gợi ý từ AI</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tin nhắn từ ứng viên -->
+                <div class="container-item-tin-tuyen-dung">
+                    <div class="container-tin-tuyen-dung">
+                        <div class="container-logo-tin-tuyen-dung">
+                            <img src="/images/candidateSubmissionSpecialist/LogoTinNhanTuUngVien.svg" alt="" class="logo-tin-tuyen-dung" />
+                        </div>
+                        <div class="container-text-Tin-Tuyen-dung">
+                            <p class="text-menu">Tin nhắn từ ứng viên</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Quản lý dịch vụ -->
+                <div class="container-item-tin-tuyen-dung">
+
+                    <div class="container-tin-tuyen-dung">
+                        <div class="container-logo-tin-tuyen-dung">
+                            <img src="/images/candidateSubmissionSpecialist/LogoQuanLyDichVu.svg" alt="" class="logo-tin-tuyen-dung" />
+                        </div>
+                        <div class="container-text-Tin-Tuyen-dung">
+                            <p class="text-menu">Quản Lý Dịch Vụ</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kinh nghiệm nhân viên -->
+                <div class="container-item-tin-tuyen-dung">
+
+                    <div class="container-tin-tuyen-dung">
+                        <div class="container-logo-tin-tuyen-dung">
+                            <img src="/images/candidateSubmissionSpecialist/LogoKinhNghiemNhanSu.svg" alt="" class="logo-tin-tuyen-dung" />
+                        </div>
+                        <div class="container-text-Tin-Tuyen-dung">
+                            <p class="text-menu">Kinh nghiệm nhân sự</p>
+                        </div>
+                    </div>
+                    <div class="container-arrow-down">
+                        <img src="/images/candidateSubmissionSpecialist/ArrowDown.svg" alt="" class="icon-arrow-down" />
+                    </div>
+                </div>
+                <!-- Quản lý tài khoản -->
+                <div class="container-item-tin-tuyen-dung">
+
+                    <div class="container-tin-tuyen-dung">
+                        <div class="container-logo-tin-tuyen-dung">
+                            <img src="/images/candidateSubmissionSpecialist/LogoTinTuyenDung.svg" alt="" class="logo-tin-tuyen-dung" />
+                        </div>
+                        <div class="container-text-Tin-Tuyen-dung">
+                            <p class="text-menu">Quản lý tài khoản</p>
+                        </div>
+                    </div>
+                    <div class="container-arrow-down">
+                        <img src="/images/candidateSubmissionSpecialist/ArrowDown.svg" alt="" class="icon-arrow-down" />
+                    </div>
+                </div>
+                <!-- Đóng góp ý kiến -->
+                <div class="container-item-tin-tuyen-dung">
+
+                    <div class="container-tin-tuyen-dung">
+                        <div class="container-logo-tin-tuyen-dung">
+                            <img src="/images/candidateSubmissionSpecialist/LogoDongGopYKien.svg" alt="" class="logo-tin-tuyen-dung" />
+                        </div>
+                        <div class="container-text-Tin-Tuyen-dung">
+                            <p class="text-menu">Đóng góp ý kiến</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-status-search-bar">
+            <div class="container-input-search">
+                <input type="text" id="inputField" name="inputField" placeholder="0">
+            </div>
+            <div class="container-menu-bar">
+                <a href="#" class="menu-link">Trang chủ</a>
+                <a href="#" class="menu-link">Bảng giá</a>
+                <a href="#" class="menu-link">Đăng tin</a>
+                <a href="#" class="menu-link">Tìm ứng viên</a>
+                <div class="container-icon-notification">
+                    <img src="/images/candidateSubmissionSpecialist/LogoNotification.svg" alt="" class="icon-notification" />
+                </div>
+            </div>
+        </div>
+        <div class="container-information-support">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

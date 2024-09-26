@@ -1,0 +1,487 @@
+/* Container Styling */
+html,
+body {
+    overflow: hidden;
+}
+
+.container {
+    background-color: #f9f9f9;
+}
+
+.container-search {
+    background: linear-gradient(to left,
+            #285A9B 0%,
+            #3C6EB0 17%,
+            #5278A9 33%,
+            #0F96B4 50%,
+            #10A9BE 67%,
+            #87D4DF 83%,
+            #CDE3FF 100%);
+    height: 108px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    border: 1px solid #000;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input[type="text"],
+select,
+.search-btn,
+.filter-btn {
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+
+.search-input-field {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    width: 356px;
+    height: 50px;
+    padding: 0 10px;
+    padding-left: 40px;
+    background: url('/images/listCandidateIcon/Icon.png') no-repeat 10px center;
+    background-size: 20px;
+    margin-left: 10px;
+}
+
+.search-input-field::placeholder {
+    color: #999999;
+    opacity: 1;
+}
+
+.select-container {
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    max-width: 322px;
+    /* Căn giữa theo chiều dọc */
+}
+
+.content-select {
+    border: none;
+    outline: none;
+    position: relative;
+    /* padding-right: 30px;
+    background-image: url('/images/listCandidateIcon/arrow_down.png');
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: right 10px center; */
+}
+
+.search-input-field,
+.location-select,
+.industry-select,
+.search-btn,
+.filter-btn {
+    min-width: 120px;
+    flex: 0 1 auto;
+}
+
+
+.content-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left: 10px;
+}
+
+/* Giữ cho các nút cùng hàng */
+.search-btn,
+.filter-btn {
+    flex: 0 0 auto;
+    /* Giữ kích thước cố định cho các nút */
+}
+
+/* Nếu bạn có styles cho input[type="text"], có thể bỏ qua */
+input[type="text"] {
+    border: 1px #ccc;
+    border-radius: 5px;
+    height: 50px;
+    width: 266px;
+    padding: 0 50px;
+    background: url('/images/listCandidateIcon/Icon.png') no-repeat 10px center;
+    background-size: 20px;
+    /* Kích thước icon */
+    background-color: #FFFFFF;
+}
+
+
+select {
+    height: 50px;
+    width: 322px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-btn {
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #3DB3F7;
+    color: #FFFFFF;
+}
+
+.filter-btn {
+    width: 155px;
+    height: 50px;
+    background-color: #FFFFFF;
+    color: #285A9B;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    display: flex;
+}
+
+.search-btn:hover {
+    background-color: #11aa7c;
+}
+
+.filter-btn:hover {
+    background-color: #e7f1ff;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+    margin-right: 70px;
+    overflow-y: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* Recommend Section Styling */
+.recommended-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #285A9B;
+}
+
+.recommend {
+    background-color: #FFFFFF;
+    padding: 20px;
+    flex: 3;
+    overflow-y: auto;
+    max-height: 70vh;
+    gap: 40px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-bottom: 20px;
+    width: 1138px;
+}
+
+.recommend::-webkit-scrollbar {
+    display: none;
+    /* Ẩn thanh cuộn cho trình duyệt Webkit (Chrome, Safari) */
+}
+
+/* Danh sách Recommend */
+.list-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    margin-bottom: 0;
+    padding: 0 0 20px 0;
+}
+
+/* Danh sách các mục bên trong Recommend */
+.list-item {
+    position: relative;
+    height: fit-content;
+    position: sticky;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    gap: 37px;
+    box-sizing: border-box;
+}
+
+/* Styling cho ảnh trong Recommend */
+.list-item img {
+    width: 114px;
+    height: 114px;
+    object-fit: cover;
+    border-radius: 8px;
+    position: relative;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.status-circle {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #4ECB71 0%, #76FF9C 100%);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+}
+
+/* Styling cho thông tin trong Recommend */
+.item-info {
+    flex: 1;
+
+}
+
+/* Tiêu đề */
+.item-info h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #285A9B;
+}
+
+/* Detail */
+.details-container {
+    display: flex;
+    /* Sắp xếp các phần tử theo hàng */
+    justify-content: flex-start;
+    /* Căn trái cho các phần tử */
+    margin-top: 10px;
+}
+
+.vertical-line {
+    border-left: 2px solid black;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.detail-part {
+    background-color: #FFFFFF;
+    margin-left: 10px;
+    display: flex;
+    /* Sắp xếp icon và nội dung theo hàng */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    margin-right: 10px;
+}
+
+.detail-icon1 {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    margin-right: 10px;
+    /* background: url('/images/listCandidateIcon/location2.svg') no-repeat 10px center; */
+}
+
+.detail-icon2 {
+    background: url('/images/listCandidateIcon/Exp.svg') no-repeat 10px center;
+}
+
+.detail-icon3 {
+    background: url('/images/listCandidateIcon/Wage.svg') no-repeat 10px center;
+}
+
+
+/* Địa chỉ */
+.item-info p {
+    margin-bottom: 10px;
+    color: #777;
+}
+
+/* Nút Chat */
+.chat-recommend {
+    position: relative;
+    /* Để các phần tử bên trong có thể được định vị tương đối */
+    display: flex;
+    /* Sắp xếp các phần tử bên trong theo hàng */
+    flex-direction: column;
+    /* Đặt chiều dọc */
+    align-items: flex-end;
+    /* Căn phải cho các phần tử */
+    height: 100%;
+    /* Chiều cao của container để điều chỉnh vị trí */
+}
+
+.tick-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+
+    background: url('/images/listCandidateIcon/Tick.svg') no-repeat 10px center;
+}
+
+.chat-btn {
+
+    right: 20px;
+    background-color: #5DC22D;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 17px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 75px;
+    height: 35px;
+    gap: 10px;
+    padding: 8px 7px;
+    margin: 50px 0 0 20px;
+}
+
+
+.chat-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Chat Section Styling */
+.chat {
+    width: 471px;
+    flex: 1;
+    gap: 16px;
+    background-color: #FFFFFF;
+    padding: 20px 20px;
+    border: 1px solid #ccc;
+    height: fit-content;
+    /* Kích thước theo nội dung */
+    position: sticky;
+    /* Giữ nguyên vị trí khi cuộn */
+    margin-left: 50px;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.chat-title-container {
+    max-width: 391px;
+    height: 28px;
+}
+
+.chat-title {
+    font-size: 24;
+    font-weight: medium;
+    color: #194890;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.chat-content {
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 350px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Khoảng cách giữa tiêu đề chat và danh sách */
+}
+
+.chat-list {
+    list-style-type: none;
+    /* Loại bỏ dấu đầu dòng cho danh sách */
+    padding: 0;
+    /* Bỏ padding mặc định */
+    display: flex;
+    flex-direction: column;
+    /* Sắp xếp các mục theo chiều dọc */
+}
+
+.chat-item {
+    max-width: 391px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.chat-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.chat-item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chat-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.chat-item-info p,
+.chat-item-info span {
+    margin: 3px 0;
+}
+
+.status-circle-chat {
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #4ECB71 0%, #76FF9C 100%);
+    border-radius: 10px;
+    position: absolute;
+    right: 7px;
+    top: 3px;
+}
+
+.container-button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.see-more-button {
+    width: 159px;
+    height: 44px;
+    background-color: #285A9B;
+
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.see-more-button:hover {
+    background-color: #11aa7c;
+    /* Màu nền khi hover */
+}
+
+.ant-icon {
+    width: 15.6px;
+    height: 16.5px;
+    margin-left: 10px;
+
+}

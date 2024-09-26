@@ -1,0 +1,331 @@
+.html,
+body {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    margin-top: 0px;
+    height: 100%;
+    width: 1920px;
+    background-color: #D0D0D0;
+    overflow-y: auto;
+    overflow-x: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Menu drawer */
+.container-menu-drawer {
+    top: 0px;
+    margin-left: 0;
+    width: 343px;
+    height: 1091px;
+    background-color: #D0D0D0;
+    gap: 28px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+}
+
+
+.container-logo-website {
+    width: 182.9px;
+    height: 59px;
+    margin: 0 auto;
+}
+
+.logo-website {
+    width: 182.9px;
+    height: 59px;
+}
+
+.container-logo-website-2 {
+    width: 343px;
+    height: 173px;
+    gap: 20px;
+    background-color: #D0D0D0;
+}
+
+.logo-company-slogan {
+    width: 80px;
+    height: 80px;
+    margin: 25px auto;
+}
+
+.logo-company {
+    width: 80px;
+    height: 80px;
+}
+
+.container-title-logo {
+    width: 223px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto
+}
+
+.title-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    line-height: 23px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-menu-item {
+    width: 343px;
+    height: 759px;
+    background-color: #D0D0D0;
+    gap: 36px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 28px;
+    padding-bottom: 16px;
+
+}
+
+.container-item-quan-ly-chung {
+    max-width: 343px;
+    height: 22px;
+    border-radius: mixed;
+    padding-left: 26px;
+    gap: 21px;
+    display: flex;
+    flex-direction: row;
+}
+
+.text-menu {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    line-height: 21px;
+    font-size: 18px;
+    color: #FFFFFF
+}
+
+.container-logo-quan-ly-chung {
+    width: 25px;
+    height: 22px;
+}
+
+.logo-quan-ly-chung {
+    width: 25px;
+    height: 22px;
+}
+
+.container-item-tin-tuyen-dung {
+    width: 306px;
+    height: 24.62px;
+    padding-right: 12px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.container-tin-tuyen-dung,
+.container-quan-ly-ho-so {
+    width: 230px;
+    height: 24.62px;
+    gap: 29px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.container-logo-tin-tuyen-dung {
+    width: 20px;
+    height: 24.62px;
+}
+
+.logo-tin-tuyen-dung {
+    width: 20px;
+    height: 24.62px;
+}
+
+.container-arrow-down {
+    width: 11px;
+    height: 5px;
+}
+
+.icon-arrow-down {
+    width: 11px;
+    height: 5px;
+}
+
+.container-menu-quan-ly-ho-so {
+    height: 204.36px;
+    width: 318px;
+
+    margin-left: auto;
+    gap: 16px;
+    position: relative;
+
+}
+
+.container-item-quan-ly-ho-so {
+    width: 306px;
+    height: 26.36px;
+    padding-right: 12px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.container-logo-quan-ly-ho-so {
+    width: 21.09px;
+    height: 26.36px;
+}
+
+.logo-quan-ly-ho-so {
+    width: 21.09px;
+    height: 26.36px;
+}
+
+.container-list-item-quan-ly-ho-so {
+    width: 251px;
+    height: 162px;
+    gap: 16px;
+    margin-left: auto;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-item-chuyen-vien-gui-ung-vien {
+    width: 251px;
+    height: 51px;
+    position: relative;
+    gap: 10px;
+}
+
+.choose-item-background {
+    width: 251px;
+    height: 51px;
+}
+
+.container-item-chuyen-vien-gui-ung-vien p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap
+}
+
+.container-ung-vien-den-ung-tuyen {
+    width: 191px;
+    height: 21px;
+    padding-left: 30px;
+
+}
+
+.container-text-item-quan-ly-ho-so {
+    width: 191px;
+    height: 21px;
+}
+
+/* container-status-search-bar */
+
+.container-status-search-bar {
+    width: 1447px;
+    height: 43px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    gap: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.container-input-search {
+    width: 197px;
+    height: 43px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #E4EFF8;
+    border-radius: 40px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Để thay đổi màu sắc của placeholder */
+input::placeholder {
+    color: #FF0C0C;
+    opacity: 1;
+}
+
+input {
+    text-align: right;
+    background-color: #E4EFF8;
+}
+
+.container-menu-bar {
+    width: 677.96px;
+    height: 42.25px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+}
+
+.menu-link:hover {
+    background-color: #ccc;
+
+}
+
+.container-icon-notification {
+    width: 26.25px;
+    height: 30.62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-notification {
+    width: 26.25px;
+    height: 30.62px;
+}
+
+/* Nhân viên hỗ trợ */
+.container-information-support {
+    width: 1502px;
+    height: 174px;
+    gap: 27px;
+    position: absolute;
+
+}

@@ -1,0 +1,463 @@
+html,
+body {
+    overflow: hidden;
+
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+}
+
+.container-search {
+    background: linear-gradient(to left,
+            #285A9B 0%,
+            #3C6EB0 17%,
+            #5278A9 33%,
+            #0F96B4 50%,
+            #10A9BE 67%,
+            #87D4DF 83%,
+            #CDE3FF 100%);
+    height: 108px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    border: 1px solid #000;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input[type="text"],
+select,
+.search-btn,
+.filter-btn {
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+
+.search-input-field {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    width: 356px;
+    height: 50px;
+    padding: 0 10px;
+    padding-left: 40px;
+    background: url('/images/candidateDetails/Icon.png') no-repeat 10px center;
+    background-size: 20px;
+    margin-left: 10px;
+}
+
+.search-input-field::placeholder {
+    color: #999999;
+    opacity: 1;
+}
+
+.select-container {
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    max-width: 322px;
+    /* Căn giữa theo chiều dọc */
+}
+
+.content-select {
+    border: none;
+    outline: none;
+    position: relative;
+    /* padding-right: 30px;
+    background-image: url('/images/candidateDetails/arrow_down.png');
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: right 10px center; */
+}
+
+.search-input-field,
+.location-select,
+.industry-select,
+.search-btn,
+.filter-btn {
+    min-width: 120px;
+    flex: 0 1 auto;
+}
+
+
+.content-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left: 10px;
+}
+
+/* Giữ cho các nút cùng hàng */
+.search-btn,
+.filter-btn {
+    flex: 0 0 auto;
+    /* Giữ kích thước cố định cho các nút */
+}
+
+/* Nếu bạn có styles cho input[type="text"], có thể bỏ qua */
+input[type="text"] {
+    border: 1px #ccc;
+    border-radius: 5px;
+    height: 50px;
+    width: 266px;
+    padding: 0 50px;
+    background: url('/images/candidateDetails/Icon.png') no-repeat 10px center;
+    background-size: 20px;
+    /* Kích thước icon */
+    background-color: #FFFFFF;
+}
+
+
+select {
+    height: 50px;
+    width: 322px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-btn {
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #3DB3F7;
+    color: #FFFFFF;
+}
+
+.filter-btn {
+    width: 155px;
+    height: 50px;
+    background-color: #FFFFFF;
+    color: #285A9B;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    align-items: center;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-btn:hover,
+.filter-btn:hover {
+    background-color: #bebebe;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+    margin-right: 70px;
+    overflow-y: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Container-cv-person - content */
+
+.container-cv-person {
+    flex: 1;
+    padding-top: 40px;
+    overflow-y: auto;
+    border-radius: 8px;
+    margin-left: 50px;
+    margin-right: 50px;
+    scrollbar-width: none;
+}
+
+.container-introduce {
+    height: 107px;
+    width: 100%-28px;
+    background-color: #FFFFFF;
+    padding: 14px 14px 14px 14px;
+    gap: 22px;
+    display: flex;
+    flex-direction: row;
+}
+
+.avatar-introduce-container {
+    border: 1px solid rgba(25, 72, 144, 0.5);
+    border-radius: 8px;
+    width: 107px;
+    height: 107px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.avatar-introducer {
+    width: 88.26px;
+    height: 88.26px;
+    border-radius: 4px;
+}
+
+.content-introduce {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content-introduce h3,
+.content-introduce p {
+    margin: 0;
+}
+
+.content-introduce h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.content-introduce p {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.content-introduce p:last-child {
+    margin-bottom: 0;
+}
+
+.container-cv-content {
+    background-color: #f9f9f9;
+    margin-top: 14px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    height: 370px;
+}
+
+/* Details candidates */
+.container-candidate-details {
+    flex: 3;
+    background-color: #FFFFFF;
+    height: fit-content
+}
+
+.container-candidate-information {
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-right: 14px;
+
+}
+
+.container-title-candidate {
+    height: 28px;
+}
+
+.title-candidate {
+    font-size: 24px;
+}
+
+/* candidate skill */
+.container-candidate-skills {
+    height: 244px;
+    background-color: #CEE4EF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.item-skills {
+    width: 80%;
+    height: 42px;
+
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-industry {
+    width: 314px;
+    height: 42px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item-industry-icon {
+    background-color: #E8ECF2;
+    border-radius: 44px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.industry-icon {
+    width: 19px;
+    height: 19px;
+}
+
+.item-industry-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.industry-title,
+.industry-name {
+    font-size: 16px;
+    margin: 0;
+}
+
+.industry-title strong {
+    font-weight: bold;
+}
+
+.item-desired-work-location {
+    width: 219px;
+    height: 42px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* candidate cv */
+.container-candidate-cv {
+    height: 1123px;
+    width: 790px;
+    background-color: #0F96B4;
+
+    margin: auto;
+}
+
+/* Suggest candidates */
+.container-suggested-candidate {
+    height: fit-content;
+    width: 431px;
+    flex: 1;
+    gap: 14px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Ẩn thanh cuộn trên Firefox */
+}
+
+.container-suggested-candidate::-webkit-scrollbar {
+    display: none;
+    /* Ẩn thanh cuộn trên Chrome/Safari */
+}
+
+.suggest-title-container {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.suggest-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #194890;
+}
+
+.suggest-content {
+    margin-top: 10px;
+    overflow-y: auto;
+    max-height: calc(100% - 60px);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.suggest-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.suggest-item {
+    max-width: 391px;
+    height: 108px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+}
+
+.suggest-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.suggest-item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.suggest-name {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.suggest-item-info p,
+.suggest-item-info span {
+    margin: 3px 0;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.status-circle-suggest {
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #4ECB71 0%, #76FF9C 100%);
+    border-radius: 50%;
+    position: absolute;
+    right: 7px;
+    top: 3px;
+}
+
+.detail-part {
+    background-color: #FFFFFF;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.container-candidate-information-skills {
+    height: 42px;
+    margin-top: 12px;
+}

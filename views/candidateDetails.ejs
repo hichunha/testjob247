@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Ứng Viên</title>
+    <%- include('layouts/common_library.ejs'); %>
+    <link rel="stylesheet" href="/css/candidateDetails.css?v=<%= data.version %>">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Search & Select bar -->
+        <div class="container-search">
+            <div class="search-input">
+                <input type="text" placeholder="Looking for job seeker" class="search-input-field" />
+                <!-- Location -->
+                <div class="select-container">
+                    <img src="/images/candidateDetails//ChooseLocation.svg" alt="Location Icon" class="content-icon" />
+                    <select class="content-select">
+                        <option value="" disabled selected>Location</option>
+                        <option value="ha-noi">Hà Nội</option>
+                        <option value="ho-chi-minh">TP. Hồ Chí Minh</option>
+                        <option value="da-nang">Đà Nẵng</option>
+                    </select>
+                </div>
+                <!-- All industries -->
+                <div class="select-container">
+                    <img src="/images/candidateDetails/ChooseIndustries.svg" alt="Industries Icon" class="content-icon" />
+                    <select class="content-select">
+
+                        <option value="" disabled selected>All industries</option>
+                        <option value="it">Công nghệ thông tin</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="finance">Tài chính</option>
+                        <!-- Thêm các lựa chọn ngành nghề khác ở đây -->
+                    </select>
+                </div>
+                <button class="search-btn">Search</button>
+                <button class="filter-btn">Advanced Filtering</button>
+            </div>
+
+
+        </div>
+
+        <div class="container-cv-person">
+            <div class="container-introduce">
+                <div class="avatar-introduce-container">
+                    <img src="/images/candidateDetails/avatar.png" alt="Avatar" class="avatar-introducer" />
+                </div>
+                <div class="content-introduce">
+                    <h3>JOHN ROGER STEPHENS</h3>
+                    <p>Designer</p>
+                    <p><strong>ID:</strong> 1111403911</p>
+                </div>
+            </div>
+            <div class="container-cv-content">
+                <div class="container-candidate-details">
+                    <div class="container-candidate-information">
+                        <div class="container-tile">
+                            <h3 class="title-candidate">CANDIDATES DETAILS</h3>
+                        </div>
+                        <div class="container-candidate-skills">
+                            <div class="item-skills">
+                                <div class="item-industry">
+                                    <div class="item-industry-icon">
+                                        <img src="/images/candidateDetails/Industry.svg" alt="Industry Icon" class="industry-icon" />
+                                    </div>
+                                    <div class="item-industry-content">
+                                        <p class="industry-title"><strong>Industry:</strong></p>
+                                        <p class="industry-name">Graphic design</p>
+                                    </div>
+                                </div>
+                                <div class="item-desired-work-location">
+                                    <div class="item-industry-icon">
+                                        <img src="/images/candidateDetails/DesiredWorkLocation.svg" alt="Desired work location Icon"
+                                            class="industry-icon" />
+                                    </div>
+                                    <div class="item-industry-content">
+                                        <p class="industry-title"><strong>Desired work location:</strong></p>
+                                        <p class="industry-name">Metro Manila</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-skills">
+                                <div class="item-industry">
+                                    <div class="item-industry-icon">
+                                        <img src="/images/candidateDetails/Salary.svg" alt="Industry Icon" class="industry-icon" />
+                                    </div>
+                                    <div class="item-industry-content">
+                                        <p class="industry-title"><strong>Expected Salary:</strong></p>
+                                        <p class="industry-name">20000 - 25000 per month</p>
+                                    </div>
+                                </div>
+                                <div class="item-desired-work-location">
+                                    <div class="item-industry-icon">
+                                        <img src="/images/candidateDetails/WorkExperience.svg" alt="Desired work location Icon"
+                                            class="industry-icon" />
+                                    </div>
+                                    <div class="item-industry-content">
+                                        <p class="industry-title"><strong>Work Experience:</strong></p>
+                                        <p class="industry-name">1 year</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-skills">
+                                <div class="item-industry">
+                                    <div class="item-industry-icon">
+                                        <img src="/images/candidateDetails/DateOfBirth.svg" alt="Industry Icon" class="industry-icon" />
+                                    </div>
+                                    <div class="item-industry-content">
+                                        <p class="industry-title"><strong>Date a bird:</strong></p>
+                                        <p class="industry-name">11/09/2002</p>
+                                    </div>
+                                </div>
+                                <div class="item-desired-work-location">
+                                    <div class="item-industry-icon">
+                                        <img src="/images/candidateDetails/Age.svg" alt="Desired work location Icon"
+                                            class="industry-icon" />
+                                    </div>
+                                    <div class="item-industry-content">
+                                        <p class="industry-title"><strong>Age:</strong></p>
+                                        <p class="industry-name">22</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-skills">
+                                <div class="item-industry">
+                                    <div class="item-industry-icon">
+                                        <img src="/images/candidateDetails/Address.svg" alt="Industry Icon" class="industry-icon" />
+                                    </div>
+                                    <div class="item-industry-content">
+                                        <p class="industry-title"><strong>Address:</strong></p>
+                                        <p class="industry-name">75 Phú Diễn, Quận Bắc Từ Liêm, Hà Nội</p>
+                                    </div>
+                                </div>
+                                <div class="item-desired-work-location">
+                                    <div class="item-industry-icon">
+                                        <img src="/images/candidateDetails/Gender.svg" alt="Desired work location Icon"
+                                            class="industry-icon" />
+                                    </div>
+                                    <div class="item-industry-content">
+                                        <p class="industry-title"><strong>Gender:</strong></p>
+                                        <p class="industry-name">Male</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="container-candidate-cv">
+                            <img src="/images/candidateDetails/cv.png" alt="Candidate CV Photo" class="cv-photo" />
+                        </div>
+                    </div>
+                </div>
+                <div class="container-suggested-candidate">
+                    <div class="suggest-title-container">
+                        <h2 class="suggest-title">SUGGESTED CANDIDATES</h2>
+                    </div>
+                    <div class="suggest-content">
+                        <ul class="suggest-list" id="suggest-list">
+                            <script>
+                                // Số lượng phần tử bạn muốn thêm vào danh sách
+                                const numberOfItemHumans = 9; // Thay đổi theo số lượng cần thiết
+                                const chatListContainer = document.getElementById('suggest-list');
+
+                                for (let i = 1; i <= numberOfItemHumans; i++) {
+                                    const listItem = document.createElement('li');
+                                    listItem.classList.add('suggest-item');
+                                    //img
+                                    const imgContainer = document.createElement('div');
+                                    imgContainer.classList.add('img-container');
+
+                                    const img = document.createElement('img');
+                                    img.src = '/images/candidateDetails/avatar.png';
+                                    img.alt = 'Ảnh đại diện';
+                                    img.classList.add('suggest-avatar');
+
+                                    // Tick xanh
+                                    const circle = document.createElement('div');
+                                    circle.classList.add('status-circle-suggest');
+
+                                    imgContainer.appendChild(img);
+                                    imgContainer.appendChild(circle);
+                                    //
+                                    const title = document.createElement('span');
+                                    title.textContent = `Isabelita Flor de Maria Reyes`;
+                                    title.classList.add('suggest-name');
+
+                                    const itemInfo = document.createElement('div');
+                                    itemInfo.classList.add('suggest-item-info');
+
+                                    const jobTitle = document.createElement('p');
+                                    jobTitle.textContent = `Sale Staff`;
+
+                                    // Tạo phần chi tiết 1
+                                    const detailsPart1 = document.createElement('div');
+                                    detailsPart1.classList.add('detail-part');
+
+                                    // Tạo icon location
+                                    const icon1 = document.createElement('div');
+                                    const iconElement = document.createElement('i');
+                                    iconElement.className = 'fi fi-rr-marker detail-icon1';
+                                    icon1.appendChild(iconElement);
+
+                                    // Thêm icon vào phần chi tiết 1
+                                    const textLocation = document.createElement('span');
+                                    textLocation.textContent = `Metro Manila`;
+
+                                    // Append các phần tử vào detailsPart1
+                                    detailsPart1.appendChild(icon1);
+                                    detailsPart1.appendChild(textLocation);
+
+                                    // Append các phần tử vào itemInfo
+                                    itemInfo.appendChild(title);
+                                    itemInfo.appendChild(jobTitle);
+                                    itemInfo.appendChild(detailsPart1);
+
+                                    // Append img và itemInfo vào listItem
+                                    listItem.appendChild(imgContainer);
+                                    listItem.appendChild(itemInfo);
+
+                                    // Append listItem vào chatListContainer
+                                    chatListContainer.appendChild(listItem);
+                                }
+                            </script>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
