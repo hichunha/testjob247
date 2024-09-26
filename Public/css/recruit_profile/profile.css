@@ -1,0 +1,485 @@
+.candidate-profile {
+  background: #f3f5f7;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-section {
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+
+.cv-manage-btn,
+.cv-act {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.onecvmanage-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.onecvact-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  color: #285A9B;
+  background: #d0dbe9a3;
+  padding: 3px 10px;
+  border-radius: 46px;
+  cursor: pointer;
+}
+
+.current-color-ic {
+  width: 33px;
+  height: 33px;
+  background: yellow;
+  border-radius: 50%;
+}
+
+.my-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  padding: 15px;
+  border: 2px solid #c4c4c4;
+  border-radius: 15px;
+  /* justify-content: space-evenly; */
+  gap: 10px;
+}
+
+.infor-container {
+  width: 55%;
+}
+
+.oneprofile-section {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 30px);
+  /* justify-content: center; */
+  gap: 15px;
+  border: 2px solid #c4c4c4;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.profilesection-icon-name,
+.profilesection-detail-addthissection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.profilesection-detail-addthissection {
+  width: 70%;
+}
+
+.profilesection-icon-name {
+  width: 30%;
+  gap: 10px;
+  color: #007580;
+  font-weight: 600;
+}
+
+.cv-profile-image {
+  max-width: 857px;
+  max-height: 1212px;
+  width: 100%;
+}
+
+.profilesection-icon {
+  width: 106px;
+  height: 106px;
+}
+
+.profilesection-addthissection-btn {
+  color: #285A9B;
+  border: 2px solid #285A9B;
+  padding: 10px;
+  border-radius: 9px;
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+  word-break: break-all;
+}
+
+.profilesection-detail {
+  font-weight: 600;
+}
+
+.infor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-profile {
+  background: #fff;
+  padding: 15px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-profile-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.candidate-image-container {
+  width: 30%;
+  position: relative;
+}
+
+.form-contact {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 5px;
+}
+
+.form-section.address {}
+
+.address {
+  width: 100% !important;
+}
+
+.update-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.oneradiobtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-section-input {
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.form-section-header::after {
+  content: "*";
+  /* width: 0px; */
+  /* height: 10px; */
+  position: absolute;
+  right: -10px;
+  color: red;
+}
+
+.form-profile-header::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  right: -35px;
+  background: red;
+  top: 9px;
+}
+
+.form-section-header {
+  width: max-content;
+  position: relative;
+}
+
+.form-profile-header {
+  width: max-content;
+  position: relative;
+  color: #285A9B;
+}
+
+button.update-btn {
+  color: #fff;
+  background: #285A9B;
+  padding: 5px 20px;
+  border: 0;
+  border-radius: 4px;
+}
+
+.candidate-profile {
+  background: #f3f5f7;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-section {
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+
+.cv-manage-btn,
+.cv-act {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.onecvmanage-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.onecvact-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  color: #285A9B;
+  background: #d0dbe9a3;
+  padding: 3px 10px;
+  border-radius: 46px;
+  cursor: pointer;
+}
+
+.current-color-ic {
+  width: 33px;
+  height: 33px;
+  background: yellow;
+  border-radius: 50%;
+}
+
+.my-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  padding: 15px;
+  border: 2px solid #c4c4c4;
+  border-radius: 15px;
+  /* justify-content: space-evenly; */
+  gap: 10px;
+}
+
+.infor-container {
+  width: 55%;
+}
+
+.oneprofile-section {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 30px);
+  /* justify-content: center; */
+  gap: 15px;
+  border: 2px solid #c4c4c4;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.profilesection-icon-name,
+.profilesection-detail-addthissection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.profilesection-detail-addthissection {
+  width: 70%;
+}
+
+.profilesection-icon-name {
+  width: 30%;
+  gap: 10px;
+  color: #007580;
+  font-weight: 600;
+}
+
+.cv-profile-image {
+  max-width: 857px;
+  max-height: 1212px;
+  width: 100%;
+}
+
+.profilesection-icon {
+  width: 106px;
+  height: 106px;
+}
+
+.profilesection-addthissection-btn {
+  color: #285A9B;
+  border: 2px solid #285A9B;
+  padding: 10px;
+  border-radius: 9px;
+  width: 35%;
+  text-align: center;
+  cursor: pointer;
+  word-break: break-all;
+}
+
+.profilesection-detail {
+  font-weight: 600;
+}
+
+.infor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-profile {
+  background: #fff;
+  padding: 15px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-profile-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  /* justify-content: center; */
+}
+
+.candidate-image-container {
+  width: 18%;
+  position: relative;
+  cursor: pointer;
+  max-width: 190px;
+}
+
+.form-contact {
+  width: calc(100% - 215px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 5px;
+}
+
+.form-section.address {}
+
+.address {
+  width: 100% !important;
+}
+
+.update-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.oneradiobtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-section-input {
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 5px;
+  border-width: 1px;
+  /* cursor: pointer; */
+}
+
+.form-section-header::after {
+  content: "*";
+  /* width: 0px; */
+  /* height: 10px; */
+  position: absolute;
+  right: -10px;
+  color: red;
+}
+
+.form-profile-header::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  right: -35px;
+  background: red;
+  top: 9px;
+}
+
+.form-section-header {
+  width: max-content;
+  position: relative;
+}
+
+.form-profile-header {
+  width: max-content;
+  position: relative;
+  color: #285A9B;
+}
+
+.update-btn {
+  color: #fff;
+  background: #285A9B;
+  padding: 5px 20px;
+  border: 0;
+  border-radius: 4px;
+}
+
+.change-image-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+}
+
+.gender-radio {
+  cursor: pointer;
+}
