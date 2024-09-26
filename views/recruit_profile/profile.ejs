@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Recruiment Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="/css/recruit_profile/profile.css" as="style">
+  <%- include('layouts/common_library.ejs'); %>
+</head>
+
+<body>
+  <%- include('layouts/header', {}); %>
+  <div class="candidate-profile">
+    <span class="profile-section cv-manage">
+      <span class="cv-manage-btn">
+        <span class="onecvmanage-btn cvtemplate-btn">
+          <span class="btn-name template-txt">CV template</span>
+          <img src="../images/cvtemplate.png" alt="image" class="cvmanagebtn-image template-ic"
+            onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+        </span>
+        <span class="onecvmanage-btn changecolor-btn">
+          <span class="btn-name color-txt">Change CV color</span>
+          <span class="current-color-ic"></span>
+        </span>
+        <span class="onecvmanage-btn changelanguage-btn">
+          <span class="btn-name language-txt">Change CV language</span>
+          <img src="../images/cvlanguage.png" alt="image" class="cvmanagebtn-image language-ic"
+            onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+        </span>
+      </span>
+      <span class="cv-act">
+        <span class="onecvact-btn duplicate-btn">
+          <img src="../images/duplicate.png" alt="icon" class="cvactbtn-icon duplicate-ic"
+            onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+          <span class="actbtn-name duplicate-txt">Duplicate</span>
+        </span>
+        <span class="onecvact-btn preview-btn">
+          <img src="../images/preview.png" alt="icon" class="cvactbtn-icon preview-ic"
+            onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+          <span class="actbtn-name preview-txt">Preview</span>
+        </span>
+        <span class="onecvact-btn savecv-btn">
+          <img src="../images/save.png" alt="icon" class="cvactbtn-icon savecv-ic"
+            onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+          <span class="actbtn-name savecv-txt">Save CV</span>
+        </span>
+        <span class="onecvact-btn download-btn">
+          <img src="../images/download.png" alt="icon" class="cvactbtn-icon download-ic"
+            onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+          <span class="actbtn-name download-txt">Download</span>
+        </span>
+      </span>
+    </span>
+    <div class="profile-section file-infor">
+      <div class="my-profile">
+        <span class="oneprofile-section personalsummary-section">
+          <div class="profilesection-icon-name">
+            <img src="../images/personalsummary.png" alt="image" class="profilesection-icon personalsummary-ic"
+              onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+            <span class="profilesection-name personalsummary-txt">Personal summary</span>
+          </div>
+          <div class="profilesection-detail-addthissection">
+            <span class="profilesection-detail">Add a personal summary to your profile as a way to introduce who you
+              are.</span>
+            <span class="profilesection-addthissection-btn">Add summary</span>
+          </div>
+        </span>
+        <span class="oneprofile-section careerhistory-section">
+          <div class="profilesection-icon-name">
+            <img src="../images/careerhistory.png" alt="image" class="profilesection-icon careerhistory-ic"
+              onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+            <span class="profilesection-name careerhistory-txt">Career history</span>
+          </div>
+          <div class="profilesection-detail-addthissection">
+            <span class="profilesection-detail">The more you let employers know about your experience, the more you can
+              stand out.</span>
+            <span class="profilesection-addthissection-btn">Add role</span>
+          </div>
+        </span>
+        <span class="oneprofile-section education-section">
+          <div class="profilesection-icon-name">
+            <img src="../images/education.png" alt="image" class="profilesection-icon education-ic"
+              onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+            <span class="profilesection-name education-txt">Education</span>
+          </div>
+          <div class="profilesection-detail-addthissection">
+            <span class="profilesection-detail">Tell employers about your educatión.</span>
+            <span class="profilesection-addthissection-btn">Add education</span>
+          </div>
+        </span>
+        <span class="oneprofile-section designjob-section">
+          <div class="profilesection-icon-name">
+            <img src="../images/designjob.png" alt="image" class="profilesection-icon designjob-ic"
+              onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+            <span class="profilesection-name designjob-txt">Summary</span>
+          </div>
+          <div class="profilesection-detail-addthissection">
+            <span class="profilesection-detail">Add a personal summary to your profile as a way to introduce who you
+              are.</span>
+            <span class="profilesection-addthissection-btn">Add summary</span>
+          </div>
+        </span>
+        <span class="oneprofile-section language-section">
+          <div class="profilesection-icon-name">
+            <img src="../images/language.png" alt="image" class="profilesection-icon language-ic"
+              onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+            <span class="profilesection-name language-txt">Language</span>
+          </div>
+          <div class="profilesection-detail-addthissection">
+            <span class="profilesection-detail">Add languages to appeal to more companies and employers. </span>
+            <span class="profilesection-addthissection-btn">Add language</span>
+          </div>
+        </span>
+        <span class="oneprofile-section skill-section">
+          <div class="profilesection-icon-name">
+            <img src="../images/skill.png" alt="image" class="profilesection-icon skill-ic"
+              onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+            <span class="profilesection-name skill-txt">Skill</span>
+          </div>
+          <div class="profilesection-detail-addthissection">
+            <span class="profilesection-detail">Let employers know how valuable you can be to them. </span>
+            <span class="profilesection-addthissection-btn">Add skill</span>
+          </div>
+        </span>
+        <span class="oneprofile-section licence-section">
+          <div class="profilesection-icon-name">
+            <img src="../images/licence.png" alt="image" class="profilesection-icon licence-ic"
+              onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+            <span class="profilesection-name licence-txt">Licence</span>
+          </div>
+          <div class="profilesection-detail-addthissection">
+            <span class="profilesection-detail">Showcase your professional credentials. Add your relevant licences,
+              certificates, memberships and accreditations here.</span>
+            <span class="profilesection-addthissection-btn">Add licence</span>
+          </div>
+        </span>
+      </div>
+      <div class="infor-container">
+        <div class="infor">
+          <img src="../images/cvprofileimage.png" alt="image" class="cv-profile-image"
+            onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+        </div>
+        <!-- <div class="infor">
+            <span class="oneinfor avatar-email">
+              <img src="" alt="image" class="profile-avatar" onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+              <span class="profile-email">abc@gmail.com</span>
+            </span>
+            <span class="oneinfor introduction-section">
+              <span class="cv-section-header introduction-txt">Introduction</span>
+              <span class="cv-section-content introduction-content"></span>
+            </span>
+            <div class="cv-all">
+              <div class="cv-content">
+                <div class="cv-block">
+                  <span class="cv-section-header careerobjecttive-txt">Career Objective</span>
+                  <div class="cv-section-content careerobjecttive-content">
+                    <span class="onecareerobjecttivecontent"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="horizon-line"></div>
+              <div class="cv-main">
+                <div class="cv-block skill-block">
+                  <span class="cv-section-header skill-txt">Skill</span>
+                  <div class="cv-section-content skill-content">
+                    <span class="oneskillcontent prog-lang">
+                      <span class="langname-skillful">
+                        <span class="langname">React.js</span>
+                        <span class="skillful-txt">Skillful</span>
+                      </span>
+                      <span class="prog-exp-container">
+                        <span class="prog-exp"></span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="cv-block">
+                  <span class="cv-section-header personalinterest-txt">Personal Interests</span>
+                  <div class="cv-section-content personalinterest-content">
+                    <span class="onepersonalinterestcontent">Passsonnate about </br> ...  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+      </div>
+    </div>
+    <div class="form-profile contact_information">
+      <span class="form-profile-header">Contact information</span>
+      <div class="form-profile-content">
+        <span class="candidate-image-container">
+          <img src="../images/candidate.png" alt="image" class="candidate-image"
+            onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+          <img src="../images/camera.png" alt="icon" class="change-image-icon"
+            onerror="this.onerror=null; this.src='/images/img/avata_default.png';">
+        </span>
+        <div class="form-contact">
+          <span class="form-section full-name">
+            <span class="form-section-header">Full name</span>
+            <input type="text" placeholder="Enter your full-name" class="form-section-input" id="fullname-input">
+          </span>
+          <span class="form-section gender">
+            <span class="form-section-header">Gender</span>
+            <span class="oneradiobtn">
+              <input type="radio" class="form-section-input gender-radio" id="male" name="gender">
+              <label for="gender-radio">Male</label>
+              <input type="radio" class="form-section-input gender-radio" id="female" name="gender">
+              <label for="gender-radio">Female</label>
+            </span>
+          </span>
+        </div>
+        <span class="form-section address">
+          <span class="form-section-header">Address</span>
+          <input type="text" placeholder="Enter your address" class="form-section-input" id="address-input">
+        </span>
+        <span class="update-btn-container">
+          <button class="update-btn">Update</button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <%- include('layouts/footer', {}); %>
+</body>
+<script src="/javascript/recruit_profile/profile.js"></script>
+</html>
