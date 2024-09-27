@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job 247 Dashboard</title>
+    <%- include('layouts/common_library.ejs'); %>
+    <link rel="stylesheet" href="/css/cvApplied.css?v=<%= data.version %>">
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="main-content">
+    <main>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <!-- <h2>Job 247</h2> -->
+                <img src="/images/cvApplied/Frame 1321317478.png" alt="Company Logo">
+            </div>
+
+            <div class="sidebar-user-info">
+                <div>
+                    <img src="/images/cvApplied/Ellipse 1.svg" alt="User Profile">
+                    <h3>Lê Trung Lưu</h3>
+                    <div style="display: flex; align-items: center;" class="search-allow">Allow employers to search <a href=""><img src="/images/cvApplied/Group 1000007338.png" alt=""></div></a>
+                </div>
+            </div>
+
+            <div class="others">
+                <div>
+                    <a href=""><div class="sidebar-items"><img style="padding-left: 20px;" src="/images/cvApplied/pc.png" alt=""> Account management</div></a>
+                </div>
+
+                <div>
+                    <a href=""><div class="sidebar-items"><img style="padding-left: 20px;" src="/images/cvApplied/profile.png" alt=""> My Profile <img class="sidebar-vector" src="/images/cvApplied/Vector.png" alt=""></div></a>
+                    <div class="sidebar-sub-items"><a href="">Online Profile</a></div> 
+                    <div class="sidebar-sub-items"><a href="">My CV</a></div> 
+                    
+                </div>
+
+                <div>
+                    <a href=""><div class="sidebar-items"><img style="padding-left: 20px;" src="/images/cvApplied/my-jobs.png" alt="">My Jobs <img class="sidebar-vector" src="/images/cvApplied/Vector.png" alt=""></div></a>          
+                    <div class="sidebar-sub-items sidebar-hover"><a href="">Aplied Jobs</a></div> 
+                    <div class="sidebar-sub-items"><a href="">Recomended Jobs</a></div> 
+                </div>
+
+                <div>
+                    <a href=""><div class="sidebar-items"><img style="padding-left: 20px;" src="/images/cvApplied/chat365.png" alt="">Chat365</div></a>
+                </div>
+
+                <div>
+                    <a href=""><div class="sidebar-items"><img style="padding-left: 20px;" src="/images/cvApplied/setting.png" alt="">Account settings <img class="sidebar-vector" src="/images/cvApplied/Vector.png" alt=""></div></a>
+                    <div class="sidebar-sub-items"><a href="">Change the passwords</a></div>
+                </div>
+
+                <div class="dang-xuat">
+                    <a style="color: #285A9B;" class="logout-btn" href=""><img src="/images/cvApplied/dang-xuat.png" alt=""> Đăng xuất</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sub-main">
+            <!-- User info -->
+            <div class="user-info">
+                <div class="user-info-item avatar">
+                    <img src="/images/cvApplied/Ellipse 2.png" alt="">
+                </div>
+                <div class="user-info-item">
+                    <p>Support staff: <a href="">Mrs.Nguyễn Hồng</a></p>
+                </div>
+                <div class="user-info-item">
+                    <p>Phone number: <a href="">0972319116</a></p>
+                </div>
+                <div class="user-info-item">
+                    <p>Email: <a href="">nguyenhongg2609@gmail.com</a></p>
+                </div>
+            </div>
+
+            <div class="applied-jobs">
+                <h2 class="title">Aplied Jobs</h2>
+
+                <table>
+                    <tr style="height: 40px; background-color: #285A9B;">
+                        <th style="width: 5%;"><p style="color: white;">SN</p></th>
+                        <th style="width: 25%;"><p style="color: white;">Position</p></th>
+                        <th style="width: 20%;"><p style="color: white;">Company</p></th>
+                        <th style="width: 15%;"><p style="color: white;">Application Deadline</p></th>
+                        <th style="width: 15%;"><p style="color: white;">Date of application</p></th>
+                        <th style="width: 13%;"><p style="color: white;">Review</p></th>
+                        <th style="width: 7%;"><p style="color: white;">Delete</p></th>
+                    </tr>
+                    <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th>
+                            <a href="">ITP GROUP</a>
+                            <br>
+                            <a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a>
+                        </th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                    </tr>
+                    <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th><a href="">ITP GROUP</a><br><a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a></th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                    </tr>
+                    
+                    <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th><a href="">ITP GROUP</a><br><a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a></th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                    </tr>
+
+                    <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th><a href="">ITP GROUP</a><br><a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a></th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                      </tr>
+
+                    <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th><a href="">ITP GROUP</a><br><a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a></th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                    </tr>
+
+                    <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th><a href="">ITP GROUP</a><br><a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a></th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                    </tr>
+
+                      <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th><a href="">ITP GROUP</a><br><a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a></th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                      </tr>
+
+                      <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th><a href="">ITP GROUP</a><br><a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a></th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                      </tr>
+
+                      <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th><a href="">ITP GROUP</a><br><a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a></th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                      </tr>
+
+                      <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th><a href="">ITP GROUP</a><br><a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a></th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                      </tr>
+
+                      <tr style="height: 60px; background-color: white;">
+                        <th>1</th>
+                        <th><a href="">SEO Staff</a></th>
+                        <th><a href="">ITP GROUP</a><br><a style="font-weight: lighter;" href=""><i>(Xem chi tiết)</i></a></th>
+                        <th>01/01/2024</th>
+                        <th>01/01/2024</th>
+                        <th>Not rated yet</th>
+                        <th><a href=""><img src="/images/cvApplied/trash.png" alt=""></a></th>
+                      </tr>
+                </table>
+
+                <div class="pagination">
+                    <a href="#">&lt;&lt;</a>
+                    <a href="#">&lt;</a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <span>...</span>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a href="#">&gt;</a>
+                    <a href="#">&gt;&gt;</a>
+                  </div>
+                  
+
+
+        </div>      
+    </main>
+</body>
+</html>

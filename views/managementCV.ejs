@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job 247 Dashboard</title>
+    <%- include('layouts/common_library.ejs'); %>
+    <link rel="stylesheet" href="/css/managementCV.css?v=<%= data.version %>">
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="main-content">
+    <main>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <!-- <h2>Job 247</h2> -->
+                <img src="/images/managementCV/Frame 1321317478.png" alt="Company Logo">
+            </div>
+
+            <div class="sidebar-user-info">
+                <div>
+                    <img src="/images/managementCV/Ellipse 1.svg" alt="User Profile">
+                    <h3>Lê Trung Lưu</h3>
+                    <div style="display: flex; align-items: center;" class="search-allow">Allow employers to search <a href=""><img src="/images/managementCV/Group 1000007338.png" alt=""></div></a>
+                </div>
+            </div>
+
+            <div class="others">
+                <div>
+                    <a href=""><div class="sidebar-items"><img style="padding-left: 20px;" src="/images/managementCV/pc.png" alt=""> Account management</div></a>
+                </div>
+
+                <div>
+                    <a href=""><div class="sidebar-items"><img style="padding-left: 20px;" src="/images/managementCV/profile.png" alt=""> My Profile <img class="sidebar-vector" src="/images/managementCV/Vector.png" alt=""></div></a>
+                    <div class="sidebar-sub-items"><a href="">Online Profile</a></div> 
+                    <div class="sidebar-sub-items sidebar-hover"><a href="">My CV</a></div> 
+                    
+                </div>
+
+                <div>
+                    <a href=""><div class="sidebar-items"><img style="padding-left: 20px;" src="/images/managementCV/my-jobs.png" alt="">My Jobs <img class="sidebar-vector" src="/images/managementCV/Vector.png" alt=""></div></a>          
+                    <div class="sidebar-sub-items"><a href="">Aplied Jobs</a></div> 
+                    <div class="sidebar-sub-items"><a href="">Recomended Jobs</a></div> 
+                </div>
+
+                <div>
+                    <a href=""><div class="sidebar-items"><img style="padding-left: 20px;" src="/images/managementCV/chat365.png" alt="">Chat365</div></a>
+                </div>
+
+                <div>
+                    <a href=""><div class="sidebar-items"><img style="padding-left: 20px;" src="/images/managementCV/setting.png" alt="">Account settings <img class="sidebar-vector" src="/images/managementCV/Vector.png" alt=""></div></a>
+                    <div class="sidebar-sub-items"><a href="">Change the passwords</a></div>
+                </div>
+
+                <div class="dang-xuat">
+                    <a style="color: #285A9B;" class="logout-btn" href=""><img src="/images/managementCV/dang-xuat.png" alt=""> Đăng xuất</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sub-main">
+
+            <!-- User info -->
+            <div class="user-info">
+                <div class="user-info-item avatar">
+                    <img src="/images/managementCV/Ellipse 2.png" alt="">
+                </div>
+                <div class="user-info-item">
+                    <p>Support staff: <a href="">Mrs.Nguyễn Hồng</a></p>
+                </div>
+                <div class="user-info-item">
+                    <p>Phone number: <a href="">0972319116</a></p>
+                </div>
+                <div class="user-info-item">
+                    <p>Email: <a href="">nguyenhongg2609@gmail.com</a></p>
+                </div>
+            </div>
+
+            <!-- My CV List -->
+            <div class="cv-list">
+                <h3 class="title">My CV List</h3>
+                
+                <div class="cv-image">
+                    <img class="cv-images" src="/images/managementCV/my-cv-list-cv.png" alt="">
+                    <img class="cv-images" style="margin-left: 20px;" src="/images/managementCV/my-cv-list-cv.png" alt="">   
+                
+                    <div class="add-cv-btn cv-images">
+                        <a style="text-decoration: none;" href="">
+                            <div class="add-cv-circle">
+                                <img src="/images/managementCV/add-cv-plus.png" alt="">
+                            </div>
+                        </a> 
+                    </div>
+                </div>                       
+            </div>
+
+            <!-- My favorite CV -->
+            <div class="favorite-cv">
+                <h3 class="title">My favorite CV</h3>
+                
+                <div class="favorite-cv-image">
+                    <img class="cv-images" src="/images/managementCV/my-cv-list-cv.png" alt="">
+                    <img class="favorite-cv-image-item cv-images" src="/images/managementCV/my-cv-list-cv.png" alt=""> 
+                    <img class="favorite-cv-image-item cv-images" src="/images/managementCV/my-cv-list-cv.png" alt="">   
+                    <img class="favorite-cv-image-item cv-images" src="/images/managementCV/my-cv-list-cv.png" alt="">   
+                </div>  
+                
+                <div class="see-more-btn">
+                    <a href="#">See more <img style="margin-left: 5px;" src="/images/managementCV/ant-design_double-right-outlined.png" alt=""></a>
+                </div>
+            </div>
+
+        </div>      
+    </main>
+</body>
+</html>
