@@ -3,15 +3,18 @@
         <h3>Chỉnh sửa ảnh đại diện</h3>
         <div class="editor-col-left">
             <h4>Ảnh gốc</h4>
+            <!-- Này là nơi ảnh mà mình chọn có xuất hiện hay không -->
             <div class="imageEditor" style="display:none;">
                 <img id="image" src="">
             </div>
+            <!-- Này là nơi chọn ảnh và sửa ảnh -->
             <div class="editorChooseImage">
                 <label for="inputImage" class="btn-choose-image" title="Upload image file">
                     <input type="file" class="sr-only" id="inputImage" name="avatar" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
                     <span><i class="fa fa-picture-o"></i><br>Click chọn ảnh để tải lên!</span>
                 </label>
             </div>
+            <!-- Đây là zoom in, zoomout, xoay ảnh-  xử lý ở file main.js: btn-zoom-in-image -->
             <div class="image-controls" style="display: none;">
                 <div class="image-control-group">
                     <button class="image-control-btn btn-zoom-in-image">
@@ -29,7 +32,8 @@
                     </button>
                 </div>
             </div>
-            <div id="tipCompress">Nếu ảnh của bạn có dung lượng trên 5MB, vui lòng giảm dung lượng ảnh.</div>
+            <div id="tipCompress" >Nếu ảnh của bạn có dung lượng trên 5MB, vui lòng giảm dung lượng ảnh.</div>
+            <!-- Load ảnh -->
             <div class="loadingShow" style="display: none;">
                 <i class="fa fa-spinner fa-spin"></i>
                 <br><br>
@@ -39,7 +43,8 @@
         <div class="editor-col-right">
             <h4>Ảnh hiển thị trên CV</h4>
             <div class="imageEditorControls">
-                <div class="img-edit-preview" style="border: 1px solid #efefef;"><img src="/images/no_avatar.jpg">
+                <div class="img-edit-preview" style="border: 1px solid #efefef;">
+                    <img src="/images/no_avatar.jpg">
                 </div>
                 <div class="edit-image-btns" style="display: none;">
                     <label id="title-change" for="inputImage1" type="button" class="btn-change-image">

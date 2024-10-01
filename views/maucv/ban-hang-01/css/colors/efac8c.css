@@ -1,56 +1,56 @@
 .cv_page {
-    position: relative;
-    background: url(../top2.png) no-repeat, url(../bottom2.png) no-repeat, #FFF;
-    background-size: 790px 517px, 790px 91px, 100% 100%;
-    background-position: left top, left bottom, left top;
+  position: relative;
+  background: url(../top2.png) no-repeat, url(../bottom2.png) no-repeat, #fff;
+  background-size: 790px 517px, 790px 91px, 100% 100%;
+  background-position: left top, left bottom, left top;
 }
 
 .cv_page.page_more {
-    position: relative;
-    background: url(../bottom2.png) no-repeat, #FFF;
-    background-size: 790px 91px, 100% 100%;
-    background-position: left bottom, left top;
+  position: relative;
+  background: url(../bottom2.png) no-repeat, #fff;
+  background-size: 790px 91px, 100% 100%;
+  background-position: left bottom, left top;
 }
-
-#border_img {
+/* bỏ border nhìn chưa ổn */
+/* #border_img {
     border: 8px solid #efac8c;
-  }
+  } */
 
 #cv-content .exp-date {
-    color: #efac8c;
+  color: #efac8c;
 }
 
 .icoweb-birthday {
-    width: 23px;
-    height: 23px;
-    background: url(../date2.png) no-repeat;
-    background-size: 23px 23px;
-  }
-  
-  .icoweb-address {
-    width: 23px;
-    height: 23px;
-    background: url(../address2.png) no-repeat;
-    background-size: 23px 23px;
-  }
-  
-  .icoweb-email {
-    width: 23px;
-    height: 23px;
-    background: url(../email2.png) no-repeat;
-    background-size: 23px 23px;
-  }
-  
-  .icoweb-phone {
-    width: 23px;
-    height: 23px;
-    background: url(../phone2.png) no-repeat;
-    background-size: 23px 23px;
-  }
-  
-  .icoweb-sex {
-    width: 23px;
-    height: 23px;
-    background: url(../sex2.png) no-repeat;
-    background-size: 23px 23px;
-  }
+  width: 23px;
+  height: 23px;
+  background: url(../date2.png) no-repeat;
+  background-size: 23px 23px;
+}
+
+.icoweb-address {
+  width: 23px;
+  height: 23px;
+  background: url(../address2.png) no-repeat;
+  background-size: 23px 23px;
+}
+
+.icoweb-email {
+  width: 23px;
+  height: 23px;
+  background: url(../email2.png) no-repeat;
+  background-size: 23px 23px;
+}
+
+.icoweb-phone {
+  width: 23px;
+  height: 23px;
+  background: url(../phone2.png) no-repeat;
+  background-size: 23px 23px;
+}
+
+.icoweb-sex {
+  width: 23px;
+  height: 23px;
+  background: url(../sex2.png) no-repeat;
+  background-size: 23px 23px;
+}

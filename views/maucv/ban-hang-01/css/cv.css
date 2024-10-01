@@ -1,740 +1,741 @@
 #form-cv {
-    width: 100%;
-    float: left;
-    position: relative;
-    font-size: 14px;
-    line-height: 23px;
+  width: 100%;
+  float: left;
+  position: relative;
+  font-size: 14px;
+  line-height: 23px;
 }
 
 #cv-main .fieldgroup_controls .edit {
-    display: none;
+  display: none;
 }
 
 .cv_page {
-    position: relative;
+  position: relative;
+  background: url(../top1.png) no-repeat, url(../bottom1.png) no-repeat, #fff;
+  background-size: 790px 517px, 790px 91px, 100% 100%;
+  background-position: left top, left bottom, left top;
 }
 
 .cv_page.page_more {
-    position: relative;
-    background: url(bottom1.png) no-repeat, #FFF;
-    background-size: 790px 91px, 100% 100%;
-    background-position: left bottom, left top;
+  position: relative;
+  background: url(../bottom1.png) no-repeat, #fff;
+  background-size: 790px 91px, 100% 100%;
+  background-position: left bottom, left top;
 }
 
 #form-cv p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 #sortable .cvo-block {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 #cv-top {
-    padding: 0 !important;
-    margin: 0 !important;
-    border: unset !important;
-    width: 100%;
-    float: left;
-    position: relative;
-    height: 515px;
-    background: url(top1.png) no-repeat, url(bottom1.png) no-repeat, #FFF;
-    background-size: 790px 517px, 790px 91px, 100% 100%;
-    background-position: left top, left bottom, left top;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: unset !important;
+  width: 100%;
+  float: left;
+  position: relative;
+  height: 515px;
+  background: url(top1.png) no-repeat, url(bottom1.png) no-repeat, #fff;
+  background-size: 790px 517px, 790px 91px, 100% 100%;
+  background-position: left top, left bottom, left top;
 }
 
 .watermark {
-    float: left;
-    width: 100%;
-    height: 22px;
-    color: #000;
-    text-align: right;
-    padding-right: 22px;
-    font-size: 14px;
-    font-family: Courier;
+  float: left;
+  width: 100%;
+  height: 22px;
+  color: #000;
+  text-align: right;
+  padding-right: 22px;
+  font-size: 14px;
+  font-family: Courier;
 }
 
 #cvo-profile {
-    float: left;
-    width: 100%;
-    margin: 0;
-    border-bottom: crimson;
+  float: left;
+  width: 100%;
+  margin: 0;
+  border-bottom: crimson;
 }
 
 #cv-content {
-    padding: 0;
-    margin: 0;
-    width: 49%;
-    float: right;
-    margin-top: 0px;
+  padding: 0;
+  margin: 0;
+  width: 49%;
+  float: right;
+  margin-top: 0px;
 }
 
 #cv-main {
-    padding: 0;
-    margin: 0;
-    width: 48%;
-    float: left;
+  padding: 0;
+  margin: 0;
+  width: 48%;
+  float: left;
 }
 
 .page_more #cv-main {
-    margin-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 #cv-right .ir {
-    padding: 0px !important;
-    float: left;
-    width: 100%;
-    margin-top: -2px;
+  padding: 0px !important;
+  float: left;
+  width: 100%;
+  margin-top: -2px;
 }
 
 p.skill-name {
-    float: left;
-    width: 100%;
-    text-align: justify;
+  float: left;
+  width: 100%;
+  text-align: justify;
 }
 
 p.skill-name input {
-    color: #8c5449 !important;
+  color: #8c5449 !important;
 }
 
 #cv-right .ctbx {
-    padding: 0;
-    margin: 0;
-    border: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 #cv-right .skill .ctbx {
-    width: 100%;
-    float: left;
+  width: 100%;
+  float: left;
 }
 
 .skill {
-    width: 82%;
-    clear: both;
-    float: left;
-    padding: 0;
-    padding-left: 50px;
-    margin-top: -18px;
+  width: 82%;
+  clear: both;
+  float: left;
+  padding: 0;
+  padding-left: 50px;
+  margin-top: -18px;
 }
 
 div#prof {
-    float: left;
-    width: 100%;
-    padding: 0;
+  float: left;
+  width: 100%;
+  padding: 0;
 }
 
 .ic-r {
-    width: 38%;
-    float: right;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    align-items: flex-end;
+  width: 38%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  align-items: flex-end;
 }
 
 .ic_l {
-    width: 34%;
-    float: left;
-    display: flex;
-    flex-direction: column;
+  width: 34%;
+  float: left;
+  display: flex;
+  flex-direction: column;
 }
 
 #cv-top h1 {
-    float: left;
-    margin: 0;
-    width: 100%;
-    text-transform: uppercase;
-    padding-right: 0px;
-    font-weight: bold;
-    position: relative;
-    text-align: left;
-    background: #fff;
-    margin-top: 9px;
-    margin-left: 15px;
+  float: left;
+  margin: 0;
+  width: 100%;
+  text-transform: uppercase;
+  padding-right: 0px;
+  font-weight: bold;
+  position: relative;
+  text-align: left;
+  background: #fff;
+  margin-top: 9px;
+  margin-left: 15px;
 }
 
 h1 #cv-profile-fullname {
-    width: 100%;
-    font-size: 50px;
-    line-height: 65px;
-    color: #000;
+  width: 100%;
+  font-size: 50px;
+  line-height: 65px;
+  color: #000;
 }
 
 #cv-top h2 {
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    width: 100%;
-    float: left;
-    font-weight: unset;
-    position: relative;
-    color: #000;
-    text-align: left;
-    background: #fff;
-    margin-left: 15px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  width: 100%;
+  float: left;
+  font-weight: unset;
+  position: relative;
+  color: #000;
+  text-align: left;
+  background: #fff;
+  margin-left: 15px;
 }
 
 span#cv-profile-job {
-    font-weight: unset;
-    text-transform: uppercase;
-    float: left;
-    width: 100%;
-    line-height: 38px;
-    font-size: 25px;
+  font-weight: unset;
+  text-transform: uppercase;
+  float: left;
+  width: 100%;
+  line-height: 38px;
+  font-size: 25px;
 }
 
-
 .box-01 p {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .cum {
-    width: 100%;
-    float: left;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    height: 35px;
-    line-height: 35px;
-    background-size: 100% 100%;
-    text-align: left;
+  width: 100%;
+  float: left;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 35px;
+  line-height: 35px;
+  background-size: 100% 100%;
+  text-align: left;
 }
 
 .box-01 #box01 {
-    float: right;
-    width: 45%;
-    padding: 0;
-    margin: 0;
-    padding-right: 45px;
-    padding-top: 28px;
-    position: absolute;
-    right: 0;
+  float: right;
+  width: 45%;
+  padding: 0;
+  margin: 0;
+  padding-right: 45px;
+  padding-top: 28px;
+  position: absolute;
+  right: 0;
 }
 
 #anh {
-    float: right;
-    position: relative;
-    width: 248px;
-    top: 243px;
-    right: 43px;
+  float: right;
+  position: relative;
+  width: 248px;
+  top: 243px;
+  right: 43px;
 }
 
 #chu {
-    float: left;
-    width: 43%;
-    text-align: left;
-    margin-top: 80px;
-    margin-left: 80px;
+  float: left;
+  width: 43%;
+  text-align: left;
+  margin-top: 80px;
+  margin-left: 80px;
 }
 
 #cv-content p {
-    float: right;
-    font-size: 14px;
-    line-height: 23px;
-    margin-bottom: 0;
-    width: 100%;
+  float: right;
+  font-size: 14px;
+  line-height: 23px;
+  margin-bottom: 0;
+  width: 100%;
 }
 
 #cv-content .ir {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    float: left;
-    padding-right: 20px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  float: left;
+  padding-right: 20px;
 }
 
 #cv-content .ir a {
-    color: #2ebb2f
+  color: #2ebb2f;
 }
 
 #cv-content .head {
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 0px 0px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0px 0px;
 }
 
 #cv-right .head-right {
-    float: left;
-    line-height: 30px;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0;
-    text-align: left;
-    width: 100%;
-    padding-bottom: 24px;
-    background-position: right bottom;
+  float: left;
+  line-height: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 24px;
+  background-position: right bottom;
 }
 
 #cv-content .head {
-    width: 85%;
-    line-height: 30px;
-    float: left;
-    font-size: 20px;
-    margin-bottom: 3px;
-    letter-spacing: 0;
+  width: 85%;
+  line-height: 30px;
+  float: left;
+  font-size: 20px;
+  margin-bottom: 3px;
+  letter-spacing: 0;
 }
 
 #cv-right .h3 {
-    text-align: left;
-    width: 100%;
+  text-align: left;
+  width: 100%;
 }
 
 #cv-content h3 {
-    font-size: 14px;
-    line-height: 23px;
-    margin-top: 0;
-    margin-bottom: 0;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
+  font-size: 14px;
+  line-height: 23px;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
 }
 
 .exp-title {
-    width: 100%;
-    float: left;
-    color: #000;
-    text-align: left;
-    font-weight: normal !important;
+  width: 100%;
+  float: left;
+  color: #000;
+  text-align: left;
+  font-weight: normal !important;
 }
 
 #form-cv #cv-content .cvo-block {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 8px;
-    padding-top: 5px;
-    float: left;
-    width: 100% !important;
-    margin-top: 0px !important;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 8px;
+  padding-top: 5px;
+  float: left;
+  width: 100% !important;
+  margin-top: 0px !important;
 }
 
 #form-cv #cv-content #block05 {
-    background: unset;
+  background: unset;
 }
 
 .ctbx {
-    float: left;
-    width: 100%;
+  float: left;
+  width: 100%;
 }
 
 #cv-content span {
-    display: inline-block;
-    margin-bottom: 0;
-    width: 100%;
-    color: #000;
+  display: inline-block;
+  margin-bottom: 0;
+  width: 100%;
+  color: #000;
 }
 
 .ctbx {
-    position: relative;
+  position: relative;
 }
 
 #experience-table .ctbx {
-    padding-top: 0px;
-    margin-top: 10px !important;
+  padding-top: 0px;
+  margin-top: 10px !important;
 }
 
 #block05 #experience-table .ctbx {
-    background: unset;
-    padding-left: 3px;
+  background: unset;
+  padding-left: 3px;
 }
 
 #experience-table #exp1 {
-    margin-top: 0 !important;
-    padding-top: 0;
+  margin-top: 0 !important;
+  padding-top: 0;
 }
 
 .ctbx:hover {
-    box-shadow: 0 0 1px #999;
+  box-shadow: 0 0 1px #999;
 }
 
 .ctbx:hover .fieldgroup_controls {
-    display: block;
+  display: block;
 }
 
 [cvo-form-field] {
-    cursor: text;
+  cursor: text;
 }
 
 #cvo-profile-avatar-wraper img {
-    border-radius: 50%;
-    object-fit: fill !important;
-    width: 100%;
-    height: 100%;
+  border-radius: 50%;
+  object-fit: fill !important;
+  width: 100%;
+  height: 100%;
 }
 
 #border_img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #cvo-profile-avatar {
-    width: 307px;
-    height: 300px;
+  width: 307px;
+  height: 300px;
 }
 
 #line-seperate {
-    height: 25px;
+  height: 25px;
 }
 
 .bar-exp div {
-    float: left;
-    height: 11px;
-    background: #000;
-    border-radius: 10px;
+  float: left;
+  height: 11px;
+  background: #000;
+  border-radius: 10px;
 }
 
 .bar-exp {
-    height: 15px;
-    margin-bottom: 0px;
-    padding: 1px;
-    float: left;
-    width: 282px;
-    margin-bottom: 8px;
-    display: none;
-    background: unset;
-    border: solid 1px;
-    border-radius: 10px;
+  height: 15px;
+  margin-bottom: 0px;
+  padding: 1px;
+  float: left;
+  width: 282px;
+  margin-bottom: 8px;
+  display: none;
+  background: unset;
+  border: solid 1px;
+  border-radius: 10px;
 }
 
 .bar-value-exp input[type="text"] {
-    height: 56px;
+  height: 56px;
 }
 
 .h3-title {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 [cvo-form-field]:hover {
-    outline: 2pt dashed #77a5cc;
+  outline: 2pt dashed #77a5cc;
 }
 
 .bar-value-exp {
-    width: 100%;
+  width: 100%;
 }
 
 .icoweb label {
-    display: block;
-    color: #8c5449;
+  display: block;
+  color: #8c5449;
 }
 
 .ic {
-    text-align: right;
-    float: left;
-    padding-bottom: 3px;
-    padding-top: 3px;
-    margin-bottom: 2px;
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    gap: 7px;
+  text-align: right;
+  float: left;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  gap: 7px;
 }
 
 .icoweb-birthday {
-    width: 23px;
-    height: 23px;
-    background: url(date1.png) no-repeat;
-    background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  background: url(date1.png) no-repeat;
+  background-size: 23px 23px;
 }
 
 .icoweb-address {
-    width: 23px;
-    height: 23px;
-    background: url(address1.png) no-repeat;
-    background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  background: url(address1.png) no-repeat;
+  background-size: 23px 23px;
 }
 
 .icoweb-email {
-    width: 23px;
-    height: 23px;
-    background: url(email1.png) no-repeat;
-    background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  background: url(email1.png) no-repeat;
+  background-size: 23px 23px;
 }
 
 .icoweb-phone {
-    width: 23px;
-    height: 23px;
-    background: url(phone1.png) no-repeat;
-    background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  background: url(phone1.png) no-repeat;
+  background-size: 23px 23px;
 }
 
 .icoweb-sex {
-    width: 23px;
-    height: 23px;
-    background: url(sex1.png) no-repeat;
-    background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  background: url(sex1.png) no-repeat;
+  background-size: 23px 23px;
 }
 
 #form-cv .icf {
-    float: left;
-    line-height: 28px;
-    font-size: 18px;
-    width: 19px;
-    height: 18px;
-    text-align: left;
-    display: none;
+  float: left;
+  line-height: 28px;
+  font-size: 18px;
+  width: 19px;
+  height: 18px;
+  text-align: left;
+  display: none;
 }
 
 .icoweb span {
-    width: 100%;
-    text-align: right;
+  width: 100%;
+  text-align: right;
 }
 
 #cv-profile-email {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 #cv-profile-phone {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 #cv-profile-sex {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .ic3 .icoweb {
-    float: right;
-    width: 91%;
+  float: right;
+  width: 91%;
 }
 
 .icf img {
-    font-size: 20px;
-    width: 30px;
-    height: 30px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 div .wfa {
-    width: 30px;
-    float: left;
+  width: 30px;
+  float: left;
 }
 
 div#box-hvt {
-    padding: 0;
-    margin: 0;
-    float: left;
-    width: 100%;
-    height: 229px;
-    padding-left: 15px;
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 100%;
+  height: 229px;
+  padding-left: 15px;
 }
 
 .all {
-    float: left;
-    width: 100%;
-    padding-top: 10px !important;
-    padding-bottom: 30px;
-    margin-top: -1px;
+  float: left;
+  width: 100%;
+  padding-top: 10px !important;
+  padding-bottom: 30px;
+  margin-top: -1px;
 }
 
 .page_more .all {
-    background: unset;
-    padding-top: 10px !important;
-    margin-top: 0 !important;
+  background: unset;
+  padding-top: 10px !important;
+  margin-top: 0 !important;
 }
 
-
 #cv-content .cvo-block {
-    padding: 0;
+  padding: 0;
 }
 
 #box-content {
-    float: left;
-    width: 82%;
-    clear: both;
-    color: black;
-    text-align: justify;
-    padding-left: 50px;
-    margin-top: -18px;
+  float: left;
+  width: 82%;
+  clear: both;
+  color: black;
+  text-align: justify;
+  padding-left: 50px;
+  margin-top: -18px;
 }
 
 div#experience-table {
-    float: left;
-    width: 100%;
-    text-align: justify;
-    margin-left: 0px;
-    padding: 0px;
+  float: left;
+  width: 100%;
+  text-align: justify;
+  margin-left: 0px;
+  padding: 0px;
 }
 
 #block05 #experience-table {
-    background: unset;
+  background: unset;
 }
 
 #block02 #experience-table {
-    width: 100%;
+  width: 100%;
 }
 
 #cv-right .ir #sortable .block {
-    clear: both;
+  clear: both;
 }
 
 .box-01 {
-    float: left;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border-radius: 30px;
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: 30px;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 #cvo-experience-blocktitle {
-    width: 100%;
-    float: left;
-    color: #000;
+  width: 100%;
+  float: left;
+  color: #000;
 }
 
 #cvo-experience-blocktitle,
 #cv-boxtitle {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .titlecv {
-    width: 100%;
-    float: left;
-    text-align: left;
-    color: black;
-    padding-left: 50px;
-    padding-top: 3px;
-    padding-bottom: 2px;
+  width: 100%;
+  float: left;
+  text-align: left;
+  color: black;
+  padding-left: 50px;
+  padding-top: 3px;
+  padding-bottom: 2px;
 }
 
 #cv-main #cv-right .ir #sortable {
-    padding: 0;
-    margin: 0;
-    float: left;
-    width: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 100%;
 }
 
 #cv-main #cv-right .ir #sortable .block {
-    float: left;
-    width: 100%;
-    position: relative;
-    border-radius: 0;
-    margin-top: 0px !important;
-    margin-right: 0;
-    padding-bottom: 8px;
-    padding-top: 5px;
+  float: left;
+  width: 100%;
+  position: relative;
+  border-radius: 0;
+  margin-top: 0px !important;
+  margin-right: 0;
+  padding-bottom: 8px;
+  padding-top: 5px;
 }
 
 #cv-main #cv-right .ir #sortable #box07 {
-    background: unset;
+  background: unset;
 }
 
 #cv-main #cv-right .ir #sortable #box03 {
-    padding-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 #cv-main #cv-right .ir #sortable #box01 {
-    display: none;
+  display: none;
 }
 
 #cv-right {
-    padding: 0;
-    margin: 0;
-    float: left;
-    width: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 100%;
 }
 
 #sortable #box02 {
-    float: left;
-    padding: 0;
-    width: 100%;
-    padding-top: 25px !important;
+  float: left;
+  padding: 0;
+  width: 100%;
+  padding-top: 25px !important;
 }
 
 .exp-content {
-    width: 100% !important;
-    text-align: justify;
-    float: right;
-    margin: 0;
-    color: #000;
+  width: 100% !important;
+  text-align: justify;
+  float: right;
+  margin: 0;
+  color: #000;
 }
 
 .box-content {
-    width: 100% !important;
-    padding: 0px;
-    margin-top: 0px !important;
-    max-height: 140px;
-    overflow: hidden;
+  width: 100% !important;
+  padding: 0px;
+  margin-top: 0px !important;
+  max-height: 140px;
+  overflow: hidden;
 }
 
 #box02.box-content {
-    width: 100% !important;
-    padding: 0px;
-    margin-top: 0px !important;
+  width: 100% !important;
+  padding: 0px;
+  margin-top: 0px !important;
 }
 
 #sortable .ic {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 #cv-content .exp-date {
-    text-align: right;
-    font-style: normal;
-    color: #70198a;
-    width: 120px;
+  text-align: right;
+  font-style: normal;
+  color: #70198a;
+  width: 120px;
 }
 
-
 #cv-content #block04 .exp-date {
-    font-weight: unset;
+  font-weight: unset;
 }
 
 .block {
-    background: none;
+  background: none;
 }
 
 .ic1 {
-    float: left;
-    width: 49%;
+  float: left;
+  width: 49%;
 }
 
 div#cv-contact {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    width: 100% !important;
-    line-height: 33px;
-    display: none;
-    height: 33px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 100% !important;
+  line-height: 33px;
+  /* Ẩn chữ đi */
+  display: none;
+  height: 33px;
 }
 
 .exp-fake {
-    float: left;
-    width: 262px;
-    height: 13px;
-    margin-top: -13px;
-    display: none;
+  float: left;
+  width: 262px;
+  height: 13px;
+  margin-top: -13px;
+  display: none;
 }
 
 .exp .ctbx {
-    display: table;
-    width: 100%;
-    position: relative;
+  display: table;
+  width: 100%;
+  position: relative;
 }
 
 .span-icoweb {
-    width: 89%;
+  width: 89%;
 }
 
 div#box02 {
-    position: absolute !important;
-    top: 320px;
-    width: 50% !important;
-    margin-left: 50px !important;
-    max-height: 200px !important;
-    overflow: hidden;
+  position: absolute !important;
+  top: 320px;
+  width: 50% !important;
+  margin-left: 50px !important;
+  max-height: 200px !important;
+  overflow: hidden;
 }
 
 div#box02 .blockControls {
-    display: none;
+  display: none;
 }
 
 div#box02 .titlecv,
 div#box02 #box-content {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 div#box02 #box-content {
-    width: 100%;
+  width: 100%;
 }

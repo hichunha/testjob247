@@ -111,33 +111,36 @@ $(document).on('input', '.bar-value-exp input', function () {
         $(this).val("0"); // Xóa giá trị nhập vào
     }
 });
-
+// Cái này là sự kiện sidebar(khi nhấp chọn toolbar)
 if ($(window).width() >= 1250) {
+    // Sự kiện khi click vào cái thu gọn của sidebar
     $(document).on("click", ".rutgon-sidebar-cv", function () {
         $(".content-main-cv").css({
-            "transition": "all 0.5s ease",
-            "max-width": "100%",
+            "transition": "all 0.5s ease", // độ mượt
+            "max-width": "100%",// set content-cv chính thành 100%
         });
-        $(this).parents(".box-sidebar-cv").hide();
+        $(this).parents(".box-sidebar-cv").hide(); // Cái này dùng để ẩn sidebar bên trái đi
         setTimeout(() => {
-            $(".content-main-cv").attr("style", "");
+            $(".content-main-cv").attr("style", ""); 
         }, 500);
     });
-
+    
+    // các lựa chọn toolbar để hiển thị sidebar
     function sidebar_option(e) {
+        // Thay đổi kích thước content-main-cv
         $(".content-main-cv").css({
             "max-width": "calc(100% - 430px)",
             "transition": "all 0.5s ease",
         });
-        $(".box-sidebar-cv").show();
+        $(".box-sidebar-cv").show();// đây là toàn bộ sidebar
         let option = $(e).attr("data");
-        $('.content-sidebar-cv .content-sidebar-cm').hide();
+        $('.content-sidebar-cv .content-sidebar-cm').hide(); //ẩn content-sidebar-cm giúp cho không bị che mất nội dung tuy nhiên chưa hiểu sao phải ẩn content-sidebar-cv
         if (option == 1) {
             $(".content-sidebar-maucv").show();
         } else if (option == 2) {
             $(".content-sidebar-colorcv").show();
         } else if (option == 3) {
-            $(".content-sidebar-langcv").show();
+            $(".content-sidebar-langcv").show(); // ngôn ngữ
         } else if (option == 4) {
             $(".content-sidebar-cvthamkhao").show();
         } else if (option == 5) {
@@ -145,8 +148,11 @@ if ($(window).width() >= 1250) {
         } else if (option == 6) {
             $(".content-sidebar-toiuukhonggian").show();
         }
+
     }
-} else {
+} 
+// màn hình <1250
+else {
     function sidebar_option(e) {
         $(".box-sidebar-cv").show();
         let option = $(e).attr("data");
@@ -185,6 +191,7 @@ $(document).ready(function () {
         var oldlink = $('#cv-color-css').attr('href');
         var newlink = oldlink.slice(0, oldlink.lastIndexOf("/")) + '/' + newcolor + '.css';
         $('#cv-color-css').attr('href', newlink);
+        // Đổi màu trên toolbar
         $(".cvo-toolbar-color .options-color .color").attr("style", `background-color:#${newcolor}`).attr('data-color', newcolor);
     });
     // ==================Sự kiện đổi ngon ngu cho cv===============================
@@ -390,6 +397,7 @@ $(document).ready(function () {
     });
 
     // ======================Su kien an muc + them muc========================
+    // Ẩn mục
     $(document).on('click', '.blockControls .an-muc', function (e) {
         var item = $(this).parent().parent();
         var itemId = item.attr('id');
@@ -740,7 +748,7 @@ $(document).ready(function () {
             cv_title = $('#cv_alias').val();
         }
         data['cv_title'] = cv_title;
-        data['avatar'] = $('#page-cv #cvo-profile-avatar').attr('src');
+        data['avatar'] = $('#page-cv #cvo-profile-avatar').attr('src');//  đi đến phần cvo-profile-avatar với page-cv là cha(parents) lấy thuộc tính src, hình ảnh
         data['name'] = $('#cv-profile-fullname').text().trim();
         data['email'] = $('#cv-profile-email').text().trim();
         data['address'] = $('#cv-profile-address').text().trim();
@@ -1063,6 +1071,7 @@ $(document).ready(function () {
             const containsAdmin = fname.text().toLowerCase().indexOf("admin") !== -1; // Sử dụng indexOf
             if (containsAdmin) {
                 $("#cv-profile-fullname").css('outline', '1px dashed red');
+                
                 txt_err += "Tên không được chứa ký tự admin, ";
                 txt_err = txt_err.substring(0, txt_err.length - 2);
                 var msg = ' <div class="show_err_box">'
@@ -1736,12 +1745,13 @@ $(document).ready(function () {
     $(document).on("click", ".txt_close_cvtk", function () {
         $(this).parents(".show-cv-thamkhao").hide();
     });
-
+    // Khi mở sidebar của cv_thamkhao chọn cv bạn muốn
     $(document).on("click", ".input_cvthamkhao", function () {
         var img = $(this).val();
         var linkcv = $(this).attr("data-link");
-        $(".show-cv-thamkhao").show().find(".img-cv-thamkhao").attr("src", img);
-        $(".show-cv-thamkhao").find(".button_usesamplecv").attr("href", linkcv);
+        //Đi đến content_cv_suggest.ejs
+        $(".show-cv-thamkhao").show().find(".img-cv-thamkhao").attr("src", img); // hiển thị ảnh 
+        $(".show-cv-thamkhao").find(".button_usesamplecv").attr("href", linkcv); // tìm kiếm link và cho href=linkcv
     });
 });
 

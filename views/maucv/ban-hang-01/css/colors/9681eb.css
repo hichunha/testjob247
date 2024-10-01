@@ -11,10 +11,10 @@
   background-size: 790px 91px, 100% 100%;
   background-position: left bottom, left top;
 }
-
-#border_img {
+/* Bỏ border nhìn nó cứ sao */
+/* #border_img {
   border: 8px solid #9681eb;
-}
+} */
 
 #cv-content .exp-date {
   color: #9681eb;

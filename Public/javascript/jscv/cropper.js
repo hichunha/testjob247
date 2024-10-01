@@ -2638,7 +2638,6 @@
     zoom: function zoom(ratio, _originalEvent) {
       var canvasData = this.canvasData;
 
-
       ratio = Number(ratio);
 
       if (ratio < 0) {
@@ -2668,11 +2667,21 @@
 
 
       ratio = Number(ratio);
-
+      //  Giới hạn không cho người dùng phóng to quá cũng như nhỏ quá
+      var maxZoomRatio = 8;
+      var minZoomRatio = 0.25;
+      var currentRatio = width / naturalWidth;
       if (ratio >= 0 && this.ready && !this.disabled && options.zoomable) {
+        // Giới hạn phóng to
+        if (currentRatio * ratio > maxZoomRatio) {
+          ratio = maxZoomRatio / currentRatio; 
+      }
+        // Giới hạn thu nhỏ
+        if(currentRatio*ratio < minZoomRatio ){
+          ratio = minZoomRatio/currentRatio;
+      }
         var newWidth = naturalWidth * ratio;
         var newHeight = naturalHeight * ratio;
-
         if (dispatchEvent(this.element, EVENT_ZOOM, {
           originalEvent: _originalEvent,
           oldRatio: width / naturalWidth,

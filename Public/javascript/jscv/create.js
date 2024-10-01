@@ -1742,18 +1742,28 @@ $("#luu_cv_b3").click(function () {
         }
     }
     if (birthday == '' || sexcv == '' || phone == '' || email == '' || fname == '' || address == '' || (jobname == '' || jobname.trim() == 'Vị trí công việc bạn muốn ứng tuyển' || jobname.trim() == '지원하고 싶은 위치' || jobname.trim() == '応募仕事' || jobname.trim() == 'Job position')) {
+        // Thêm viền đỏ cho profile birthday
         if (birthday == '') {
             $('#cv-profile-birthday').css('outline', '1px dashed red');
             txt_err += "Ngày sinh, ";
         } else {
             $('#cv-profile-birthday').css('outline', 'unset');
         }
+        // Thêm viền đỏ cho profile sex
         if (sexcv == '') {
             $('#cv-profile-sex').css('outline', '1px dashed red');
             txt_err += "Giới tính, ";
         } else {
             $('#cv-profile-sex').css('outline', 'unset');
         }
+        // test 
+        // if (phone == '') {
+        //     $('#cv-profile-phone').css('outline', '1px dashed red');
+        //     txt_err += "Giới tính, ";
+        // } else {
+        //     $('#cv-profile-phone').css('outline', 'unset');
+        // }
+        //
         if (fname == '') {
             $('#cv-profile-fullname').css('outline', '1px dashed red');
             txt_err += "Họ tên, ";

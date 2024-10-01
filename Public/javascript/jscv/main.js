@@ -259,12 +259,20 @@ $(function () {
           uploadedImageURL = URL.createObjectURL(file);
           $image.cropper('destroy').attr('src', uploadedImageURL).cropper(options);
           $inputImage.val('');
-          //Add them
-          $('.imageEditor').show();
-          $('.editorChooseImage').hide();
-          $('.image-controls').show();
-          $('.edit-image-btns').show();
-          $('.tipCompress').hide();
+          //Add them ảnh những hộp sau sẽ hiện
+          $('.imageEditor').show(); // Đây là phần hiển thị ảnh chọn
+          $('.editorChooseImage').hide(); // Phần chọn ảnh để tải lên
+
+          $('.loadingShow').fadeIn(100, function() {
+            // Sau khi fade in xong, bắt đầu fade out sau 200 ms 
+            setTimeout(function() {
+                $('.loadingShow').fadeOut(100); // Ẩn phần tử trong 0.1 giây
+            }, 200); // Thời gian hiển thị trước khi ẩn
+        });
+          
+          $('.image-controls').show(); // zoom, rotate
+          $('.edit-image-btns').show(); // button đổi ảnh, xóa ảnh
+          $('#tipCompress').hide(); // Ẩn chữ giới hạn 5 MB
           $download.removeClass('disabled');
           /////////////
         } else {
@@ -306,7 +314,14 @@ $(function () {
           //Add them
           $('.imageEditor').show();
           $('.editorChooseImage').hide();
-          $('.image-controls').show();
+          $('.loadingShow').fadeIn(100, function() {
+            // Sau khi fade in xong, bắt đầu fade out sau 1 giây (1000 milliseconds)
+            setTimeout(function() {
+                $('.loadingShow').fadeOut(100); // Ẩn phần tử trong 0.5 giây
+            }, 200); // Thời gian hiển thị trước khi ẩn
+        });
+          
+          $('.image-controls').show();// Tương tự trên import IMG
           $('.edit-image-btns').show();
           $('.tipCompress').hide();
           $download.removeClass('disabled');
@@ -326,18 +341,24 @@ $(function () {
     $image.data('cropper', null).cropper('destroy').attr('src', uploadedImageURL).cropper(options);
     $('.imageEditor').hide()
     $('.editorChooseImage').show()
+    $('.image-controls').hide()
+    $('#tipCompress').show()
     // $('#cvo-profile-avatar').attr('src', '/images/no_avatar.jpg')
     $('.img-edit-preview img').attr('src', '/images/no_avatar.jpg').removeAttr('style')
     $('#inputImage').val("").change();
+    // Vô hiệu hóa nút lưu ảnh
+    $download.addClass('disabled');
   });
+  // crop_img.ejs, zoom-int,zoom-out, xoay trái , phải
   $('.btn-rotate-right').click(function () {
-    $image.cropper("rotate", 90);
+    $image.cropper("rotate", 90); // Phương thức rotate ở file cropper.js
   });
   $('.btn-rotate-left').click(function () {
     $image.cropper("rotate", -90);
   });
+
   $('.btn-zoom-in-image').click(function () {
-    $image.cropper("zoom", 0.2);
+    $image.cropper("zoom", 0.2); // Phương thức zoom, zoomTo ở file cropper.js
   });
   $('.btn-zoom-out-image').click(function () {
     $image.cropper("zoom", -0.2);
@@ -345,14 +366,14 @@ $(function () {
 
   $('.btn-save-image').click(function () {
     if ($(this).hasClass('disabled')) { } else {
-      var dataX = $dataX.val();
-      var dataY = $dataY.val();
-      var dataHeight = $dataHeight.val();
-      var dataWidth = $dataWidth.val();
-      var dataRotate = $dataRotate.val();
-      var dataScaleX = $dataScaleX.val();
-      var dataScaleY = $dataScaleY.val();
-      var cropper = $image.data('cropper');
+      // var dataX = $dataX.val();
+      // var dataY = $dataY.val();
+      // var dataHeight = $dataHeight.val();
+      // var dataWidth = $dataWidth.val();
+      // var dataRotate = $dataRotate.val();
+      // var dataScaleX = $dataScaleX.val();
+      // var dataScaleY = $dataScaleY.val();
+      // var cropper = $image.data('cropper');
       var result = $image.cropper('getCroppedCanvas', {
         width: baseW,
         height: baseH,
@@ -384,13 +405,23 @@ $(function () {
       $('#imageEditorWraper').hide();
     }
   });
-
+  // Sự kiện khi nhấn vào ảnh, hộp là crop_img.ejs
   $(document).on('click', '#cvo-profile-avatar,.fake-img', function () {
     // $image.cropper('destroy').cropper(options);
-    $('#imageEditorWraper').show();
+    $('#imageEditorWraper').show();// Cái này dùng để hiện ra 1 box giúp chọn ảnh , chỉnh sửa 
   })
   $(document).on('click', '.btn-close-image-editor', function () {
-    $('#imageEditorWraper').hide();
+    // này ở crop_img.ejs, 
+    //này hơi dư thừa vì cần sử dụng .btn-remove-image , tối ưu hơn thì cần để hàm
+    $image.data('cropper', null).cropper('destroy').attr('src', uploadedImageURL).cropper(options);
+    $('.imageEditor').hide()
+    $('.editorChooseImage').show()
+    $('.image-controls').hide()
+    $('#tipCompress').show()
+    $('.img-edit-preview img').attr('src', '/images/no_avatar.jpg').removeAttr('style')
+    $('#inputImage').val("").change();
+
+    $('#imageEditorWraper').hide(); // đóng hộp thoại
   })
   // $('#cvo-profile-avatar').click(function () {
   //   $image.cropper('destroy').cropper(options);
@@ -400,7 +431,7 @@ $(function () {
   //   $('#imageEditorWraper').hide();
   // });
 
-  $('.img-edit-preview').click(function () {
+  $('.img-edit-preview').click(function () { 
     $('#inputImage').trigger('click')
   });
 });

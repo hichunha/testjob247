@@ -7,29 +7,44 @@
   <div id="form-cv">
     <div id="cv-top">
       <div id="cvo-profile">
+        <!-- box-01 này gồm ảnh avatar người dùng có thể upload, tên của họ theo dạng tiêu đề và ghi chú tóm tắt như sđt, địa chỉ... -->
         <div class="box-01">
+          <!-- Sự kiện gestures vào ảnh xử lý ở file main.js -->
           <div id="anh">
             <div id="cvo-profile-avatar-wraper">
               <div id="border_img">
                 <img id="cvo-profile-avatar" cvo-form-field="true" src="<%- data_uv.avatar %>" alt="avatar">
               </div>
             </div>
+             <!-- Để làm gì ta ? -->
             <div class="fake-img">
               <img class="background_avt" src="" alt="">
             </div>
           </div>
+          <!-- Phần tên và là phần Nguyễn Thị Thương, nhân viên bán hàng -->
           <div id="chu">
             <div id="box-hvt">
-              <h1><span id="cv-profile-fullname" cvo-placeholder="<%- placeholders.holder_name %>" contenteditable="true"><% if (typeof data_uv.fullnamess !== 'undefined') { %>
+              <h1>
+                <!--Đây là tên(Nguyễn Thị Hương) cái này có contenteditable là có thể chỉnh sửa -->
+                <span id="cv-profile-fullname" cvo-placeholder="<%- placeholders.holder_name %>" contenteditable="true"> 
+                <% if (typeof data_uv.fullnamess !== 'undefined') { %>
                   <%- data_uv.fullnamess %>
                 <% } else if (typeof data_uv.namefull !== 'undefined') { %>
                   <%- data_uv.namefull %>
                 <% } else if (typeof data_uv.fullname !== 'undefined') { %>
                   <%- data_uv.fullname %>
-                <% } %></span></h1>
-              <h2><span id="cv-profile-job" contenteditable="true" cvo-placeholder="<%- placeholders.holder_job %>"><%- data_uv.position ? data_uv.position : '' %></span></h2>
+                <% } %>
+                </span>
+              </h1>
+              <!-- Nhân viên bán hàng -->
+              <h2>
+                <span id="cv-profile-job" contenteditable="true" cvo-placeholder="<%- placeholders.holder_job %>">
+                  <%- data_uv.position ? data_uv.position : '' %>
+                </span>
+              </h2>
             </div>
           </div>
+          <!-- Cái này profile trong cv, check xem kiểu có phải profile. Gồm sex,birth,number-phone,email,address -->
           <% menu_html.forEach(function(m, index) {
             if (m.type === "profile") { %>
               <div id="<%- m.id %>" class="<%- m.class %>" <%- m.status === 'hide' ? 'style="display:none"' : '' %>>

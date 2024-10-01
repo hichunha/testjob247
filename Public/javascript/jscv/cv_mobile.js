@@ -704,7 +704,7 @@ if ($(window).width() < 600) {
 
         // =============== Thông tin liên hệ ================= //
         if (data_block == 'box01') {
-            var tieude = $('#thongtin_box01').find('.tieude').text();
+            // var tieude = $('#thongtin_box01').find('.tieude').text(); // đã ẩn đi chữ thông tin liên hệ
             var ctbx_mobile = $('#thongtin_box01').find(".box_infor_small .text");
             var sex = ctbx_mobile.find('#cv-profile-sex-mb').text();
             var date = ctbx_mobile.find('#cv-profile-birthday-mb').text();
@@ -712,7 +712,7 @@ if ($(window).width() < 600) {
             var email = ctbx_mobile.find('#cv-profile-email-mb').text();
             var add = ctbx_mobile.find('#cv-profile-address-mb').text();
 
-            $('#cv-contact').text(tieude);
+            // $('#cv-contact').text(tieude); // đã ẩn chữ thông tin liên hệ
             $('#cv-profile-sex').text(sex);
             $('#cv-profile-birthday').text(date);
             $('#cv-profile-phone').text(phone);
